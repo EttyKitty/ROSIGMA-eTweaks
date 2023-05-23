@@ -1,6 +1,13 @@
 en-US:
 
   ########################################################## GLOBALS ##########################################################
+
+  STR_1_BEGINNER: "Adeptus Astartes"
+  STR_2_EXPERIENCED: "Unavailable"
+  STR_3_VETERAN: "Unavailable"
+  STR_4_GENIUS: "Unavailable"
+  STR_5_SUPERHUMAN: "Unavailable"
+
   STR_DAMAGE_NONE: "SUPPORT"
   STR_DAMAGE_ARMOR_PIERCING: "PIERCING"
   STR_DAMAGE_INCENDIARY: "INCENDIARY"
@@ -30,7 +37,7 @@ en-US:
   STR_UFO_CONSTRUCTION: "Ceramite Plate"
   STR_ELERIUM_115: "Promethium Bottle"
 
-  ########################################################## 40K/ROSIGMA ITEMS-WEAPONS##########################################################
+  ########################################################## 40K/ROSIGMA ITEMS-WEAPONS ##########################################################
 
   STR_MGRENADE: "Melta Bomb"
   STR_HIGH_EXPLOSIVE: "Melta Mine"
@@ -38,6 +45,9 @@ en-US:
   STR_RIFLE: "Bolter, Godwyn"
   STR_RIFLEC: "Boltgun, Stalker"
   STR_RIFLEB: "Bolter, Ultra"
+  STR_PISTOLB: "Boltpistol, Ultra"
+  STR_PISTOLH: "Boltpistol, Tigrus"
+  STR_PISTOLS: "Boltpistol, Spectris"
   STR_HB: "Storm Bolter, Godwyn"
   STR_ASSC: "Assault Cannon, Astartes"
   STR_LASCAN: "Lascannon, Astartes"
@@ -75,6 +85,7 @@ en-US:
   ########################################################## 40K/ROSIGMA ARMORS ##########################################################
 
   STR_TATICAL_ARMOR: "MK7 Power Armor"
+  STR_SCOUT_UC: "Scout Carapace Armor"
 
   ########################################################## eTweaks ARMORS ##########################################################
 
