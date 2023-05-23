@@ -1,0 +1,77 @@
+craftWeapons:
+
+  - type: STR_CANNON_UC # Twin-linked Bolter
+    weaponType: 0
+
+  - type: STR_CRAFTBOLTER_QUAD_UC
+    sprite: 2
+    sound: {mod: 40k, index: 4}
+    damage: 10
+    accuracy: 40
+    reloadCautious: 2
+    reloadStandard: 2
+    reloadAggressive: 2
+    ammoMax: 200
+    rearmRate: 200
+    launcher: STR_CANNON
+    clip: STR_HWP_CANNON_SHELLS
+    projectileType: 2
+    projectileSpeed: 8
+    bulletSaving: true
+    weaponType: 11
+
+  - type: STR_STINGRAY # Krak Missile
+    damage: 140 #was 60
+    ammoMax: 6  #was 6
+    weaponType: 1
+    reloadCautious: 48
+    reloadStandard: 48
+    reloadAggressive: 48
+  
+  - type: STR_AVALANCHE # Plasma Missile
+    damage: 240 #was 100
+    ammoMax: 3 #was 3
+    weaponType: 2
+    reloadCautious: 72
+    reloadStandard: 72
+    reloadAggressive: 72
+
+  - type: STR_LASER_CANNON_UC # Lascannon
+    launcher: STR_LASCAN
+    weaponType: 3
+
+  - type: STR_CRAFT_MULTILASER_UC # Multilaser
+    weaponType: 4
+
+  - type: STR_CRAFT_QUADLASER_UC # Quad-linked Lascannon
+    weaponType: 5
+
+  - type: STR_CRAFT_AUTOCANNON_UC # Quad-linked Autocannon
+    weaponType: 6
+
+  - type: STR_FUSION_BALL_UC # Multimelta
+    weaponType: 7
+
+  - type: STR_PLASMA_BEAM_UC # Twin-linked Plasma
+    weaponType: 8
+
+  - type: STR_ASSCANNON_UC # Assault-Cannon
+    weaponType: 9
+    rearmRate: 200
+    ammoMax: 200
+
+  - type: STR_THUNDER_CANNON_UC # Battle-Cannon
+    weaponType: 10
+
+
+  - type: STR_LANCE_CANNON_UC        #R 30      A 10        D70      Acc  45
+    weaponType: 20
+
+  - type: STR_HEAVYDSCYTHES_UC               #R 50       A 4        D100     Acc 75
+    weaponType: 21
+
+  - type: STR_COBRA_CANNON_UC      #R 40      A 6         D300     Acc 30
+    weaponType: 23
+
+  - type: STR_DSTARCANNON_UC         #R 40      A 5         D120     Acc 30
+    weaponType: 24

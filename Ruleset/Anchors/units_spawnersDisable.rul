@@ -1,0 +1,152 @@
+units:
+
+  - &HEALTH_BOOST_MEDIUM
+    type: STR_PINK_HORROR_TERRORIST
+    spawnUnit: ""
+    stats:
+      health: 60
+
+  - type: STR_TZEENTCH_ACOLYTE_FLAMER  #TZEENTCH FEMALE CULTIST INTO FLAMER
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_TZEENTCH_CULT_LEADER_ASSASSIN  #TZEENTCH LEADER INTO ASSASSIN
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_TZEENTCH_CULT_LEADER_SPAWN #TZEENTCH LEADER INTO SPAWN Possessed
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_SISTER_BLESSED_TRUE   #CHAOS STR_ADEPTAS_SLAANESH Truly Blessed                    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_SISTER_BLESSED_FALSE   #CHAOS STR_ADEPTAS_SLAANESH Blessed by Lies                    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_KHORNE_ARMSISTER_BLESSED_TRUE   #CHAOS Truly Blessed                    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_KHORNE_ARMSISTER_BLESSED_FALSE   #CHAOS STR_ADEPTAS_SLAANESH Blessed by Lies                    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_KHORNE_RETRIBUTOR_SUPERIOR_BLESSED_FALSE     #CHAOS KHORNE RETRIBUTOR SUPERIOR                      RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_KHORNE_RETRIBUTOR_BLESSED_FALSE     #CHAOS KHORNE RETRIBUTOR TROOPER                      RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_SACRIFICE_F #Female version, transforms into Dire Daemonette
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_SACRIFICE_M #male version, transforms into Dire Daemonette
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_CIVILIAN_HEDONITE_BLESSED_SACRIFICE #cant move, transforms on death
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_DEMIMONDE_BLESSED_SACRIFICE  #cant move
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_DEMIMONDE_BLESSED_RITUALIST
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_DEMIMONDE_BLESSED
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_FBLESSED     #Blessed by Slaanesh for being turned into DemiDeamonettes
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_FBLESSED_FALSE     #Blessed by Slaanesh for being turned into DemiDeamonettes
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SLAANESH_MBLESSED #Blessed Slaanesh Marine RANK 5 weapons done             aggroSound
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_DEMI_DAEMONETTE   #CHAOS Demi Daemonette                    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_REPENTIA_SUPERIOR     #CHAOS REPENTIA SUPERIOR
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_FALLEN_SISTERDAEMONETTE   #CHAOS Slaan Infested Sister of Battle    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_HERETIC_SISTER_SBLESSED   #CHAOS Heretic Sister of Battle Blessed by Slannesh   RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_HERETIC_SISTER_SBLESSED_LIE   #CHAOS Heretic Sister of Battle Blessed by Slannesh   RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_TZEENTCH_BLESSED #CHAOS MUTON_ARMOR0                        RANK 5 weapons done             aggroSound
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_TZEENTCH_BLESSED2 #Spawns a Tzeentch Demon Flamer on death                 RANK 5 weapons done             aggroSound
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SECTOID_DARK_DISCIPLE_DAEMONETTE  #CHAOS FEMALE CULTIST DARK DISCIPLE TRANSFORMS INTO DAEMONETTE
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SECTOID_DARK_DISCIPLE_NEVERBORN  #CHAOS FEMALE CULTIST DARK DISCIPLE TRANSFORMS INTO NEVERBORN
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SECTOID_DARK_DISCIPLE_NEVERBORN_RITUALIST  #CHAOS FEMALE CULTIST DARK DISCIPLE TRANSFORMS INTO NEVERBORN
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_GREEN_MONK_RITUALIST_BLESSED #Civilian Robed Green turns into Midwife
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_CIV_CULTIST_BLESSED #Turns into Plaguewalker on death
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_CIV_CULTIST_BLESSED2 #Reveals BOOMER on death
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_SISTERBLESSED #Spawns Plaguebearer on death                        RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_SISTERBLESSED_MIDWIFE #Spawns Midwife on death                        RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_SISTERBLESSED_NURGLING #Spawns Nurgling on death                        RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_SECONDBORN_SISTER   #CHAOS Nurgle Sister of Battle Weak but Weird    RANK 5 NO weapons
+    refNode: *HEALTH_BOOST_MEDIUM
+
+  - type: STR_NURGLE_SOLDIER_BLESSED #CHAOS MUTON_ARMORNURGLE                        RANK 5 weapons done          aggroSound
+    refNode: *HEALTH_BOOST_MEDIUM
+
+
+items:
+
+  - &VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+    type: STR_DAEMONETTESPAWNER_GRENADE
+    spawnUnit: ""
+
+  - type: STR_DAEMONETTE_MISSILE_PACK            #Deamonette spawner
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_BLOODLETTERSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_FLAMERSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_PINKHORRORSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_BLUEHORRORSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_TZLESSER_DAEMON_SPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_PLAGUEBEARERSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_NURGLINGSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+
+  - type: STR_NURGLINGSPAWNER_GRENADE
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU
+  
+  - type: STR_BLIGHT_GRENADE40
+    refNode: *VERY_COOL_AND_BALANCED_WEAPON_NO_THANK_YOU

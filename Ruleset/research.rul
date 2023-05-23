@@ -1,0 +1,141 @@
+research:
+  - delete: STR_ASSAULT
+  - delete: STR_TATICAL
+  - delete: STR_DEVASTATOR
+  - delete: STR_SCOUT
+  - delete: STR_NOT_PRIMARIS
+  - delete: STR_ASSAULT_AND_TACTICAL_KIT_REQ
+  - delete: STR_SCOUT_AND_TACTICAL_KIT_REQ
+  - delete: STR_TACTICAL_KIT_REQ
+  - delete: STR_CRATED_LANDSPEEDER
+  - delete: STR_CRATED_RHINO
+  - delete: STR_SNIPER_KIT_REQ
+  - delete: STR_CRATED_DROPPODS
+  - delete: STR_ASSAULT_KIT_REQ
+  - delete: STR_SNIPER_KIT
+  - delete: STR_TACTICAL_KIT
+  - delete: STR_SCOUT_KIT
+  - delete: STR_ASSAULT_KIT
+  - delete: STR_ASSAULT_AND_TACTICAL_KIT
+  - delete: STR_SCOUT_AND_TACTICAL_KIT
+
+#################################### GENERAL ####################################
+
+  - name: STR_MARINES_STRATEGY
+    unlocks: !remove
+      - STR_GUARD_SUPORT
+      - STR_GUARDSMEN
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_MARINES_STRATEGY
+    unlocks: !add
+      - STR_HEAVY_WEAPONS_RESEARCH_REQ
+      - STR_THUNDERHAWKTYPE1
+      - STR_THUNDERHAWKTYPE2
+      - STR_SPEEDR
+      # - STR_STORMHAWKR
+      - STR_HAND_FLAMETHROWER_REQUISITION
+      - STR_MARINES_AND_DEATHWATCH
+      # - STR_ASS_ARMOR
+      - STR_MOTION_SCANNER
+      # - STR_MEDI_KIT
+      - STR_LASER_WEAPONS
+      # - STR_CRAFTADD
+      - STR_HOLOGRAM_GRENADE_REQUISITION
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+      # - STR_DEV_ARMOR
+      - STR_SMOKE
+      - STR_TRAINFACILITYR
+      # - STR_APOTHECARY
+      # - STR_PERSONAL_ARMOR
+      # - STR_MELTABOMB
+
+  - name: STR_PRIMARIS
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+    disables: !remove
+      - STR_TATICAL
+      - STR_ASSAULT
+      - STR_DEVASTATOR
+      - STR_SCOUT
+
+  - name: STR_PHOTON_GRENADE_REQUISITION
+    dependencies: !remove
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - name: STR_HONOR_ARMOR
+    dependencies: !remove
+      - STR_TATICAL
+
+  - name: STR_HONOR_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_CHAINSWORD_MC
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_SIGNAL_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_HEAVY_PLASMA_MC
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_SCOUTH_RESEARCH
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_SARGENT_ARMOR
+    dependencies: !remove
+      - STR_ASS_ARMOR
+      - STR_DEV_ARMOR
+
+  - name: STR_DEV_ARMOR
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ASS_ARMOR
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_THE_EMPEROR_PROTECTS_RESEARCH
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ADEPTAS
+    unlocks: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_ASSC
+    dependencies: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_ASS_ARMOR_DEP1
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_DEATHWATCH
+    unlocks: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_DREADNOUGHT_MARINE
+    dependencies: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_MEDI_KIT
+    dependencies: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_SKYRANGER
+    requires: !remove
+      - STR_CRATED_DROPPODS
+
+  - name: STR_SKYRANGER
+    requires: !remove
+      - STR_CRATED_DROPPODS
+
+  - name: STR_CRAFTADD
+    dependencies:
+      - STR_MIDTIER_PREREQ

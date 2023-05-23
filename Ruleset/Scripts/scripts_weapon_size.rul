@@ -1,0 +1,93 @@
+extended:
+  tags:
+    RuleItem:
+      HUMAN_SIZED_WEAPON: int # 1=50% OHUP, 2=0% OHUP, 3=0% OHUP even 2h if no term armor
+      MARINE_SIZED_WEAPON: int
+      TERMINATOR_WEAPON: int
+    RuleArmor:
+      POWER_ARMOR: int # 1=yes
+      TERMINATOR_ARMOR: int
+
+  scripts:
+    accuracyMultiplierBonusStats:
+      - new: eTweaks_aMBS_weapon_size_restrictions
+        offset: 10
+        code: |
+          var int isSmallWeapon;
+          var int isTerminatorWeapon;
+          var int isPowerArmor;
+          var int isTerminatorArmor;
+          var ptr RuleArmor ruleA;
+
+          unit.getRuleArmor ruleA;
+
+          ruleA.getTag isPowerArmor Tag.POWER_ARMOR;
+          # debug_log "isPowerArmor:" isPowerArmor;
+          weapon.getTag isSmallWeapon Tag.HUMAN_SIZED_WEAPON;
+          # debug_log "isSmallWeapon:" isSmallWeapon;
+
+          if and eq isPowerArmor 1 eq isSmallWeapon 1;
+            # debug_log "bonus:" bonus;
+            div bonus 2;
+            return bonus;
+          end;
+
+          ruleA.getTag isTerminatorArmor Tag.TERMINATOR_ARMOR;
+          # debug_log "isTerminatorArmor:" isTerminatorArmor;
+          weapon.getTag isTerminatorWeapon Tag.TERMINATOR_WEAPON;
+          # debug_log "isTerminatorWeapon:" isTerminatorWeapon;
+
+          if eq isTerminatorArmor 1;
+            if or eq isSmallWeapon 1 eq isTerminatorWeapon 0;
+              # debug_log "bonus:" bonus;
+              div bonus 2;
+              return bonus;
+            end;
+          end;
+
+          return bonus;
+
+armors:
+  - &POWER_ARMOR
+    type: STR_PERSONAL_ARMOR_UC
+    tags:
+      POWER_ARMOR: 1
+
+  - type: STR_SARGENT_ARMOR_UC
+    refNode: *POWER_ARMOR
+
+  - type: STR_APOT_ARMOR_UC
+    refNode: *POWER_ARMOR
+
+  - type: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
+    refNode: *POWER_ARMOR
+
+  - type: STR_LIB_ARMOR_UC  #LIBRARIAN
+    refNode: *POWER_ARMOR
+
+  - type: STR_TECH_ARMOR_UC
+    refNode: *POWER_ARMOR
+
+  - type: STR_HONOR_ARMOR_UC #HONOR
+    refNode: *POWER_ARMOR
+
+  - type: STR_DEV_ARMOR_UC
+    refNode: *POWER_ARMOR
+
+  - type: STR_SIGNALFALSE_ARMOR_UC #HONOR
+    refNode: *POWER_ARMOR
+
+  - type: STR_SIGNAL_ARMOR_UC #HONOR
+    refNode: *POWER_ARMOR
+
+  - type: STR_ASS_ARMOR_UC #ASSAULT
+    refNode: *POWER_ARMOR
+
+  - type: STR_ASS_ARMOR_HONOR_UC #ASSAULT HONOR
+    refNode: *POWER_ARMOR
+
+items:
+  - &HUMAN_SIZED_WEAPON
+    type: STR_PISTOL
+    tags:
+      HUMAN_SIZED_WEAPON: 1

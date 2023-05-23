@@ -1,0 +1,426 @@
+commendations:
+
+  - type: STR_MEDAL_KILLS_TOTAL
+    description: STR_MEDAL_KILLS_TOTAL_DESC
+    sprite: 5
+    criteria: 
+      killsWithCriteriaCareer: [10, 20, 40, 60, 90, 120, 160, 200, 250, 300]
+    killCriteria:
+      - - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+
+  - type: STR_MEDAL_STATGAIN
+    description: STR_MEDAL_STATGAIN_DESCRIPTION
+    sprite: 5
+    criteria:
+      totalStatGain: [10, 20, 40, 60, 90, 120, 160, 200, 250, 300]
+
+  - type: STR_MEDAL_CARREER_SCORE
+    description: STR_MEDAL_CARREER_SCORE_DESCRIPTION
+    sprite: 2
+    criteria:
+      totalScore: [500, 1000, 2000, 4000, 7000, 10000, 14000, 18000, 23000, 28000]
+
+
+#commendations from xPiratez
+  - type: STR_MEDAL_SERVICE_TIME  #Every 6 months of service
+    description: STR_MEDAL_SERVICE_TIME_DESCRIPTION
+    sprite: 5
+    criteria:
+      totalMonthlyService: [6, 12, 18, 24, 30, 36, 42, 48, 54, 60]
+  - type: STR_MEDAL_IMMORTAL  #expanded Service Time
+    description: STR_MEDAL_IMMORTAL_DESCRIPTION
+    sprite: 5
+    criteria:
+      totalMonthlyService: [72, 84, 96, 108, 120, 144, 168, 192, 216, 240]
+  - type: STR_MEDAL_CARREER_MISSIONS #Number of Missions Won
+    description: STR_MEDAL_CARREER_MISSIONS_DESCRIPTION
+    sprite: 5
+    criteria:
+      totalWins: [5, 10, 15, 20, 30, 50, 75, 100, 150, 200]
+  - type: STR_MEDAL_NIGHTOPS  #Night ops
+    description: STR_MEDAL_NIGHTOPS_DESCRIPTION
+    sprite: 6
+    criteria:
+      totalNightMissions: [4, 7, 10, 15, 20, 30, 50, 75, 100, 150]
+  - type: STR_MEDAL_BASE_DEFENSE #up to 10 Hideout defenses
+    description: STR_MEDAL_BASE_DEFENSE_DESCRIPTION
+    sprite: 4
+    criteria:
+      totalBaseDefenseMissions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+  - type: STR_MEDAL_CAMPAIGN_RIBBON #Missions in a Region.
+    description: STR_MEDAL_CAMPAIGN_RIBBON_DESCRIPTION
+    sprite: 2
+    criteria:
+      totalMissionsInARegion: [20, 25, 30, 40, 50, 60, 70, 80, 90, 100]
+
+  - type: STR_MEDAL_CARREER_KILLS #Number of Kills total
+    description: STR_MEDAL_CARREER_KILLS_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [50, 75, 100, 150, 200, 300, 400, 500, 750, 1000]
+    killCriteria:
+      -
+         - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+      -
+         - [1, ["STATUS_DEAD", "FACTION_NEUTRAL"]]
+      -
+         - [1, ["STATUS_DEAD", "FACTION_PLAYER"]]
+  - type: STR_MEDAL_CARREER_CAPTURES #Number of Stuns total.
+    description: STR_MEDAL_CARREER_CAPTURES_DESCRIPTION
+    sprite: 4
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 30, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["FACTION_HOSTILE", "STATUS_UNCONSCIOUS"]]
+  - type: STR_MEDAL_RACE_KILLS #KOs by faction 
+    description: STR_MEDAL_RACE_KILLS_DESCRIPTION
+    sprite: 3
+    criteria:
+      totalKillsByRace: [30, 40, 50, 75, 100, 150, 200, 300, 400, 500]
+  - type: STR_MEDAL_WEAPON_PROFICIENCY #KOs by weapon
+    description: STR_MEDAL_WEAPON_PROFICIENCY_DESCRIPTION
+    sprite: 2
+    criteria:
+      totalKillsWithAWeapon: [20, 30, 40, 50, 75, 100, 150, 200, 350, 500]
+  - type: STR_MEDAL_FIREKILL #Kills with fire
+    description: STR_MEDAL_FIREKILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_IN", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_LASERKILL #"Kills with Laser
+    description: STR_MEDAL_LASERKILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_LASER", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_CHEMKILL #Kills with Chem and Smoke, and anti-511
+    description: STR_MEDAL_CHEMKILL_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_ACID", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_10", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_POISONKILL #Kills with Bio and Choke
+    description: STR_MEDAL_POISONKILL_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_SMOKE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_11", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_ELECTROKILL #Kills with electricity
+    description: STR_MEDAL_ELECTROKILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_12", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_13", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_MAGICKILL #Kills with Mind
+    description: STR_MEDAL_MAGICKILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["DT_15", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_PROXYKILL #"Kills with Proxies
+    description: STR_MEDAL_PROXYKILL_DESCRIPTION
+    sprite: 2
+    criteria:
+      totalTrapKills: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+  - type: STR_MEDAL_SLAVEKILLS  #Kills through mind controlled units
+    description: STR_MEDAL_SLAVEKILLS_DESCRIPTION
+    sprite: 3
+    criteria:
+      totalSlaveKills: [5, 10, 20, 30, 50, 75, 100, 150, 200, 500]
+  - type: STR_MEDAL_GUNSLINGER #killing 3 in a turn with a Gun
+    description: STR_MEDAL_GUNSLINGER_DESCRIPTION
+
+    sprite: 1
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [3, ["DT_AP", "BT_FIREARM", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [3, ["DT_LASER", "BT_FIREARM", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_BOMBER #killing 3 in a turn with Explosives
+    description: STR_MEDAL_BOMBER_DESCRIPTION
+
+    sprite: 5
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [3, ["DT_HE", "BT_FIREARM", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [3, ["FACTION_HOSTILE", "STATUS_DEAD", "BT_GRENADE"]]
+      -
+         - [3, ["FACTION_HOSTILE", "STATUS_DEAD", "BT_PROXIMITYGRENADE"]]
+  - type: STR_MEDAL_MELEEKILL #"Kills with melee
+    description: STR_MEDAL_MELEEKILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [10, 20, 35, 50, 75, 100, 150, 200, 350, 500]
+    killCriteria:
+      -
+         - [1, ["BT_MELEE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_SLASHER #killing 3 in a turn with slashy Melee weapon
+    description: STR_MEDAL_SLASHER_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [3, ["BT_MELEE", "DT_MELEE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [3, ["BT_MELEE", "DT_LASER", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [3, ["BT_MELEE", "DT_PLASMA", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_STABBER #killing 3 in a turn with stabby Melee weapon
+    description: STR_MEDAL_STABBER_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [3, ["BT_MELEE", "DT_16", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_SAMURAI #killing 8 in a mission with a Melee weapon
+    description: STR_MEDAL_SAMURAI_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaMission: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [8, ["BT_MELEE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+  - type: STR_MEDAL_MONSTER #"Kills with Stun damage, all factions
+    description: STR_MEDAL_MONSTER_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaCareer: [2, 5, 10, 15, 25, 35, 50, 75, 100, 150]
+    killCriteria:
+      -
+         - [1, ["DT_STUN", "BT_MELEE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_STUN", "BT_MELEE", "FACTION_NEUTRAL", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_STUN", "BT_MELEE", "FACTION_PLAYER", "STATUS_DEAD"]]
+  - type: STR_MEDAL_VOIDKILL #Kills for seemingly no reason, all factions
+    description: STR_MEDAL_VOIDKILL_DESCRIPTION
+    sprite: 0
+    criteria:
+      killsWithCriteriaCareer: [3, 7, 13, 21, 30, 40, 50, 75, 100, 150]
+    killCriteria:
+      -
+         - [1, ["DT_NONE", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_NONE", "FACTION_NEUTRAL", "STATUS_DEAD"]]
+      -
+         - [1, ["DT_NONE", "FACTION_PLAYER", "STATUS_DEAD"]]
+
+  - type: STR_MEDAL_DBLKILL #killing two in a turn
+    description: STR_MEDAL_DBLKILL_DESCRIPTION
+
+    sprite: 3
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 100, 200]
+    killCriteria:
+      -
+         - [2, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+  - type: STR_MEDAL_QUADKILL #killing four in a turn
+    description: STR_MEDAL_QUADKILL_DESCRIPTION
+
+    sprite: 5
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 100, 200]
+    killCriteria:
+      -
+         - [4, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+  - type: STR_MEDAL_7V7KILL #killing seven in a turn
+    description: STR_MEDAL_7V7KILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      killsWithCriteriaTurn: [1, 2, 4, 8, 15, 30, 45, 60, 100, 200]
+    killCriteria:
+      -
+         - [7, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+  - type: STR_MEDAL_MISSION_KILLS_5 #Kill x number of foes in a mission (5)
+    description: STR_MEDAL_MISSION_KILLS_5_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaMission: [1, 2, 4, 8, 15, 30, 45, 60, 100, 200]
+    killCriteria:
+      -
+         - [5, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+  - type: STR_MEDAL_MISSION_KILLS_11 #Kill x number of foes in a mission (11)
+    description: STR_MEDAL_MISSION_KILLS_11_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaMission: [1, 2, 4, 8, 15, 30, 45, 60, 100, 200]
+    killCriteria:
+      -
+         - [11, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+ 
+  - type: STR_MEDAL_IDOL #3 Stuns per mission
+    description: STR_MEDAL_IDOL_DESCRIPTION
+    sprite: 4
+    criteria:
+      killsWithCriteriaMission: [1, 2, 4, 8, 15, 30, 45, 60, 80, 100]
+    killCriteria:
+      -
+         - [3, ["FACTION_HOSTILE", "STATUS_UNCONSCIOUS"]]
+  - type: STR_MEDAL_SPECIALSTUN #Stuns with special
+    description: STR_MEDAL_SPECIALSTUN_DESCRIPTION
+    sprite: 4
+    criteria:
+      killsWithCriteriaCareer: [5, 10, 20, 30, 50, 75, 100, 150, 200, 500]
+    killCriteria:
+      -
+         - [1, ["DT_NONE", "FACTION_HOSTILE", "STATUS_UNCONSCIOUS"]]
+  - type: STR_MEDAL_REACTIONFIRE #reaction fire instances
+    description: STR_MEDAL_REACTIONFIRE_DESCRIPTION
+
+    sprite: 2
+    criteria:
+      totalReactionFire: [3, 5, 8, 11, 15, 20, 30, 45, 60, 75]
+  - type: STR_MEDAL_LUCKYSHOT #Low accuracy hits 
+    description: STR_MEDAL_LUCKYSHOT_DESCRIPTION
+
+    sprite: 5
+    criteria:
+      totalLowAccuracyHits: [2, 3, 4, 5, 7, 10, 13, 20, 25, 30]
+  - type: STR_MEDAL_UNDERFIRE #Shot at 10x times (10 levels)
+    description: STR_MEDAL_UNDERFIRE_DESCRIPTION
+
+    sprite: 5
+    criteria:
+      totalShotAt10Times: [1, 2, 3, 4, 5, 6, 8, 10, 12, 15]
+  - type: STR_MEDAL_MULTIPLEHITS #being hit
+    description: STR_MEDAL_MULTIPLEHITS_DESCRIPTION
+
+    sprite: 5
+    criteria: 
+      totalHit5Times: [4, 5, 6, 8, 10, 12, 15, 20, 30, 50]
+  - type: STR_MEDAL_PURPLE_HEART #being wounded
+    description: STR_MEDAL_PURPLE_HEART_DESCRIPTION
+
+    sprite: 1
+    criteria:
+      totalTimesWounded: [1, 2, 4, 7, 10, 15, 20, 30, 40, 50]
+  - type: STR_MEDAL_UNCONSCIOUS #"Smelling Salts": I've been knocked out 
+    description: STR_MEDAL_UNCONSCIOUS_DESCRIPTION
+    sprite: 4
+    criteria:
+      totalFellUnconcious: [1, 3, 6, 10, 15, 20, 30, 50, 75, 100]
+  - type: STR_MEDAL_CRIMSON_HEART #given for number of days wounded. 
+
+    description: STR_MEDAL_CRIMSON_HEART_DESCRIPTION
+    sprite: 1
+    criteria:
+      totalDaysWounded: [15, 30, 60, 100, 150, 200, 300, 500, 750, 1000]
+  - type: STR_MEDAL_HEALER  #Wounds healed
+    description: STR_MEDAL_HEALER_DESCRIPTION
+    sprite: 4
+    criteria:
+      totalWoundsHealed: [5, 6, 8, 10, 15, 20, 25, 30, 40, 50]
+  - type: STR_MEDAL_REVIVE #waking a comrade up
+    description: STR_MEDAL_REVIVE_DESCRIPTION
+    sprite: 4
+    criteria:
+      totalRevives: [1, 3, 10, 15, 25, 50, 75, 100, 150, 200]
+  - type: STR_MEDAL_FRIENDLYFIRE #Hit by Friendly fire.
+    description: STR_MEDAL_FRIENDLYFIRE_DESCRIPTION
+
+    sprite: 4
+    criteria:
+      totalFriendlyFired: [1, 3, 7, 15, 25, 35, 50, 65, 80, 100]
+  - type: STR_MEDAL_LONESURVIVOR #Lone survivor of any mission
+    description: STR_MEDAL_LONESURVIVOR_DESCRIPTION
+
+    sprite: 2
+    criteria:
+      total_lone_survivor: [1, 2, 4, 8, 12, 20, 30, 50, 75, 100]
+  - type: STR_MEDAL_GLOBETROTTER #One mission in each region
+    description: STR_MEDAL_GLOBETROTTER_DESCRIPTION
+
+    sprite: 5
+    criteria:
+      globeTrotter: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  - type: STR_MEDAL_SAVEDALL #All civilians in a Pogrom were saved
+    description: STR_MEDAL_SAVEDALL_DESCRIPTION
+
+    sprite: 4
+    criteria:
+      totalValientCrux: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  - type: STR_MEDAL_CIV_STUNS #Civvie stuns
+    description: STR_MEDAL_CIV_STUNS_DESCRIPTION
+
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [2, 4, 8, 12, 16, 20, 25, 30, 40, 50]
+    killCriteria:
+      -
+         - [1, ["STATUS_UNCONSCIOUS", "FACTION_NEUTRAL"]]
+      -
+         - [1, ["STATUS_UNCONSCIOUS", "FACTION_PLAYER"]]
+  - type: STR_MEDAL_CIV_KILLS #Civvie kills
+    description: STR_MEDAL_CIV_KILLS_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [1, 2, 4, 8, 13, 20, 30, 45, 60, 80]
+    killCriteria:
+      -
+         - [1, ["STATUS_DEAD", "FACTION_NEUTRAL"]]
+  - type: STR_MEDAL_BETRAYER #Friendly Kills
+    description: STR_MEDAL_BETRAYER_DESCRIPTION
+    sprite: 3
+    criteria:
+      killsWithCriteriaCareer: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    killCriteria:
+      -
+         - [1, ["STATUS_DEAD", "FACTION_PLAYER"]]
+  - type: STR_MEDAL_VALKYRIE #Best soldier at the moment of death
+    description: STR_MEDAL_VALKYRIE_DESCRIPTION
+    sprite: 5
+    criteria:
+      bestSoldier: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  - type: STR_MEDAL_POSTMORTEM_KILL #Posthumous Award to troops that dropped an enemy even after they fell in battle.  1-10
+    description: STR_MEDAL_POSTMORTEM_KILL_DESCRIPTION
+    sprite: 1
+    criteria:
+      totalPostMortemKills: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  - type: STR_MEDAL_MIA #"Tattered Wanted Poster": missing in action
+    description: STR_MEDAL_MIA_DESCRIPTION
+    sprite: 4
+    criteria:
+      isMIA: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  - type: STR_MEDAL_FALLEN
+    description: STR_MEDAL_FALLEN_DESCRIPTION
+    sprite: 3
+    criteria:
+      isDead: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  - type: STR_MEDAL_FALLEN2
+    description: STR_MEDAL_FALLEN2_DESCRIPTION
+    sprite: 3
+    criteria:
+      isDead: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  - type: STR_MEDAL_REVOLVINGDOOR
+    description: STR_MEDAL_REVOLVINGDOOR_DESCRIPTION
+    sprite: 3
+    criteria:
+      isDead: [13, 15, 18, 20, 25, 30, 35, 50, 70, 100]

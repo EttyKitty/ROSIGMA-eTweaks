@@ -1,0 +1,51 @@
+craftWeapons:
+
+  - &MEDIUM
+    type: STR_CANNON_UC # Twin-linked Bolter
+    range: 65
+
+  - type: STR_CRAFTBOLTER_QUAD_UC
+    refNode: *MEDIUM
+
+  - type: STR_STINGRAY # Krak Missile
+    refNode: *MEDIUM
+  
+  - type: STR_AVALANCHE # Plasma Missile
+    refNode: *MEDIUM
+
+  - type: STR_LASER_CANNON_UC # Lascannon
+    refNode: *MEDIUM
+
+  - type: STR_CRAFT_MULTILASER_UC # Multilaser
+    refNode: *MEDIUM
+
+  - type: STR_CRAFT_QUADLASER_UC # Quad-linked Lascannon
+    refNode: *MEDIUM
+
+  - type: STR_CRAFT_AUTOCANNON_UC # Quad-linked Autocannon
+    refNode: *MEDIUM
+
+  - type: STR_FUSION_BALL_UC # Multimelta
+    refNode: *MEDIUM
+
+  - type: STR_PLASMA_BEAM_UC # Twin-linked Plasma
+    refNode: *MEDIUM
+
+  - type: STR_ASSCANNON_UC # Assault-Cannon
+    refNode: *MEDIUM
+
+  - type: STR_THUNDER_CANNON_UC # Battle-Cannon
+    refNode: *MEDIUM
+
+
+  - type: STR_LANCE_CANNON_UC        #R 30      A 10        D70      Acc  45
+    refNode: *MEDIUM
+
+  - type: STR_HEAVYDSCYTHES_UC               #R 50       A 4        D100     Acc 75
+    refNode: *MEDIUM
+
+  - type: STR_COBRA_CANNON_UC      #R 40      A 6         D300     Acc 30
+    refNode: *MEDIUM
+
+  - type: STR_DSTARCANNON_UC         #R 40      A 5         D120     Acc 30
+    refNode: *MEDIUM

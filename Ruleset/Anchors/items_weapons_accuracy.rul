@@ -1,0 +1,150 @@
+items:
+
+  - &BASIC_SINGLE
+    type: STR_LASCUTTER
+    accuracySnap: 80
+    accuracyAuto: 0
+    accuracyAimed: 120
+
+  - type: STR_INFERNO_PISTOL
+    refNode: *BASIC_SINGLE
+
+  - type: STR_HEAVY_LASER
+    refNode: *BASIC_SINGLE
+
+  - type: STR_HARMONIC_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_CHAOSHARMONIC_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_CHAOS_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_SMALL_LAUNCHER_TERRAN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_RIFLEC
+    refNode: *BASIC_SINGLE
+
+  - type: STR_BLASTER_LAUNCHER
+    refNode: *BASIC_SINGLE
+
+  - type: STR_BLASTER_LAUNCHER_TERRAN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_SENTINEL_MULTIMELTA
+    refNode: *BASIC_SINGLE
+
+  # - type: STR_HEAVY_CANNON
+  #   refNode: *BASIC_SINGLE
+
+  - type: STR_LASCAN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_ROCKET_LAUNCHER
+    refNode: *BASIC_SINGLE
+
+  - type: AUX_LASCAN_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - &BASIC_DOUBLE
+    type: STR_PISTOLB
+    accuracySnap: 80
+    accuracyAuto: 80
+    accuracyAimed: 120
+
+  - type: STR_PISTOLH
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_BOLTPISTOL_CHAOS
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_PISTOL
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_PISTOLS
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_RIFLE
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_RIFLEB
+    refNode: *BASIC_DOUBLE
+
+  - type: STR_HB
+    refNode: *BASIC_DOUBLE
+
+
+  # - &BASIC_TRIPLE
+  #   type: STR_RIFLE
+  #   accuracySnap: 80
+  #   accuracyAuto: 72
+  #   accuracyAimed: 120
+
+  # - type: STR_RIFLEB
+  #   refNode: *BASIC_TRIPLE
+  #   accuracySnap: 84
+  #   accuracyAuto: 74
+  #   accuracyAimed: 120
+
+  # - type: STR_HB
+  #   refNode: *BASIC_TRIPLE
+
+  - &POWER_DOUBLE
+    type: STR_PLASMA_PISTOL
+    accuracySnap: 80
+    accuracyAuto: 76
+    accuracyAimed: 80
+
+  - type: STR_PLASMA_PISTOL_TERRAN
+    refNode: *POWER_DOUBLE
+
+  - type: STR_PLASMA_RIFLE_TERRAN
+    refNode: *POWER_DOUBLE
+
+  - type: STR_PLASMA_RIFLE
+    refNode: *POWER_DOUBLE
+
+
+  - &BASIC_AUTO6
+    type: STR_AUTO_CANNON
+    accuracySnap: 80
+    accuracyAimed: 80
+  
+  - type: STR_CSERVITOR_HB
+    refNode: *BASIC_AUTO6
+
+  - &BASIC_AUTO10
+    type: STR_ASSC
+    accuracySnap: 80
+    accuracyAimed: 80
+
+  - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
+    refNode: *BASIC_AUTO10
+
+  - &BASIC_AUTO12
+    type: AUX_BOLTER
+    accuracySnap: 36
+    accuracyAimed: 58
+
+
+  - &MELEE_BASIC
+    type: STR_KNIF
+    accuracyMelee: 80
+
+  - type: STR_CHAINSWORD
+    refNode: *MELEE_BASIC
+
+  - type: STR_EVISCERATOR
+    refNode: *MELEE_BASIC
+
+  - &MELEE_CRUDE
+    type: STR_POWERFIST            #12600           DA POWER
+    accuracyMelee: 60
+
+  - type: STR_UNARMED_GAUNTLET_PLUS            #12600           DA POWER
+    refNode: *MELEE_CRUDE
+
+  - type: STR_STUN_ROD
+    refNode: *MELEE_CRUDE

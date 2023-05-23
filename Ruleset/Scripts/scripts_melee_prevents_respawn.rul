@@ -1,0 +1,16 @@
+extended:
+  scripts:
+    damageUnit:
+      - new: eTweaks_dU_melee_prevents_respawn
+        offset: 20
+        code: |
+          var int health;
+
+          if eq battle_action_hit 10;
+            unit.getHealth health;
+            if gt to_health health;
+              unit.setSpawnUnit null;
+            end;
+          end;
+          return;
+

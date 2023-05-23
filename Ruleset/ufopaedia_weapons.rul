@@ -1,0 +1,16 @@
+ufopaedia:
+
+  - id: STR_PISTOLB                      #10105
+    listOrder: 10105
+
+  - id: STR_PISTOLH                      #10120
+    image_id: 1BP.SPK
+    listOrder: 10110
+
+  - id: STR_PISTOLS                     #10110
+    listOrder: 10120
+
+  - id: AUX_BOLTER
+    type_id: 4
+    section: STR_WEAPONS_AND_EQUIPMENT
+    text: STR_AUTO_CANNON_UFOPEDIA

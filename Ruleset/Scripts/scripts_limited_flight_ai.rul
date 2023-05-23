@@ -1,0 +1,40 @@
+extended:
+  scripts:
+    newTurnUnit:
+    - new: eTweaks_nTU_limited_flight_ai
+      offset: 20
+      code: |
+        var int temp;
+        var int faction;
+        var int factionturn;
+
+        unit.getFaction faction;
+        battle_game.getTurnSide factionturn;
+
+        if and eq faction FACTION_HOSTILE eq factionturn FACTION_PLAYER;
+          # debug_log "HOSTILE UNIT FOUND";
+
+          unit.isFlying temp;
+          if eq temp 0;
+            unit.isFloating temp;
+          end;
+          if neq temp 0;
+            # debug_log "isFlying found";
+            unit.setMovementType movement_type_walk;
+            unit.setTag Tag.CooldownTime 1;
+            # debug_log "isFlying grounded";
+            return;
+          end;
+
+          unit.getTag temp Tag.CooldownTime;
+          if eq temp 1;
+            # debug_log "CooldownTime found";
+            unit.setTag Tag.CooldownTime 0;
+            unit.setMovementType movement_type_fly;
+            unit.MoveCost.setBaseFlyTimePercent 50;
+            # debug_log "CooldownTime reset";
+          end;
+
+        end;
+
+        return;

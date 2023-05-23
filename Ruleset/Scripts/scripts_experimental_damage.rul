@@ -1,0 +1,471 @@
+extended:
+  tags:
+    RuleItem:
+      MIN_DAMAGE: int
+      ARMOR_IGNORE: int
+    RuleArmor:
+      TOUGHNESS_ARMOR: int
+    RuleSoldier:
+      TOUGHNESS_SOLDIER: int
+    BattleUnit:
+      ARMOR_VALUE: int
+
+  scripts:
+    hitUnit:
+      - new: eTweaks_hU_minimum_damage
+        offset: 5 #custom minimum damage
+        code: |
+          var int minDamage;
+
+          # debug_log "minDamage script";
+
+          # debug_log "power:" power;
+          weapon_item.getTag minDamage Tag.MIN_DAMAGE;
+          if neq minDamage 0;
+            add power minDamage;
+          end;
+          damaging_item.getTag minDamage Tag.MIN_DAMAGE;
+          if neq minDamage 0;
+            add power minDamage;
+          end;
+          # debug_log "minDamage:" minDamage;
+          # debug_log "power:" power;
+          return power part side;
+
+      - new: eTweaks_hU_armor_ignore
+        offset: 6 #armorIgnore+toughness
+        code: |
+          var ptr RuleSoldier ruleS;
+          var int armorIgnore;
+          var int armorValue;
+          var int toughness;
+          var int temp;
+
+          # debug_log "armorIgnore script";
+
+          weapon_item.getTag armorIgnore Tag.ARMOR_IGNORE_BATTLE;
+          if eq armorIgnore 0;
+            damaging_item.getTag armorIgnore Tag.ARMOR_IGNORE_BATTLE;
+          end;
+
+          if eq armorIgnore 0;
+            weapon_item.getTag armorIgnore Tag.ARMOR_IGNORE;
+            if eq armorIgnore 0;
+              damaging_item.getTag armorIgnore Tag.ARMOR_IGNORE;
+            end;
+          end;
+
+          if gt armorIgnore 0;
+            # debug_log "armorIgnore:" armorIgnore;
+            unit.getArmor armorValue side;
+            # debug_log "armorValue:" armorValue;
+            unit.setTag Tag.ARMOR_VALUE armorValue;
+            sub armorValue armorIgnore;
+            unit.getTag toughness Tag.TOUGHNESS_ARMOR;
+            if eq toughness 0;
+              unit.getRuleSoldier ruleS;
+              ruleS.getTag toughness Tag.TOUGHNESS_SOLDIER;
+            end;
+            # debug_log "toughness:" toughness;
+            if lt armorValue toughness;
+              set armorValue toughness;
+            end;
+            unit.setArmor side armorValue;
+            # debug_log "armorValue:" armorValue;
+          end;
+          return power part side;
+
+    damageUnit:
+      - new: eTweaks_dU_armor_ignore
+        offset: 1 #armorIgnore script
+        code: |
+          var int armorValue;
+
+          unit.getTag armorValue Tag.ARMOR_VALUE;
+          if gt armorValue 0;
+            unit.setArmor side armorValue;
+            unit.setTag Tag.ARMOR_VALUE 0;
+          end;
+          # debug_log "armorValue:" armorValue;
+
+          return;
+
+      - new: eTweaks_dU_toughness
+        offset: 2 #toughness
+        code: |
+          var int toughness;
+          var int armorValue;
+          var int temp;
+          var ptr RuleSoldier ruleS;
+
+          unit.getTag toughness Tag.TOUGHNESS_ARMOR;
+          if eq toughness 0;
+            unit.getRuleSoldier ruleS;
+            ruleS.getTag toughness Tag.TOUGHNESS_SOLDIER;
+          end;
+          if gt toughness 0;
+            unit.getArmor armorValue side;
+            add temp armorValue;
+            sub temp to_armor;
+            if lt temp toughness;
+              unit.setArmor side toughness;
+              set to_armor 0;
+              end;
+          end;
+
+          return;
+
+    statsForNerdsItem:
+      - new: eTweaks_sFNI_stats_for_nerds
+        offset: 30
+        code: |
+          var int temp;
+
+          rule.getTag temp Tag.MIN_DAMAGE;
+          if gt temp 0;
+            stats_state.addIntRow "MIN_DAMAGE" temp;
+          end;
+          rule.getTag temp Tag.ARMOR_IGNORE;
+          if gt temp 0;
+            stats_state.addIntRow "ARMOR_IGNORE" temp;
+          end;
+
+          return;
+
+    statsForNerdsArmor:
+      - new: RT_sFNA_stats_for_nerds_armor
+        offset: 30
+        code: |
+          var int temp;
+
+          rule.getTag temp Tag.TOUGHNESS_ARMOR;
+          if gt temp 0;
+            stats_state.addIntRow "TOUGHNESS_ARMOR" temp;
+          end;
+
+          return;
+
+
+
+soldiers:
+  - type: STR_SOLDIER
+    tags:
+      TOUGHNESS_SOLDIER: 55
+
+
+  - type: STR_SOLDIER_NEOPHYTE
+    tags:
+      TOUGHNESS_SOLDIER: 30
+
+
+items:
+
+###################################### BOLT
+
+  - &BOLT_REGULAR
+    type: STR_RIFLE_CLIP
+    tags:
+      MIN_DAMAGE: 35
+      ARMOR_IGNORE: 35
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 7
+
+  - &BOLT_KRAKEN
+    type: STR_RIFLE_CLIP_AP
+    tags:
+      MIN_DAMAGE: 35
+      ARMOR_IGNORE: 70
+    damageAlter:
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 7
+
+  - &BOLT_METALFRAG
+    type: STR_RIFLE_CLIP_EX
+    tags:
+      MIN_DAMAGE: 30
+      ARMOR_IGNORE: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.2
+      ToStun: 0.0
+      RandomType: 7
+
+  - type: STR_LIGHT_BOLTER_AMMO
+    refNode: *BOLT_REGULAR
+    power: 20
+    tags:
+      MIN_DAMAGE: 20
+      ARMOR_IGNORE: 35
+
+  - type: STR_LIGHT_BOLTER_AMMO_AP
+    refNode: *BOLT_KRAKEN
+    power: 20
+    tags:
+      MIN_DAMAGE: 20
+      ARMOR_IGNORE: 70
+
+  - type: STR_LIGHT_BOLTER_AMMO_MC
+    refNode: *BOLT_KRAKEN
+    power: 20
+    tags:
+      MIN_DAMAGE: 20
+      ARMOR_IGNORE: 70
+
+
+  - type: STR_PISTOL_CLIP
+    refNode: *BOLT_REGULAR
+
+  - type: STR_PISTOL_CLIP_AP
+    refNode: *BOLT_KRAKEN
+
+  - type: STR_PISTOL_CLIP_EX
+    refNode: *BOLT_METALFRAG
+
+  - type: STR_LIGHT_BOLTPISTOL_AMMO
+    refNode: *BOLT_REGULAR
+    tags:
+      MIN_DAMAGE: 20
+      ARMOR_IGNORE: 35
+
+
+  - type: STR_AC_AP_AMMO
+    refNode: *BOLT_REGULAR
+    tags:
+      MIN_DAMAGE: 50
+      ARMOR_IGNORE: 45
+
+  - type: STR_AC_HE_AMMO
+    refNode: *BOLT_METALFRAG
+    tags:
+      MIN_DAMAGE: 40
+      ARMOR_IGNORE: 30
+
+  - type: STR_AC_KP_AMMO
+    refNode: *BOLT_KRAKEN
+    tags:
+      MIN_DAMAGE: 50
+
+  - type: STR_AC_I_AMMO
+    tags:
+      MIN_DAMAGE: 40
+      ARMOR_IGNORE: 45
+
+  - type: AUX_BOLTER
+    refNode: *BOLT_REGULAR
+    tags:
+      MIN_DAMAGE: 50
+      ARMOR_IGNORE: 45
+
+  - type: STR_CSERVITOR_HB_AMMO
+    refNode: *BOLT_REGULAR
+    tags:
+      MIN_DAMAGE: 50
+      ARMOR_IGNORE: 45
+
+  - type: STR_HB_CLIP
+    refNode: *BOLT_REGULAR
+    power: 20
+    clipSize: 60
+
+###################################### SOLID PROJECTILE
+
+  # - type: STR_HC_AP_AMMO
+  #   tags:
+  #     MIN_DAMAGE: 35
+  #     ARMOR_IGNORE: 45
+
+  - type: STR_ASSC_CLIP
+    tags:
+      MIN_DAMAGE: 50
+      ARMOR_IGNORE: 55
+
+  - type: STR_RIPPER_GUN_CLIP
+    tags:
+      MIN_DAMAGE: 30
+      ARMOR_IGNORE: 0
+    power: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+
+  - type: STR_STUB_GUN_AMMO_HP
+    tags:
+      MIN_DAMAGE: 10
+      ARMOR_IGNORE: 10
+    power: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+
+  - type: STR_SHOTGUN_SHELLS
+    tags:
+      MIN_DAMAGE: 15
+      ARMOR_IGNORE: 0
+    power: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+
+  - type: STR_AUTOGUN_CLIP
+    tags:
+      MIN_DAMAGE: 14
+      ARMOR_IGNORE: 0
+    power: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+
+  - type: STR_AUTOPISTOL_CLIP
+    tags:
+      MIN_DAMAGE: 8
+      ARMOR_IGNORE: 0
+    power: 20
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+
+
+###################################### FLAME
+
+
+  - type: STR_FLAMETHROWER_CLIP
+    tags:
+      MIN_DAMAGE: 15
+      ARMOR_IGNORE: 15
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+    power: 20
+
+
+###################################### LASER
+
+
+  - type: STR_LASCAN_CLIP
+    tags:
+      MIN_DAMAGE: 40
+      ARMOR_IGNORE: 90
+
+  - type: STR_LASCUTTER_SMALL_AMMO #Lascutter ammo small inventory size                2020
+    tags:
+      MIN_DAMAGE: 10
+      ARMOR_IGNORE: 40
+
+  - type: STR_LASCUTTER_BIG_AMMO #Lascutter ammo big inventory size                2020
+    tags:
+      MIN_DAMAGE: 10
+      ARMOR_IGNORE: 40
+
+  - type: STR_LASGUN_CLIP_HOTSHOT_CHAOS
+    tags:
+      MIN_DAMAGE: 15
+      ARMOR_IGNORE: 30
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 7
+    power: 20
+
+  - type: STR_LASPISTOL_CLIP
+    tags:
+      MIN_DAMAGE: 10
+      ARMOR_IGNORE: 0
+    damageAlter: 
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+    power: 20
+
+
+###################################### MELTA
+
+
+  - type: STR_MELTA_AMMO
+    tags:
+      MIN_DAMAGE: 55
+      ARMOR_IGNORE: 110
+
+  - type: STR_MELTA_AMMO_HARMONIC
+    tags:
+      MIN_DAMAGE: 25
+      ARMOR_IGNORE: 110
+    damageAlter: 
+      ToArmorPre: 0.3
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 8
+    power: 40
+
+
+###################################### PLASMA
+
+  - type: STR_PLASMA_RIFLE_CLIP
+    tags:
+      MIN_DAMAGE: 50
+      ARMOR_IGNORE: 90
+
+  - type: STR_PLASMA_PISTOL_CLIP
+    tags:
+      MIN_DAMAGE: 40
+      ARMOR_IGNORE: 70
+
+###################################### GRAVITON
+
+  - type: STR_STUN_BOMB #GRAVGUN                               2062
+    tags:
+      MIN_DAMAGE: 25
+      ARMOR_IGNORE: 55
+
+#################################### MISSILES
+
+  - type: STR_SMALL_ROCKET
+    tags:
+      ARMOR_IGNORE: 35
+
+  - type: STR_LARGE_ROCKET
+    tags:
+      MIN_DAMAGE: 40
+      ARMOR_IGNORE: 70

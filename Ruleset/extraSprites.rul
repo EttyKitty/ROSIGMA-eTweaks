@@ -1,0 +1,42 @@
+extraSprites:
+
+  - type: BIGOBS.PCK
+    files:
+      0: Resources/Heavybolter/CASE4.png
+      58: Resources/Items/bigob_FirstAid.png
+      59: Resources/NULL/Null_Void_2x2.png
+
+  - type: STORMBOLTER_TURRET.PCK
+    width: 512
+    height: 200
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/STORMBOLTER_TURRET.png
+
+  - typeSingle: STORMBOLTER_TURRET.SPK
+    fileSingle: Resources/UnitSprites/STORMBOLTER_TURRET_INV.png
+
+
+  - type: FLOOROB.PCK
+    files:
+      74: Resources/Items/floorob_FirstAid.png
+
+  - type: SMOKE.PCK
+    width: 320
+    height: 40
+    subX: 32
+    subY: 40
+    files:
+      100: Resources/Rank/veteran_battle.png
+      101: Resources/Rank/ancient_battle.png
+
+
+
+  - type: BASEBITS.PCK
+    files:
+      100: Resources/Rank/veteran_base.png
+      101: Resources/Rank/ancient_base.png  
+
+  - typeSingle: ARTIFICER__1__ARTIFICERMF
+    fileSingle: Resources/LAYER/ULTRAMARINE/ARTIFICER.png

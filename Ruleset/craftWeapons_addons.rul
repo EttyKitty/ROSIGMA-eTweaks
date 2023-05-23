@@ -1,0 +1,25 @@
+craftWeapons:
+
+  - type: STR_THRUSTER_UC
+    weaponType: 50
+
+  - type: STR_TARGETER_UC
+    weaponType: 50
+
+  - type: STR_HULL_PLATING_UC
+    weaponType: 50
+
+  - type: STR_FLARE_LAUNCH_UC
+    weaponType: 50
+
+  - type: STR_SCANNER_UC
+    weaponType: 50
+
+  - type: STR_RETICULE_UC
+    weaponType: 50
+
+  - type: STR_CRAFT_SHIELD_UC
+    weaponType: 50
+
+  - type: STR_ELDAR_SHIELD_UC
+    weaponType: 50

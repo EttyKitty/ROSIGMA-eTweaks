@@ -1,0 +1,37 @@
+research:
+
+  - name: STR_HUMAN_SIZED_WEAPONS
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ADEPTAS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_IMPERIAL_GUARD_OPERATIONS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_ARBITES
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_CHAMBERMILITANT
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_LASCAN_MALTHUS
+    dependencies: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_LIGHT_MELTA_AMMO
+    dependencies: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_HARMONIC_MELTAGUN
+    dependencies: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_MULTILAS_HANDHELD_RESEARCH
+    dependencies: !add
+      - STR_HUMAN_SIZED_WEAPONS

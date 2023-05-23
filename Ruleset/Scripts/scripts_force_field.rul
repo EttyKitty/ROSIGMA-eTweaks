@@ -1,0 +1,107 @@
+extended:
+  tags:
+    RuleArmor:
+      FORCE_FIELD_RATING: int
+      FORCE_FIELD_OVERLOAD_RATING: int
+    BattleUnit:
+      FORCE_FIELD_OVERLOADED: int
+
+  scripts:
+    hitUnit:
+      - new: eTweaks_hU_force_field
+        offset: 20
+        code: |
+          var int temp;
+          var int randomNumber;
+          var int forceFieldRating;
+          var ptr RuleArmor targetArmor;
+          var ptr RuleItem damagingItem;
+          var ptr RuleDamageType damageType;
+
+          unit.getRuleArmor targetArmor;
+          targetArmor.getTag forceFieldRating Tag.FORCE_FIELD_RATING;
+          if eq 0 forceFieldRating;
+            return power part side;
+          end;
+
+          unit.getTag temp Tag.FORCE_FIELD_OVERLOADED;
+          if eq 1 temp;
+            return power part side;
+          end;
+
+          damaging_item.getRuleItem damagingItem;
+          damagingItem.getDamageType damageType;
+          damageType.getResistType temp;
+
+          # don't dodge on psi
+          if or eq battle_action BA_PANIC eq battle_action BA_MINDCONTROL eq battle_action BA_USE;
+            return power part side;
+          end;
+
+          # don't dodge support skills
+          # terrain artillery shell (terror city map) do damageType 0
+          if or eq temp 0 eq temp 10; # Support or Impact (IG Support, non-IG drop deploy) damage type
+            return power part side;
+          end;
+
+
+          battle_game.randomRange randomNumber 1 100;
+          # debug_log "randomNumber" randomNumber;
+          # debug_log "forceFieldRating" forceFieldRating;
+
+          if ge randomNumber forceFieldRating;
+            # debug_log "hit";
+            return power part side;
+          end;
+
+          targetArmor.getTag temp Tag.FORCE_FIELD_OVERLOAD_RATING;
+          # debug_log "overloadRating:" overloadRating;
+          if le randomNumber temp;
+            unit.setTag Tag.FORCE_FIELD_OVERLOADED 1;
+            battle_game.flashMessage "STR_NULLIFIED_OVERLOADED";
+            # debug_log "overloaded";
+          else;
+            battle_game.flashMessage "STR_NULLIFIED";
+            # debug_log "nullified";
+          end;
+
+          return 0 part side;
+
+    statsForNerdsArmor:
+      - new: RT_sFNA_stats_for_nerds_armor_2
+        offset: 30
+        code: |
+          var int temp;
+
+          rule.getTag temp Tag.FORCE_FIELD_RATING;
+          if gt temp 0;
+            stats_state.addIntRow "FORCE_FIELD_RATING" temp;
+            rule.getTag temp Tag.FORCE_FIELD_OVERLOAD_RATING;
+            stats_state.addIntRow "FORCE_FIELD_OVERLOAD_RATING" temp;
+          end;
+
+          return;
+
+armors:
+  - &TERMINATOR_ARMOR_1
+    type: STR_POWER_SUIT_UC
+    tags:
+      FORCE_FIELD_RATING: 35
+    
+  - type: STR_TSARGENT_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_FLYING_SUIT_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_CAPTAIN_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_GREYKNIGHT_UC 
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_CHAOS_TERMINATOR_ARMOR
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: MUTON_ARMORTZEENTCH_PLAYER
+    refNode: *TERMINATOR_ARMOR_1

@@ -1,0 +1,9 @@
+units:
+
+  - &noPsiSkill
+    type: STR_TZEENTCH_FEM_CULTIST
+    stats:
+      psiSkill: 0
+
+  - type: STR_TZEENTCH_FEM_CULTIST
+    refNode: *noPsiSkill

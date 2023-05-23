@@ -1,0 +1,145 @@
+items:
+#################################### BASIC AUTO ####################################
+
+  - &BASIC_AUTO
+    type: STR_RIFLE
+    tuSnap: 22
+    tuAuto: 22
+    tuAimed: 0
+
+  - type: STR_RIFLEB
+    refNode: *BASIC_AUTO
+
+  - type: STR_PISTOLB
+    refNode: *BASIC_AUTO
+
+  - type: STR_PISTOLH
+    refNode: *BASIC_AUTO
+
+  - type: STR_PISTOLS
+    refNode: *BASIC_AUTO
+
+  - type: STR_BOLTPISTOL_CHAOS
+    refNode: *BASIC_AUTO
+
+  - type: STR_PISTOL
+    refNode: *BASIC_AUTO
+
+  - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
+    refNode: *BASIC_AUTO
+
+  - type: STR_HB
+    refNode: *BASIC_AUTO
+
+#################################### BASIC SINGLE ####################################
+
+  # - &BASIC_SINGLE
+  #   type: STR_HEAVY_CANNON # done # Sniper
+  #   tuSnap: 22
+  #   tuAuto: 0
+  #   tuAimed: 0
+
+  - &BASIC_SINGLE
+    type: STR_RIFLEC
+    tuSnap: 22
+    tuAuto: 0
+    tuAimed: 0
+
+  - type: STR_HEAVY_LASER
+    refNode: *BASIC_SINGLE
+
+  - type: STR_INFERNO_PISTOL
+    refNode: *BASIC_SINGLE
+
+  - type: STR_HARMONIC_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_CHAOSHARMONIC_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_CHAOS_MELTAGUN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_SMALL_LAUNCHER_TERRAN # done # Gravgun
+    refNode: *BASIC_SINGLE
+
+#################################### BASIC POWER ####################################
+
+  - &BASIC_POWER
+    type: STR_PLASMA_RIFLE_TERRAN # done
+    tuSnap: 22
+    tuAuto: 44
+    tuAimed: 22
+
+  - type: STR_PLASMA_PISTOL_TERRAN #                11200
+    refNode: *BASIC_POWER
+
+  - type: STR_PLASMA_RIFLE
+    refNode: *BASIC_POWER
+
+  - type: STR_PLASMA_PISTOL
+    refNode: *BASIC_POWER
+
+#################################### HEAVY AUTO ####################################
+
+  - &HEAVY_AUTO
+    type: STR_AUTO_CANNON
+    kneelBonus: 100
+    tuSnap: 22
+    tuAuto: 0
+    tuAimed: 0
+
+  - type: STR_ASSC
+    refNode: *HEAVY_AUTO
+
+  - type: STR_CSERVITOR_HB
+    refNode: *HEAVY_AUTO
+
+#################################### HEAVY SINGLE ####################################
+
+  - &HEAVY_SINGLE
+    type: STR_LASCAN
+    kneelBonus: 100
+    tuSnap: 22
+    tuAuto: 0
+    tuAimed: 0
+
+  # - type: STR_LASCAN
+  #   refNode: *BASIC_SINGLE
+
+  - type: STR_LASCUTTER
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_BLASTER_LAUNCHER
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_BLASTER_LAUNCHER_TERRAN
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_SENTINEL_MULTIMELTA
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_ROCKET_LAUNCHER
+    refNode: *HEAVY_SINGLE
+
+  - type: AUX_LASCAN_CHAOS
+    refNode: *HEAVY_SINGLE
+
+#################################### MELEE ####################################
+
+  - &MELEE
+    type: STR_POWERFIST            #12600           DA POWER
+    tuMelee: 16
+    flatRate: true
+
+  - type: STR_UNARMED_GAUNTLET_PLUS            #12600           DA POWER
+    refNode: *MELEE
+
+  - type: STR_KNIF
+    refNode: *MELEE
+
+  - type: STR_CHAINSWORD
+    refNode: *MELEE
+
+  - type: STR_STUN_ROD
+    refNode: *MELEE

@@ -1,0 +1,23 @@
+# extended:
+#   scripts:
+#     accuracyMultiplierBonusStats:
+#       - new: eTweaks_aMBS_flying_armor_heavy_weapon_block
+#         offset: 10
+#         code: |
+#           var int temp;
+#           var ptr RuleArmor ruleA;
+
+#           unit.getRuleArmor ruleA;
+#           ruleA.getTag temp Tag.MaxFlight;
+#           # debug_log "isFlyingArmor:" temp;
+
+#           if neq temp 0;
+#             weapon.getTag temp Tag.ITEM_IS_HEAVY_WEAPON;
+#             # debug_log "isHeavyWeapon:" temp;
+#             if neq temp 0;
+#               set bonus 0;
+#               return bonus;
+#             end;
+#           end;
+
+#           return bonus;

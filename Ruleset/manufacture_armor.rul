@@ -1,0 +1,36 @@
+manufacture:
+
+  - name: STR_TATICAL_ARMOR
+    requiredItems:
+      STR_UFO_CONSTRUCTION: 6
+
+  - name: STR_APOT_ARMOR
+    requires:
+      - "STR_GENERALLOCK"
+
+  - name: STR_TECH_ARMOR
+    requires:
+      - "STR_GENERALLOCK"
+
+  - name: STR_ASS_ARMOR
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      STR_ALIEN_ALLOYS: 15
+
+  - name: STR_DEV_ARMOR
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      STR_ALIEN_ALLOYS: 15
+
+  - name: STR_POWER_SUIT
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_UFO_CONSTRUCTION: 45
+      STR_ELERIUM_115: 15
+      STR_KILLPOINT_TOKEN: 60
+
+  - name: STR_SCOUTH
+    time: 400
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5

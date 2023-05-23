@@ -1,0 +1,209 @@
+facilities:
+
+  - type: STR_ACCESS_LIFT
+    provideBaseFunc: !add
+    - "TRADE"
+
+  - type: STR_CORRIDOR
+    canBeBuiltOver: true
+
+  - type: STR_HANGAR
+    refundValue: 50000
+
+  - type: STR_LABORATORY
+    refundValue: 1000000
+    labs: 100
+    buildCost: 3000000
+  
+  - type: STR_GENERAL_STORES
+    storage: 200
+    buildCost: 300000
+    refundValue: 100000
+  
+  - type: STR_ARMORY
+    workshops: 25
+    storage: 100
+  
+  - type: STR_STEELMILL
+    refundValue: 1500000
+
+#################################################### OUTPOSTS ####################################################
+
+  - type: STR_DIRT
+    canBeBuiltOver: true
+
+  - type: STR_EMPLACEMENT               #53
+    maxAllowedPerBase: 4
+    buildCost: 500000
+    refundValue: 400000
+    defense: 800
+    hitRatio: 40
+    fireSound: 5
+    hitSound: 10
+
+  - type: STR_OUTPOST_MARINES
+    requiresBaseFunc: [OUTP]
+    provideBaseFunc: [TRADE, IMPERIUM, HANGAR]
+    canBeBuiltOver: true
+    buildTime: 10
+    monthlyCost: 80000
+    aliens: 10
+
+  - type: STR_MARKET
+    requiresBaseFunc: [OUTP]
+    provideBaseFunc: [TRADE, IMPERIUM, HANGAR]
+    canBeBuiltOver: true
+    monthlyCost: -500000
+    spriteShape: {mod: 40k, index: 600}
+    spriteFacility: {mod: 40k, index: 600}
+    buildCost: 3000000
+    crafts: 1
+    buildTime: 20
+    personnel: 50
+    aliens: 10
+    storage: 100
+    radarRange: 2577
+    radarChance: 20
+    mapName: XBASE_60
+    storageTiles:
+            - [24, 6, 1]
+            - [25, 6, 1]
+            - [27, 6, 1]
+            - [22, 4, 1]
+            - [34, 10, 1]
+            - [28, 3, 1]
+            - [27, 3, 2]
+    verticalLevels:
+      - type: ground
+        terrain: baseTerrain
+        groups: [13]
+        size: [4, 4, 0]
+      - type: middle
+        blocks: [60] # probably not 60, you'll have to count the number of where XBASE_60 is in the terrain, starting from 0
+        size: [4, 4, 1] # if the craft is going on z = 1, the height here needs to be 1
+      - type: ceiling
+        size: [4, 4, 3] # x and y need to match the size of the facility, and all of the heights should add up to the deployment height
+        terrain: STORMT4X4 # needs a 40x40 map to match the outpost
+        blocks: [0]
+
+  - type: STR_TRAINCAMP
+    requiresBaseFunc: [OUTP]
+    spriteShape: {mod: 40k, index: 600}
+    spriteFacility: {mod: 40k, index: 600}
+    size: 4
+    buildCost: 1500000
+    buildTime: 15
+    personnel: 50
+    aliens: 10
+    storage: 100
+    monthlyCost: 100000
+    trainingRooms: 50
+    radarRange: 2577
+    radarChance: 20
+    crafts: 1
+    provideBaseFunc: [TRADE, IMPERIUM, HANGAR, TRAIN]
+    mapName: XBASE_60
+    storageTiles:
+            - [24, 6, 1]
+            - [25, 6, 1]
+            - [27, 6, 1]
+            - [22, 4, 1]
+            - [34, 10, 1]
+            - [28, 3, 1]
+            - [27, 3, 2]
+    verticalLevels:
+      - type: ground
+        terrain: baseTerrain
+        groups: [13]
+        size: [4, 4, 0]
+      - type: middle
+        blocks: [60] # probably not 60, you'll have to count the number of where XBASE_60 is in the terrain, starting from 0
+        size: [4, 4, 1] # if the craft is going on z = 1, the height here needs to be 1
+      - type: ceiling
+        size: [4, 4, 3] # x and y need to match the size of the facility, and all of the heights should add up to the deployment height
+        terrain: STORMT4X4 # needs a 40x40 map to match the outpost
+        blocks: [0]
+
+  # - type: STR_OUTPOST_RESEARCH
+  #   requiresBaseFunc: [OUTP]
+  #   placeSound: {mod: 40k, index: 98}
+  #   provideBaseFunc: [TRADE, IMPERIUM, HANGAR, RESE]
+  #   connectorsDisabled: true
+  #   spriteShape: {mod: 40k, index: 600}
+  #   spriteFacility: {mod: 40k, index: 600}
+  #   size: 4
+  #   buildCost: 3500000
+  #   crafts: 1
+  #   buildTime: 20
+  #   monthlyCost: 200000
+  #   personnel: 120
+  #   labs: 100
+  #   aliens: 10
+  #   storage: 100
+  #   radarRange: 2577
+  #   radarChance: 20
+  #   mapName: XBASE_60
+  #   storageTiles:
+  #           - [24, 6, 1]
+  #           - [25, 6, 1]
+  #           - [27, 6, 1]
+  #           - [22, 4, 1]
+  #           - [34, 10, 1]
+  #           - [28, 3, 1]
+  #           - [27, 3, 2]
+  #   verticalLevels:
+  #     - type: ground
+  #       terrain: baseTerrain
+  #       groups: [13]
+  #       size: [4, 4, 0]
+  #     - type: middle
+  #       blocks: [60] # probably not 60, you'll have to count the number of where XBASE_60 is in the terrain, starting from 0
+  #       size: [4, 4, 1] # if the craft is going on z = 1, the height here needs to be 1
+  #     - type: ceiling
+  #       size: [4, 4, 3] # x and y need to match the size of the facility, and all of the heights should add up to the deployment height
+  #       terrain: STORMT4X4 # needs a 40x40 map to match the outpost
+  #       blocks: [0]
+  #   listOrder: 100
+
+  - type: STR_OUTPOST_RADAR
+    requiresBaseFunc: [OUTP]
+    placeSound: {mod: 40k, index: 98}
+    provideBaseFunc: [IMPERIUM]
+    connectorsDisabled: true
+    spriteShape: {mod: 40k, index: 600}
+    spriteFacility: {mod: 40k, index: 600}
+    size: 4
+    buildCost: 500000
+    buildTime: 5
+    monthlyCost: 40000
+    personnel: 5
+    storage: 15
+    radarRange: 2577
+    radarChance: 20
+    mapName: XBASE_60
+    storageTiles:
+            - [24, 6, 1]
+            - [25, 6, 1]
+            - [27, 6, 1]
+            - [22, 4, 1]
+            - [34, 10, 1]
+            - [28, 3, 1]
+            - [27, 3, 2]
+    verticalLevels:
+      - type: ground
+        terrain: baseTerrain
+        groups: [13]
+        size: [4, 4, 0]
+      - type: middle
+        blocks: [60] # probably not 60, you'll have to count the number of where XBASE_60 is in the terrain, starting from 0
+        size: [4, 4, 1] # if the craft is going on z = 1, the height here needs to be 1
+      - type: ceiling
+        size: [4, 4, 3] # x and y need to match the size of the facility, and all of the heights should add up to the deployment height
+        terrain: STORMT4X4 # needs a 40x40 map to match the outpost
+        blocks: [0]
+    listOrder: 100
+    canBeBuiltOver: true
+
+  - type: STR_MINEFIELD                #55
+    maxAllowedPerBase: 4
+    refundValue: 50000

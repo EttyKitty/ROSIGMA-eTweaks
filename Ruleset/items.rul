@@ -1,0 +1,55 @@
+items:
+
+  - type: STR_MEDICAE_POUCH
+    weight: 2
+    bigSprite: 58
+    floorSprite: 74
+    battleType: 6
+    woundRecovery: 1
+    healthRecovery: 0
+    stunRecovery: 5
+    energyRecovery: 5
+    painKiller: 8
+    heal: 8
+    stimulant: 8
+    medikitTargetSelf: true
+    isConsumable: true
+    medikitType: 0
+    costUse:
+      time: 10
+    invWidth: 1
+    invHeight: 2
+    attraction: 15
+    recover: false
+    scripts:
+      healUnit: |
+        var RuleArmor ptr ruleA;
+        var int isPowerArmor;
+
+        target.getRuleArmor ruleA;
+        ruleA.getTag isPowerArmor Tag.POWER_ARMOR;
+        if neq isPowerArmor 0;
+          set wound_recovery 0;
+          set energy_recovery 0;
+          set stun_recovery 0;
+          set painkiller_recovery 0;
+          set morale_recovery 0;
+        end;
+
+        return;
+
+  - type: STR_BACKPACK_AMMO_SUPPLY
+    weight: 50
+    bigSprite: {mod: 40k, index: 247}
+    floorSprite: {mod: 40k, index: 128}
+    handSprite: {mod: 40k, index: 456}
+    costBuy: 60000
+    battleType: 2
+    invWidth: 2
+    invHeight: 3
+    clipSize: 20
+    armor: 40
+    recover: true
+
+  - type: STR_MOTION_SCANNER
+

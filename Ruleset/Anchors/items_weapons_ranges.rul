@@ -1,0 +1,125 @@
+items:
+
+  - &RANGE_1
+    type: STR_LASCUTTER
+    dropoff: 4
+    autoRange: 1
+    snapRange: 2
+    aimRange: 3
+
+  - type: STR_INFERNO_PISTOL
+    refNode: *RANGE_1
+
+  - &RANGE_2
+    type: STR_HEAVY_LASER
+    dropoff: 4
+    autoRange: 2
+    snapRange: 4
+    aimRange: 6
+
+  - type: STR_HARMONIC_MELTAGUN
+    refNode: *RANGE_2
+
+  - type: STR_CHAOSHARMONIC_MELTAGUN
+    refNode: *RANGE_2
+
+  - type: STR_CHAOS_MELTAGUN
+    refNode: *RANGE_2
+
+  - &RANGE_3
+    type: STR_PISTOLB
+    dropoff: 4
+    autoRange: 3
+    snapRange: 6
+    aimRange: 9
+
+  - type: STR_PISTOLH
+    refNode: *RANGE_3
+
+  - type: STR_BOLTPISTOL_CHAOS
+    refNode: *RANGE_3
+
+  - type: STR_PISTOL
+    refNode: *RANGE_3
+
+  - type: STR_PLASMA_PISTOL
+    refNode: *RANGE_3
+
+  - type: STR_PLASMA_PISTOL_TERRAN
+    refNode: *RANGE_3
+
+  - type: STR_SMALL_LAUNCHER_TERRAN
+    refNode: *RANGE_3
+
+  - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
+    refNode: *RANGE_3
+
+  - &RANGE_10
+    type: STR_RIFLE
+    dropoff: 4
+    autoRange: 5
+    snapRange: 10
+    aimRange: 15
+
+  - type: STR_RIFLEB
+    refNode: *RANGE_10
+    
+  - type: STR_PISTOLS
+    refNode: *RANGE_10
+
+  - type: STR_PLASMA_RIFLE_TERRAN
+    refNode: *RANGE_10
+
+  - type: STR_PLASMA_RIFLE
+    refNode: *RANGE_10
+
+  - type: STR_HB
+    refNode: *RANGE_10
+
+  - &RANGE_15
+    type: STR_AUTO_CANNON
+    dropoff: 4
+    autoRange: 8
+    snapRange: 16
+    aimRange: 24
+
+  # - type: STR_HEAVY_CANNON
+  #   refNode: *RANGE_15
+
+  - type: STR_ASSC
+    refNode: *RANGE_15
+
+  - type: STR_BLASTER_LAUNCHER
+    refNode: *RANGE_15
+
+  - type: STR_BLASTER_LAUNCHER_TERRAN
+    refNode: *RANGE_15
+
+  - type: STR_SENTINEL_MULTIMELTA
+    refNode: *RANGE_15
+
+  - type: STR_CSERVITOR_HB
+    refNode: *RANGE_15
+  
+  - type: AUX_BOLTER
+    refNode: *RANGE_15
+
+  - &RANGE_20
+    type: STR_RIFLEC
+    dropoff: 4
+    autoRange: 10
+    snapRange: 20
+    aimRange: 30
+
+  - &RANGE_30
+    type: STR_LASCAN
+    dropoff: 4
+    autoRange: 12
+    snapRange: 24
+    aimRange: 36
+
+  - type: AUX_LASCAN_CHAOS
+    refNode: *RANGE_30
+
+  - type: STR_ROCKET_LAUNCHER
+    refNode: *RANGE_30

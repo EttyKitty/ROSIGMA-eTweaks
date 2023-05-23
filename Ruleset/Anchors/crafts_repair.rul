@@ -1,0 +1,43 @@
+crafts:
+  - &NORMAL
+    type: STR_SKYRANGER
+    repairRate: 10
+
+  - type: STR_DROP
+    refNode: *NORMAL
+
+  - type: STR_INTERCEPTOR
+    refNode: *NORMAL
+
+  - type: STR_VALKYRIE
+    refNode: *NORMAL
+
+  - type: STR_RHINO_NO_TT
+    refNode: *NORMAL
+
+  - type: STR_CORVUS
+    refNode: *NORMAL
+
+  - type: STR_SPEEDC
+    refNode: *NORMAL
+
+  - type: STR_FIRESTORM #STORMRAVEN
+    refNode: *NORMAL
+
+  - type: STR_STORMEAGLE
+    refNode: *NORMAL
+
+  - type: STR_THUNDERHAWNK #thunderhawnk Type 1
+    refNode: *NORMAL
+
+  - type: STR_AVENGER # Thunderhawnk Transport + Landrider
+    refNode: *NORMAL
+
+  - type: STR_TTSCT # Thunderhawnk Transport + Damocles
+    refNode: *NORMAL
+
+  - type: STR_TTDEV # Thunderhawnk Transport + Whirlwind
+    refNode: *NORMAL
+
+  - type: STR_TTASS # Thunderhawnk Transport + Razorback
+    refNode: *NORMAL

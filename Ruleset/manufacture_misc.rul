@@ -1,0 +1,37 @@
+manufacture:
+
+  - name: STR_CHAPTERARMY
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_CRATED_DROPPODS
+    requires: !remove
+      - STR_CRATED_DROPPODS
+
+  - name: STR_CRATED_LANDSPEEDER
+    requires: !remove
+      - STR_CRATED_LANDSPEEDER
+
+  - name: STR_CRATED_RHINO
+    requires: !remove
+      - STR_CRATED_RHINO
+
+  - name: STR_DREAD2_ARMOR
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_DREAD3_ARMOR
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_DREAD4_ARMOR
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_DREAD5_ARMOR
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - name: STR_FIRESTORM
+    requires: !remove
+      - STR_NOT_PRIMARIS

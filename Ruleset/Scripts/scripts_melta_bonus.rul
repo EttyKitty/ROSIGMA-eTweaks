@@ -1,0 +1,54 @@
+extended:
+  scripts:
+    hitUnit:
+      - new: eTweaks_hU_melta_bonus
+        offset: 4
+        code: |
+          var int temp;
+          var int distance;
+          var int x;
+          var int y;
+          var int z;
+          var ptr Tile tile1;
+          var ptr Tile tile2;
+
+          damaging_item.getTag temp Tag.MELTA;
+          if neq temp 0;
+
+            unit.getPosition.getX x;
+            unit.getPosition.getY y;
+            unit.getPosition.getZ z;
+            battle_game.getTile tile2 x y z;
+
+            attacker.getPosition.getX x;
+            attacker.getPosition.getY y;
+            attacker.getPosition.getZ z;
+            battle_game.getTile tile1 x y z;
+
+            tile1.getDistanceTile distance tile2;
+            debug_log "distance:" distance;
+            debug_log "MELTA:" temp;
+
+            if le distance temp;
+              damaging_item.getTag temp Tag.ARMOR_IGNORE;
+              debug_log "ARMOR_IGNORE:" temp;
+              mul temp 2;
+              damaging_item.setTag Tag.ARMOR_IGNORE_BATTLE temp;
+              debug_log "ARMOR_IGNORE_BATTLE:" temp;
+            end;
+
+          end;
+
+          return power part side;
+
+
+  tags:
+    RuleItem:
+      MELTA: int
+    BattleItem:
+      ARMOR_IGNORE_BATTLE: int
+
+items:
+  - type: STR_MELTA_AMMO
+    tags:
+      MELTA: 3

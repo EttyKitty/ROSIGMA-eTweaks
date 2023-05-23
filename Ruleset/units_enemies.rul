@@ -1,0 +1,6 @@
+units:
+
+  - type: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
+    builtInWeaponSets:
+          - - STR_CSERVITOR_HB #Chaos servitor heavybolter
+            - STR_CSERVITOR_HB_AMMO #standard "weak" rounds

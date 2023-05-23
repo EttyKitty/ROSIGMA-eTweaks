@@ -1,0 +1,10 @@
+# extended:
+#   scripts:
+#     damageUnit:
+#       - new: eTweaks_dU_fire
+#         offset: 5
+#         code: |
+
+#           debug_log "Damage:" to_health;
+
+#           return;

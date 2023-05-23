@@ -1,0 +1,105 @@
+#Ammo backpack: Items with the right tags refill the accompanying item every turn when active. 
+#Could potentially skip the priming thing. 
+#Pseudocode for version 1:
+#Each turn, if the item has the tag IS_AMMO_BACKPACK and is primed and in a soldier's inventory:
+# If the item does not have a connected item, see if there's a matching weapon elsewhere in the same inventory. If so, connect that item. If not, unprime the backpack.
+# If the item does have a connected 
+
+extended:
+  tags:
+    RuleItem:
+      ITEM_IS_AMMO_BACKPACK: int #used as a boolean
+      CLIP_CAPACITY: int #This is equal for an ammo type and a backpack that can fill it
+#Pseudocode:
+#Each turn:
+# If the item has the AMMO_BACKPACK tag and more than 1 ammo:
+#  If an ammo item in the user's inventory (including in weapons) matches the backpack's ammo type:
+#   Calculate AmmoNeeded (Clip size minus ammoQuantity for ammo item) and BackpackAmmo (Backpack's ammoQuantity minus 1)
+#   If AmmoNeeded is less than BackpackAmmo, fill the ammo up to its clip size, and subtract AmmoNeeded from the backpack's remaining ammo
+#   If AmmoNeeded is greater than BackpackAmmo, increase the item's ammoQuantity by BackpackAmmo, and set the backpack's ammo to 1.
+  scripts:
+    newTurnItem:
+      - new: eTweaks_nTI_backpack
+        offset: 5
+        code: |
+          var int clipCapacity;
+          var int ammoAvailable;
+          var int currentAmmo; 
+          var int temp;
+          var ptre BattleUnit wearer;
+          var ptre BattleItem weapon;
+          var ptre BattleItem ammoItem;
+          
+          item.getTag temp Tag.ITEM_IS_AMMO_BACKPACK;
+          # debug_log "ITEM_IS_AMMO_BACKPACK:" temp;
+
+          if neq temp 1;
+            return;
+          end;
+          
+          item.getAmmoQuantity ammoAvailable;
+          item.getOwner wearer;
+
+          wearer.getRightHandWeapon weapon;
+          weapon.getAmmoItem ammoItem;
+
+          # debug_log ammoAvailable;
+          # debug_log wearer;
+          # debug_log weapon;
+          # debug_log ammoItem;
+
+          ammoItem.getTag clipCapacity Tag.CLIP_CAPACITY;
+          ammoItem.getAmmoQuantity currentAmmo;
+          # debug_log clipCapacity;
+          # debug_log currentAmmo;
+          if gt clipCapacity currentAmmo;
+            set temp clipCapacity;
+            # debug_log "temp:" temp;
+            sub temp currentAmmo;
+            # debug_log "temp:" temp;
+            if gt ammoAvailable temp;
+              ammoItem.setAmmoQuantity clipCapacity;
+              sub ammoAvailable temp;
+              item.setAmmoQuantity ammoAvailable;
+            end;
+          end;
+
+          wearer.getLeftHandWeapon weapon;
+          weapon.getAmmoItem ammoItem;
+
+          if eq ammoItem null;
+            return;
+          end;
+
+          # debug_log ammoAvailable;
+          # debug_log wearer;
+          # debug_log weapon;
+          # debug_log ammoItem;
+
+          ammoItem.getTag clipCapacity Tag.CLIP_CAPACITY;
+          ammoItem.getAmmoQuantity currentAmmo;
+          # debug_log clipCapacity;
+          # debug_log currentAmmo;
+          if gt clipCapacity currentAmmo;
+            set temp clipCapacity;
+            # debug_log "temp:" temp;
+            sub temp currentAmmo;
+            # debug_log "temp:" temp;
+            if gt ammoAvailable temp;
+              ammoItem.setAmmoQuantity clipCapacity;
+              sub ammoAvailable temp;
+              item.setAmmoQuantity ammoAvailable;
+            end;
+          end;
+
+          return;
+
+items:
+
+  - type: STR_BACKPACK_AMMO_SUPPLY
+    tags:
+      ITEM_IS_AMMO_BACKPACK: 1
+
+  - type: STR_LASCAN_CLIP
+    tags:
+      CLIP_CAPACITY: 6

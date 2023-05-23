@@ -1,0 +1,40 @@
+items:
+
+  - type: STR_STORMBOLTER_TURRET
+    costAimed:
+      time: 1
+      energy: 3
+    dropoff: 4
+    autoRange: 0
+    snapRange: 15
+    aimRange: 0
+    accuracyAuto: 0
+    accuracySnap: 75
+    accuracyAimed: 0
+    tuAuto: 0
+    tuSnap: 25
+    tuAimed: 0
+    damageType: 1
+    power: 80 # was 90
+    damageAlter: #DA BOLTER  DOUBLE SHOT
+      RandomType: 0 # was 6
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1 # was 0.2
+      ToHealth: 1.0 # was 2.0
+      ToStun: 0.5 # was 1.0
+    shotgunSpread: 1 # 1/100; hit together
+    shotgunBehavior: 1 # new behaviour
+    shotgunPellets: 2
+    bigSprite: {mod: 40k, index: 229}
+    bulletSprite: {mod: 40k, index: 15}
+    fireSound: {mod: 40k, index: 12}
+    hitSound: 13
+    hitAnimation: 26
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    fixedWeapon: true
+    fixedWeaponShow: false
+    recover: false
+    clipSize: -1

@@ -1,0 +1,56 @@
+ufopaedia:
+
+  - id: STR_DROP                  #121
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - id: STR_RHINO_NO_TT
+    requires:
+      - STR_RHINO_NO_TT
+
+  - id: STR_INTERCEPTOR
+    requires:
+      - STR_INTERCEPTOR
+
+  - id: STR_AVENGER                    #500
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAPTER_PURITY
+  - id: STR_TTASS
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAPTER_PURITY
+  - id: STR_TTDEV
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAPTER_PURITY
+  - id: STR_TTSCT
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAPTER_PURITY
+
+  - id: STR_THUNDERHAWNK
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+
+  - id: STR_INTERCEPTOR                #110
+    pages:
+      - title: STR_INTERCEPTOR
+        text: STR_INTERCEPTOR_UFOPEDIA
+      - title: STR_INTERCEPTOR
+        text: STR_INTERCEPTOR_UFOPEDIA2
+
+  - id: STR_STORMHAWK                  #105
+    pages:
+      - title: STR_STORMHAWK
+        text: STR_STORMHAWK_UFOPEDIA
+      - title: STR_STORMHAWK
+        text: STR_STORMHAWK_UFOPEDIA2
+
+  - id: STR_FIRESTORM                  #105
+    pages:
+      - title: STR_FIRESTORM
+        text: STR_FIRESTORM_UFOPEDIA
+      - title: STR_FIRESTORM
+        text: STR_FIRESTORM_UFOPEDIA2

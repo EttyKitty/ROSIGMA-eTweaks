@@ -1,0 +1,94 @@
+EDS - Experimental Damage System feature description.
+
+1. Difficulties of communication.
+
+The whole system is built upon scripting, because of that it's somewhat hard to communicate, at least with in-game tools. 
+I (will) have to manually fill up codex pages to display all new attributes and stats.
+
+2. A new weapon stat - "Minimum Damage".
+
+It functions similarly to >50%<-200% damage spread. One exception - you can set it to whatever value you want, meaning you can have weapons with minimum damage of 200% base power.
+It makes default power with its spread function more like a crit modifier than the bulk of the weapons damage, while also making the damage more consistent.
+
+3. A new weapon stat - "Armor Ignore".
+
+Again, functions similarly to an already existing system - "ArmorEffectiveness". The difference is that now armor piercing will be more consistent and logical. 
+
+Before a weapon was piercing, for example, 20% of armor, meaning that it's 2 points (AP) against 10 armor, 20AP against 100 armor and 80AP if an armor suit had 400 armor. Pretty weird if you ask me.
+Now it functions like a flat armor ignore value, meaning that 20AP is 20AP against everything. Makes armor damage somewhat more important.
+
+Of course all "ArmorEffectiveness" will have to be set to 1.0.
+
+4. A new soldier/armor stat - "Toughness".
+
+This is a pretty new concept but a very simple nonetheless:
+First, it makes a portion of unit's armor indestructible.
+Second, it makes a portion of unit's armor unpiercable with "Armor Ignore".
+
+Later weapons with "Toughness Ignore" may be added.
+
+5. Weapon, Armor and unit rebalance.
+
+Some of the player weapons, armor and units were rebalanced according to tabletop RPG's. Mainly Space Marines faction and mainly according to the DeathWatch RPG.
+
+Transfer multipliers were as follows:
+Damage = 4
+Armor Ignore = 7
+Armor points = 7
+Health = 4
+Strength = 12
+Weight = 1.25
+In rare cases range was also used = 0.2-0.5
+Costs were untouched.
+
+6. Examples.
+
+Bolter ammo.
+WAS:
+  - type: STR_RIFLE_CLIP
+    damageAlter:
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.1
+      ToStun: 0.5
+    power: 65
+    clipSize: 20
+NOW:
+  - type: STR_RIFLE_CLIP
+    damageAlter: 
+      ToArmorPre: 0.2
+      ArmorEffectiveness: 1.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.0
+      RandomType: 7
+    power: 20
+    clipSize: 28
+    tags:
+      MIN_DAMAGE: 35
+      ARMOR_IGNORE: 30
+
+MK7 Tactical Armor.
+WAS:
+  - type: STR_PERSONAL_ARMOR_UC
+    heatVision: 0
+    frontArmor: 125
+    sideArmor: 115
+    rearArmor: 85
+    underArmor: 95
+    stats:
+       throwing: 5
+       strength: 20
+       melee: 15
+NOW:
+  - type: STR_PERSONAL_ARMOR_UC
+    heatVision: 30
+    frontArmor: 125
+    sideArmor: 100
+    rearArmor: 125
+    underArmor: 100
+    stats:
+      throwing: 10
+      strength: 50
+      melee: 10

@@ -1,0 +1,30 @@
+extended:
+  scripts:
+    accuracyMultiplierBonusStats:
+      - new: eTweaks_aMBS_flight_accuracy_penalty
+        offset: 10
+        code: |
+          var int temp;
+          var ptr RuleItem ruleI;
+
+          unit.isFloating temp;
+          if eq temp 0;
+            unit.isFlying temp;
+          end;
+
+          if eq temp 1;
+            weapon.getTag temp Tag.ITEM_IS_HEAVY_WEAPON;
+            # debug_log "isHeavyWeapon:" temp;
+            if neq temp 0;
+              set bonus 0;
+              return bonus;
+            end;
+
+            if neq battle_action 10;
+              weapon.getTotalWeight temp;
+              sub bonus temp;
+              return bonus;
+            end;
+          end;
+
+          return bonus;

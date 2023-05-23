@@ -1,0 +1,13 @@
+ufopaedia:
+
+  - id: STR_TRAINCAMP           #facility
+    image_id: 042.SPK
+
+  - id: STR_MARKET              #facility
+    image_id: 042.SPK
+
+  # - id: STR_OUTPOST_RESEARCH           #facility
+  #   type_id: 16
+  #   section: STR_BASE_FACILITIES
+  #   image_id: 042.SPK
+  #   text: STR_OUTPOST_UFOPEDIA

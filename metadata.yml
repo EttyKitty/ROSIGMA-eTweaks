@@ -1,0 +1,7 @@
+name: "ROSIGMA eTweaks"
+version: "1.0.0"
+author: "EttyKitty"
+description: "ROSIGMA is required."
+id: rosigma_etweaks
+master: 40k
+reservedSpace: 2

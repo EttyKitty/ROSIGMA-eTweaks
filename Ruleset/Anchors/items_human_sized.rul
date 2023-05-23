@@ -1,0 +1,78 @@
+items:
+
+  - &HUMAN_SIZED
+    type: STR_MELTA_GRENADE40
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_INCENDIARY_GRENADE40
+    refNode: *HUMAN_SIZED
+
+  - type: STR_KRAK_GRENADE40
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASER_PISTOLG
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASPISTOL_CLIP
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASER_RIFLEG
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_CLIP
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LIGHT_MELTAGUN_MYNERVA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_ACCATRAN
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_VOSS # no bayonet
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_VOSTROYA
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_LUCIUS
+    refNode: *HUMAN_SIZED
+
+  - type: STR_SHOTGUN
+    refNode: *HUMAN_SIZED
+
+  - type: STR_SHOTGUN_SHELLS
+    refNode: *HUMAN_SIZED
+
+  - type: STR_STUN_SHELLS
+    refNode: *HUMAN_SIZED
+
+  - type: STR_STUN_GAS_SHELLS
+    refNode: *HUMAN_SIZED
+
+  - type: STR_AUTOGUN_CLIP
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASER_RIFLE
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASER_PISTOL
+    refNode: *HUMAN_SIZED

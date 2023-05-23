@@ -1,0 +1,51 @@
+manufacture:
+
+  - &MARINES_CRAFTS
+    name: STR_RHINO_NO_TT
+    category: STR_CRAFT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_MIDTIER_PREREQ
+      - STR_RHINO_NO_TT_MANU
+    time: 5000
+    cost: 0
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+
+  - name: STR_INTERCEPTOR
+    category: STR_CRAFT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_MIDTIER_PREREQ
+      - STR_INTERCEPTOR_MANU
+    time: 3000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+
+  - name: STR_LIGHTNING
+    requires:
+      - STR_GENERALLOCK
+
+  - name: STR_THUNDERHAWNK
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+    refund: true
+
+  - &STR_THUNDERHAWK_TRANSPORT
+    name: STR_AVENGER #thunderhawnk Transport
+    requires:
+      - STR_MIDTIER_PREREQ
+      - STR_CHAPTER_PURITY
+    refund: true
+
+  - name: STR_TTASS #thunderhawnk Transport ASS
+    refNode: *STR_THUNDERHAWK_TRANSPORT
+
+  - name: STR_TTDEV  #thunderhawnk Transport Dev
+    refNode: *STR_THUNDERHAWK_TRANSPORT
+
+  - name: STR_TTSCT  #thunderhawnk Transport Dev
+    refNode: *STR_THUNDERHAWK_TRANSPORT
