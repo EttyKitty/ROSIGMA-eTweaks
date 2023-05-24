@@ -38,6 +38,7 @@ crafts:
     requires:
       - STR_INTERCEPTOR_REQ
     speedMax: 2200
+    accel: 6
     weapons: 3
     weaponTypes: [[0, 3, 1, 2], [9], [50]]
 
