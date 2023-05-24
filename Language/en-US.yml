@@ -165,6 +165,8 @@ en-US:
   STR_STORMHAWK_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Bolters{ALT}/{ALT}Lascannon{ALT}/{ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT} {NEWLINE}{NEWLINE}3: {ALT}Modification{ALT}"
   STR_FIRESTORM_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Bolters{ALT}/{ALT}Multimelta{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT}/{ALT}Lascannon{ALT}/{ALT}Twin-Plasma Cannons{ALT} {NEWLINE}{NEWLINE}3: {ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}4: {ALT}Modification{ALT}"
 
+  STR_RHINO_NO_TT_UFOPAEDIA: "{NEWLINE} The Rhino is a common armoured troop transport produced by the Imperium. Armed with a Storm Bolter for close defense, which is remotely operated by the driver."
+
   ########################################################## eTweaks COMMENDATIONS ##########################################################
 
   STR_MEDAL_KILLS_TOTAL: "Executor"
