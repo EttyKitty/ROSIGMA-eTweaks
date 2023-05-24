@@ -11,9 +11,9 @@ facilities:
     refundValue: 50000
 
   - type: STR_LABORATORY
-    refundValue: 1000000
-    labs: 100
-    buildCost: 3000000
+    refundValue: 500000
+    labs: 50
+    buildCost: 1500000
   
   - type: STR_GENERAL_STORES
     storage: 200
@@ -180,6 +180,7 @@ facilities:
     storage: 15
     radarRange: 2577
     radarChance: 20
+    crafts: 1
     mapName: XBASE_60
     storageTiles:
             - [24, 6, 1]
