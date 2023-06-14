@@ -1,14 +1,23 @@
 facilities:
 
   - type: STR_ACCESS_LIFT
+    sightRange: 400
+    storage: 25
+    storageTiles:
+      - [8, 2, 1]
     provideBaseFunc: !add
     - "TRADE"
 
   - type: STR_CORRIDOR
+    refundValue: 14000
     canBeBuiltOver: true
+    buildTime: 8
 
   - type: STR_HANGAR
-    refundValue: 50000
+    refundValue: 125000
+    canBeBuiltOver: true
+    workshops: 10
+    storage: 25
 
   - type: STR_LABORATORY
     refundValue: 500000
@@ -16,16 +25,36 @@ facilities:
     buildCost: 1500000
   
   - type: STR_GENERAL_STORES
-    storage: 200
-    buildCost: 300000
-    refundValue: 100000
+    storage: 100
+    buildCost: 150000
+    monthlyCost: 2500
+    refundValue: 75000
+    workshops: 5
   
   - type: STR_ARMORY
-    workshops: 25
-    storage: 100
+    buildCost: 10000000
+    monthlyCost: 200000
+    refundValue: 6500000
+    workshops: 10
+    storage: 125
   
   - type: STR_STEELMILL
     refundValue: 1500000
+
+  - type: STR_SMALL_RADAR_SYSTEM
+    buildCost: 375000
+    monthlyCost: 7500
+    refundValue: 225000
+    radarChance: 80
+    maxAllowedPerBase: 1
+
+  - type: STR_LARGE_RADAR_SYSTEM
+    buildCost: 875000
+    monthlyCost: 15000
+    refundValue: 565000
+    radarRange: 2000
+    radarChance: 80
+    maxAllowedPerBase: 1
 
 #################################################### OUTPOSTS ####################################################
 

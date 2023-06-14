@@ -1,15 +1,3 @@
-extendedMeleeReactions: 2
-extendedTerrainMelee: 2
-flagByKills: []
-surrenderMode: 2
-enableCloseQuartersCombat: 1
-closeQuartersAccuracyGlobal: 20
-showFullNameInAlienInventory: true
-tuRecoveryWakeUpNewTurn: 0
-noLOSAccuracyPenaltyGlobal: 60
-fixedUserOptions: !add
-  strafe: true
-
 invs:
 
   - id: STR_QD_SLOT
