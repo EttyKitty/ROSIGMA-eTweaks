@@ -1,0 +1,138 @@
+items:
+
+###################################### BOLT
+
+  - &RANDOMTYPE_2
+    type: STR_RIFLE_CLIP
+    damageAlter:
+      RandomType: 2
+
+  - type: STR_RIFLE_CLIP_AP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_RIFLE_CLIP_EX
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_PISTOL_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_PISTOL_CLIP_AP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_PISTOL_CLIP_EX
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_AC_AP_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_AC_HE_AMMO
+    refNode: *RANDOMTYPE_2
+
+  # - type: STR_AC_KP_AMMO
+  #   refNode: *RANDOMTYPE_2
+
+  - type: STR_AC_I_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_HB_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_STORMBOLTER_AMMO_KP
+    refNode: *RANDOMTYPE_2
+
+  - type: AUX_BOLTER
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_CSERVITOR_HB_AMMO
+    refNode: *RANDOMTYPE_2
+
+###################################### SOLID PROJECTILE
+
+  - type: STR_HC_AP_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_ASSC_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_RIPPER_GUN_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_SHOTGUN_SHELLS
+    refNode: *RANDOMTYPE_2
+
+###################################### FLAME
+
+  - type: STR_FLAMETHROWER_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_HFLAMER_CLIP
+    refNode: *RANDOMTYPE_2
+
+###################################### LASER
+
+  - type: STR_LASCAN_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_LASCUTTER_SMALL_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_LASCUTTER_BIG_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_LASPISTOL_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_LASGUN_CLIP_HOTSHOT
+    refNode: *RANDOMTYPE_2
+
+###################################### MELTA
+
+  - type: STR_MELTA_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_INFERNO_PISTOL_AMMO
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_BLASTER_BOMB
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_MELTA_AMMO_HARMONIC
+    refNode: *RANDOMTYPE_2
+
+###################################### PLASMA
+
+  - type: STR_PLASMA_RIFLE_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_PLASMA_PISTOL_CLIP
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_HEAVY_PLASMA_CLIP
+    refNode: *RANDOMTYPE_2
+
+###################################### GRAVITON
+
+  - type: STR_STUN_BOMB #GRAVGUN                               2062
+    refNode: *RANDOMTYPE_2
+
+#################################### MISSILES
+
+  - type: STR_SMALL_ROCKET
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_LARGE_ROCKET
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_INCENDIARY_ROCKET
+    refNode: *RANDOMTYPE_2
+
+#################################### GRENADES
+
+  - type: STR_GRENADE
+    refNode: *RANDOMTYPE_2
+
+  - type: STR_KRAK_GRENADE
+    refNode: *RANDOMTYPE_2

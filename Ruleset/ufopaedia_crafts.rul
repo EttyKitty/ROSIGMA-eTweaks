@@ -1,4 +1,5 @@
 ufopaedia:
+  - delete: STR_STORMHAWKS 
 
   - id: STR_DROP                  #121
     requires: !remove
@@ -6,7 +7,7 @@ ufopaedia:
 
   - id: STR_RHINO_NO_TT
     requires:
-      - STR_RHINO_NO_TT
+      - STR_RHINO_TRANSPORT
 
   - id: STR_INTERCEPTOR
     requires:
@@ -49,8 +50,50 @@ ufopaedia:
         text: STR_STORMHAWK_UFOPEDIA2
 
   - id: STR_FIRESTORM                  #105
+    requires: !remove
+      - STR_NOT_PRIMARIS
     pages:
       - title: STR_FIRESTORM
         text: STR_FIRESTORM_UFOPEDIA
       - title: STR_FIRESTORM
         text: STR_FIRESTORM_UFOPEDIA2
+
+  - id: STR_VALKYRIE
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: STR_CHAPTERARMY                #700
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - id: STR_SKYRANGER                  #120
+    requires: !remove
+      - STR_NOT_PRIMARIS
+
+  - id: STR_SPEEDC                     #200
+    requires:
+      - STR_SPEEDC
+
+  - id: STR_STINGRAY
+    requires:
+      - STR_INTERCEPTOR_REQ
+
+  - id: STR_AVALANCHE
+    requires:
+      - STR_INTERCEPTOR_REQ
+
+  - id: STR_CRAFTBOLTER_QUAD_UC
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CC00.SPK
+    text: STR_CANNON_UFOPEDIA
+    listOrder: 1300
+
+  - id: STR_ASSCANNON_TWIN_UC
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_ASSC
+    image_id: CC13.SPK
+    text: STR_ASSCANNON_UFOPEDIA
+    listOrder: 1750

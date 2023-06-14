@@ -1,13 +1,5 @@
 items:
 
-  - type: STR_STORMBOLTER_TURRET_SPAWNER
-    spawnUnit: STR_STORMBOLTER_TURRET
-    spawnUnitFaction: 0
-    invWidth: 0
-    invHeight: 0
-    battleType: 4
-
-
   - type: INV_NULL_2X1_RL
     weight: 0
     bigSprite: 59
@@ -24,4 +16,13 @@ items:
     invHeight: 2
     fixedWeapon: true
     defaultInventorySlot: STR_LEFT_LEG
+    recover: false
+
+  - type: INV_NULL_1X3_QD
+    weight: 0
+    bigSprite: 60
+    invWidth: 1
+    invHeight: 3
+    fixedWeapon: true
+    defaultInventorySlot: STR_QD_SLOT
     recover: false

@@ -1,64 +1,5 @@
 ufopaedia:
 
-  - id: STR_PERSONAL_ARMOR_UC              #5200
-    title: STR_SOLDIER
-
-  - id: STR_SCOUT_UC #SCOUT
-
-  - id: STR_SCOUTH_UC
-
-  - id: STR_SARGENT_ARMOR_UC
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SARGENT
-
-  - id: STR_APOT_ARMOR_UC
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_APOTHECARY
-
-  - id: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_CHAPLAIN
-
-  - id: STR_LIB_ARMOR_UC  #LIBRARIAN
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_LIBRARIAN
-
-  - id: STR_TECH_ARMOR_UC
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_TECHMARINE
-
-  - id: STR_HONOR_ARMOR_UC #HONOR
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_STERNGUARD
-
-  - id: STR_DEV_ARMOR_UC
-    title: STR_SOLDIER_DEVASTATOR
-
-  - id: STR_SIGNALFALSE_ARMOR_UC #HONOR
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_DEVASTATOR_SARGENT
-
-  - id: STR_SIGNAL_ARMOR_UC #HONOR
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_DEVASTATOR_SARGENT
-
-  - id: STR_ASS_ARMOR_UC #ASSAULT
-    title: STR_SOLDIER_ASSAULT
-
-  - id: STR_ASS_ARMOR_HONOR_UC #ASSAULT HONOR
-    requires:
-      - STR_PERSONAL_ARMOR
-    title: STR_SOLDIER_VANGUARD
-
-  - id: STR_POWER_SUIT_UC
 
   - id: STR_ARMOR_ARTIFICER_UC
     type_id: 5
@@ -67,21 +8,72 @@ ufopaedia:
     requires:
       - STR_PERSONAL_ARMOR
 
-  - id: STR_APOT_ARMOR_UC                  #5700
-    requires: !remove
-      - STR_NOT_PRIMARIS
+  - id: STR_ARMOR_CAPTAIN_MK7_UC
+    type_id: 5
+    section: STR_ARMORPEDIA
+    text: STR_ARMOR_CAPTAIN_MK7_UFOPEDIA
+    requires:
+      - STR_PERSONAL_ARMOR
 
-  - id: STR_TECH_ARMOR_UC                  #5800
-    requires: !remove
-      - STR_NOT_PRIMARIS
+  - id: STR_ARMOR_ASPIRANT_UC
+    type_id: 5
+    section: STR_ARMORPEDIA
+    text: STR_ARMOR_ASPIRANT_UFOPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
 
-  - id: STR_CHAP_ARMOR_UC                  #5900
-    requires: !remove
-      - STR_NOT_PRIMARIS
+  - id: STR_ARMOR_NEOPHYTE_UC
+    type_id: 5
+    section: STR_ARMORPEDIA
+    text: STR_ARMOR_NEOPHYTE_UFOPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
 
-  - id: STR_LIB_ARMOR_UC                   #6000
-    requires: !remove
-      - STR_NOT_PRIMARIS
+  - id: STR_PERSONAL_ARMOR_UC              #5200
+
+  - id: STR_SCOUT_UC #SCOUT
+
+  - id: STR_SCOUTH_UC
+
+  - id: STR_SARGENT_ARMOR_UC
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_APOT_ARMOR_UC
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_LIB_ARMOR_UC  #LIBRARIAN
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_TECH_ARMOR_UC
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_HONOR_ARMOR_UC #HONOR
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_DEV_ARMOR_UC
+
+  - id: STR_SIGNALFALSE_ARMOR_UC #HONOR
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_SIGNAL_ARMOR_UC #HONOR
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_ASS_ARMOR_UC #ASSAULT
+
+  - id: STR_ASS_ARMOR_HONOR_UC #ASSAULT HONOR
+    requires:
+      - STR_PERSONAL_ARMOR
 
   - id: STR_TSARGENT_UC                    #6300   #ARMOR
     requires: !remove
@@ -94,18 +86,28 @@ ufopaedia:
   - id: BIKE_ARMOR_UC                     #6410   #ARMOR
     requires: !remove
       - STR_NOT_PRIMARIS
+
   - id: BIKE_ARMOR_UC                     #6410   #ARMOR
     requires: !add
       - STR_PERSONAL_ARMOR
 
-  - id: STR_CHAPTERARMY                #700
+  - id: STR_POWER_SUIT_UC  
     requires: !remove
       - STR_NOT_PRIMARIS
 
-  - id: STR_FIRESTORM                  #300
-    requires: !remove
-      - STR_NOT_PRIMARIS
 
-  - id: STR_SKYRANGER                  #120
-    requires: !remove
-      - STR_NOT_PRIMARIS
+  - id: STR_GUARD_ARMORS_MEDIC_UC
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: STR_GUARD_ARMORSM                  #6650   #ARMOR
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: STR_GUARD_ARMORS_TAUROS_HEAVY_STUBBER
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: STR_SENTINEL_ARMOR_UC
+    requires: !add
+      - STR_GUARD_SUPORT

@@ -36,15 +36,22 @@ en-US:
   STR_DAMAGE_CAPACITY_UC: "DURABILITY>{ALT}{0}{ALT}"
   STR_CARGO_SPACE: "TRANSPORT>{ALT}{0}{ALT}"
 
+  STR_CAT_SPACEMARINES: "Space Marines"
+
   ########################################################## 40K/ROSIGMA CRAFTS/WEAPONS ##########################################################
   
+  STR_CRAFTBOLTER_QUAD: "Quad Heavy Bolter"
+  STR_CRAFTBOLTER_QUAD_UC: "QUAD HEAVY BOLTER"
+  STR_CRAFT_RAZORBACK: "RAZORBACK"
   STR_CRAFT_LANDRAIDER: "LAND RAIDER"
+  STR_HWP_CANNON_SHELLS: "Heavy Bolter Rounds x50"
+  STR_DROP: "DROP POD"
 
   ########################################################## 40K/ROSIGMA ITEMS-MISC ##########################################################
 
   STR_ALIEN_ALLOYS: "Plasteel Bar"
   STR_UFO_CONSTRUCTION: "Ceramite Plate"
-  STR_ELERIUM_115: "Promethium Bottle"
+  STR_ELERIUM_115: "Promethium Canister"
 
   ########################################################## 40K/ROSIGMA ITEMS-WEAPONS ##########################################################
 
@@ -69,37 +76,72 @@ en-US:
   STR_HEAVY_CANNON: "Sniper Rifle, Astartes"
   STR_LASCUTTER: "Lascutter, Mezoa"
 
+  AUX_DREAD_FLAMER: "Dreadnought Flamer Fist"
+  AUX_HOVERTANK_LAUNCHER: "Dreadnought Missile Launcher"
+  AUX_DREAD_STORMBOLTER: "Dreadnought Bolter Fist"
+  AUX_DREAD_ASSC: "Dreadnought Assault Cannon"
+  AUX_HOVERTANK_PLASMA: "Dreadnought Heavy Plasma"
+  AUX_HOVERTANK_LASER: "Dreadnought Twin-Lascannon"
+  AUX_DREAD_MULTIMELTA: "Dreadnought Multi-Melta"
+
   ########################################################### 40K/ROSIGMA ITEMS-AMMO ##########################################################
 
   STR_RIFLE_CLIP: "Bolter Mag, S"
   STR_RIFLE_CLIP_AP: "Bolter Mag, KP"
-  STR_RIFLE_CLIP_EX: "Bolter Mag, MSG"
+  STR_RIFLE_CLIP_EX: "Bolter Mag, MS"
   STR_PISTOL_CLIP: "Boltpistol Mag, S"
   STR_PISTOL_CLIP_AP: "Boltpistol Mag, KP"
-  STR_PISTOL_CLIP_EX: "Boltpistol Mag, MSG"
+  STR_PISTOL_CLIP_EX: "Boltpistol Mag, MS"
   STR_AC_AP_AMMO: "Heavy Bolter Case, S"
-  STR_AC_HE_AMMO: "Heavy Bolter Case, MSG"
+  STR_AC_HE_AMMO: "Heavy Bolter Case, MS"
   STR_AC_I_AMMO: "Heavy Bolter Case, DF"
   STR_HC_AP_AMMO: "Sniper Rifle Clip, S"
   STR_HC_HE_AMMO: "Sniper Rifle Clip, HE"
   STR_HC_I_AMMO: "Sniper Rifle Clip, I"
 
-  ########################################################### eTweaks ITEMS-MISC ##########################################################
+  ########################################################### eTweaks ITEMS-AMMO 
+
+  # STR_AC_KP_AMMO: "Heavy Bolter Case, KP"
+  STR_AC_HF_AMMO: "Heavy Bolter Case, HF"
+  STR_STORMBOLTER_AMMO_KP: "Storm Bolter Mag, KP"
+
+  ########################################################### eTweaks ITEMS-MISC 
 
   STR_MEDICAE_POUCH: "Medicae Pouch"
   STR_BACKPACK_AMMO_SUPPLY: "Backpack Ammo Supply"
-  STR_AC_KP_AMMO: "Heavy Bolter Case, KP"
-  STR_STORMBOLTER_AMMO_KP: "Storm Bolter Mag, KP"
+  STR_MK7_CORPSE: "Damaged MK7 Tactical Armor"
 
   ########################################################## 40K/ROSIGMA ARMORS ##########################################################
 
+  STR_PERSONAL_ARMOR_UC: "MK7 Power Armor"
   STR_TATICAL_ARMOR: "MK7 Power Armor"
-  STR_SCOUT_UC: "Scout Carapace Armor"
+  STR_SCOUT_UC: "Carapace Scout Armor"
 
-  ########################################################## eTweaks ARMORS ##########################################################
+  DREAD_ARMOR_UC: "Dreadnought"
+  DREAD_ARMOR2_UC: "Castraferrum Dreadnought"
+  DREAD_ARMOR3_UC: "Hellfire Dreadnought"
+  DREAD_ARMOR4_UC: "Mortis Dreadnought"
+  DREAD_ARMOR5_UC: "Venerable Dreadnought"
+  STR_DREAD_GK_ARMOR_UC: "Dreadnought ¬"
+  STR_DREAD1_ARMOR: "Dreadnought"
+  STR_DREAD2_ARMOR: "Castraferrum Dreadnought"
+  STR_DREAD3_ARMOR: "Hellfire Dreadnought"
+  STR_DREAD4_ARMOR: "Mortis Dreadnought"
+  STR_DREAD5_ARMOR: "Venerable Dreadnought"
+  STR_DREAD_DW_ARMOR_UC: "Dreadnought ¤"
+  STR_DREAD_DW_ARMOR2_UC: "Castraferrum Dreadnought ¤"
+  STR_DREAD_DW_ARMOR3_UC: "Hellfire Dreadnought ¤"
+  STR_DREAD_DW_ARMOR4_UC: "Mortis Dreadnought ¤"
+  STR_DREAD_DW_ARMOR5_UC: "Venerable Dreadnought ¤"
+
+  ########################################################## eTweaks ARMORS 
 
   STR_ARMOR_ARTIFICER: "Artificer Power Armor"
   STR_ARMOR_ARTIFICER_UC: "Artificer Power Armor"
+  STR_ARMOR_CAPTAIN_MK7_UC: "MK7 Captain Armor"
+  STR_ARMOR_ASPIRANT_UC: "Aspirant Fatigues"
+  STR_ARMOR_SCOUT: "Carapace Scout Armor"
+  STR_ARMOR_NEOPHYTE_UC: "Neophyte Fatigues"
 
   ########################################################## 40K/ROSIGMA FACILITIES ##########################################################
 
@@ -110,9 +152,23 @@ en-US:
   STR_OUTPOST_RADAR: "Radar Outpost"
   STR_OUTPOST_RESEARCH: "Research Outpost"
 
-  ########################################################## eTweaks SOLDIERS/RANKS ##########################################################
+  ########################################################## 40K/ROSIGMA SOLDIERS/RANKS ##########################################################
 
-  STR_SOLDIER_NEOPHYTE: "Neophyte"
+  STR_STORMTROOPER_OFFICER: "Tempestor"
+  STR_STORMTROOPER_RANK_0: "Scion"
+  STR_STORMTROOPER_RANK_1: "Scion"
+  STR_STORMTROOPER_RANK_2: "Scion"
+  STR_STORMTROOPER_RANK_3: "Scion"
+  STR_STORMTROOPER_OFFICER_RANK_0: "Tempestor"
+  STR_STORMTROOPER_OFFICER_RANK_1: "Tempestor"
+  STR_STORMTROOPER_OFFICER_RANK_2: "Tempestor"
+  STR_STORMTROOPER_OFFICER_RANK_3: "Tempestor"
+  STR_STORMTROOPER_OFFICER_RANK_4: "Tempestor"
+  STR_STORMTROOPER_OFFICER_RANK_5: "Tempestor"
+
+  ########################################################## eTweaks SOLDIERS/RANKS
+
+  STR_SOLDIER_ASPIRANT: "Aspirant"
   STR_SOLDIER_SCOUT: "Scout"
   STR_SOLDIER_DEVASTATOR: "Devastator"
   STR_SOLDIER_ASSAULT: "Assault"
@@ -121,43 +177,69 @@ en-US:
   STR_SOLDIER_VANGUARD: "Vanguard"
   STR_SOLDIER_APOTHECARY: "Apothecary"
   STR_SOLDIER_TECHMARINE: "Techmarine"
-  STR_SOLDIER_ANCIENT: "Ancient"
+  STR_SOLDIER_CAPTAIN: "Captain"
+  STR_FALLEN: "Ancient"
 
-  ########################################################## eTweaks TRANSFORMATIONS/PROMOTIONS ##########################################################
+  ########################################################## 40K/ROSIGMA TRANSFORMATIONS/PROMOTIONS ##########################################################
 
-  STR_PROMOTE_SCOUT: "Accept into the Chapter"
+  STR_PROMOTE_SCION_OFFICER: "Promote Scion to Tempestor"
 
-  STR_PROMOTE_DEVASTATOR: "Devastator Promotion"
-  STR_PROMOTE_ASSAULT: "Assault Promotion"
-  STR_PROMOTE_TACTICAL: "Tactical Promotion"
-  STR_PROMOTE_TERMINATOR: "Veteran Promotion"
-  STR_PROMOTE_STERNGUARD: "Sternguard Promotion"
-  STR_PROMOTE_VANGUARD: "Vanguard Promotion"
+  ########################################################## eTweaks TRANSFORMATIONS/PROMOTIONS 
 
-  STR_PROMOTE_APOTHECARY: "Apothecary Training"
-  STR_PROMOTE_TECHMARINE: "Techmarine Training"
+  STR_PROMOTION_SCOUT: "Accept into the Chapter"
+
+  STR_PROMOTION_DEVASTATOR: "Devastator Promotion"
+  STR_PROMOTION_ASSAULT: "Assault Promotion"
+  STR_PROMOTION_TACTICAL: "Tactical Promotion"
+  STR_PROMOTION_TERMINATOR: "Veteran Promotion"
+  STR_PROMOTION_STERNGUARD: "Sternguard Promotion"
+  STR_PROMOTION_VANGUARD: "Vanguard Promotion"
+  STR_PROMOTION_CAPTAIN: "Captain Promotion"
+
+  STR_PROMOTION_APOTHECARY: "Apothecary Training"
+  STR_PROMOTION_TECHMARINE: "Techmarine Training"
 
   ########################################################## eTweaks SCRIPTS ##########################################################
 
-  MIN_DAMAGE: "Minimum Damage"
-  ARMOR_IGNORE: "Armor Ignore"
+  # MIN_DAMAGE: "Minimum Damage"
+  # ARMOR_IGNORE: "Armor Ignore"
   FORCE_FIELD_RATING: "Force Field Rating"
   FORCE_FIELD_OVERLOAD_RATING: "Force Field Overload Rating"
   STR_NULLIFIED: "NULLIFIED"
+  STR_SCRIPT_WEAPON_IS_TOO_HEAVY: "The weapon is too heavy!"
 
-  ########################################################## eTweaks RESEARCH ##########################################################
+  ########################################################## 40K/ROSIGMA RESEARCH ##########################################################
+
+  STR_STEELMILLR: "Adamantium Forges"
+  STR_SCOUTH_RESEARCH: "Advanced Scout Armor Schematics"
+
+  ########################################################## eTweaks RESEARCH 
 
   STR_RHINO_NO_TT_REQ: "Rhino Requisition"
   STR_RHINO_NO_TT_MANU: "Rhino Schematics"
   STR_INTERCEPTOR_REQ: "Stormtalon Requisition"
   STR_INTERCEPTOR_MANU: "Stormtalon Schematics"
+  STR_STORMHAWK_MANU: "Stormhawk Schematics"
   STR_HUMAN_SIZED_WEAPONS: "(Human-Sized Weapon)"
+  STR_CHAPTER_INITIATION: "Chapter Initiation"
+  STR_RHINO_TRANSPORT: "Transport - Rhino APC"
+  STR_STORMTALON_INTERCEPTOR: "Interceptor - Stormtalon"
+  STR_STORMHAWK_INTERCEPTOR: "Interceptor - Stormhawk"
+
+  ########################################################## eTweaks MANUFACTURE ##########################################################
+
+  STR_PROCESS_CORPSE_MK7: "Repair MK7 Power Armor"
+  STR_PURIFICATION_WEAPON: "Weapon Purification"
+  STR_PURIFICATION_GRAVGUN: "Purify Chaos Grav-gun"
+  STR_PURIFICATION_MULTIMELTA: "Purify Chaos Multi-melta"
+  STR_PURIFICATION_PLASMAGUN: "Purify Chaos Plasma gun"
 
   ########################################################## eTweaks TURRETS ##########################################################
 
-  STR_STORMBOLTER_TURRET_SPAWNER: "Storm Bolter Turret Spawner"
-  STR_STORMBOLTER_TURRET: "Storm Bolter Turret"
-  STR_STORMBOLTER_TURRET_ARMOR: "Storm Bolter Turret"
+  STR_TURRET_TWINLASCANNON_LEFT: "Twin Lascannon Turret"
+  STR_TURRET_TWINLASCANNON_RIGHT: "Twin Lascannon Turret"
+  STR_STORMBOLTER_TURRET_1X1: "Storm Bolter Turret"
+  STR_STORMBOLTER_TURRET_1X1_ARMOR: "Storm Bolter Turret"
 
   ########################################################## 40k/ROSIGMA Enemies ##########################################################
 
@@ -168,13 +250,25 @@ en-US:
   STR_CYBERDISC_AUTOPSY: "Bloodthirster Origin"
   STR_CYBERDISC_TO_HONOR: "Bloodthirster Corpse"
 
-  ########################################################## eTweaks UFOPAEDIA ##########################################################
+  STR_SNAKEMAN_LEADER: "Traitor Guardsman Commander"
 
-  STR_INTERCEPTOR_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Bolters{ALT}/{ALT}Lascannon{ALT}/{ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT} {NEWLINE}{NEWLINE}3: {ALT}Modification{ALT}"
-  STR_STORMHAWK_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Bolters{ALT}/{ALT}Lascannon{ALT}/{ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT} {NEWLINE}{NEWLINE}3: {ALT}Modification{ALT}"
-  STR_FIRESTORM_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Bolters{ALT}/{ALT}Multimelta{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT}/{ALT}Lascannon{ALT}/{ALT}Twin-Plasma Cannons{ALT} {NEWLINE}{NEWLINE}3: {ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}4: {ALT}Modification{ALT}"
+  ########################################################## eTweaks UFOPAEDIA TEXT ##########################################################
+
+  STR_INTERCEPTOR_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin Heavy Bolter{ALT}/{ALT}Twin Lascannon{ALT}/{ALT}Krak Missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}2: {ALT}Twin Assault Cannon{ALT} {NEWLINE}{NEWLINE}3: {ALT}Modification{ALT}"
+  STR_STORMHAWK_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin Heavy Bolter{ALT}/{ALT}Krak Missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}2: {ALT}Twin Assault Cannon{ALT} {NEWLINE}{NEWLINE}3: {ALT}Lascannon{ALT}/{ALT}Assault Cannon{ALT} {NEWLINE}{NEWLINE}4: {ALT}Modification{ALT}"
+  STR_FIRESTORM_UFOPEDIA2: "{NEWLINE}Supported Weapons: {NEWLINE}{NEWLINE}1: {ALT}Twin-Heavy Bolters{ALT}/{ALT}Multimelta{ALT} {NEWLINE}{NEWLINE}2: {ALT}Assault Cannon{ALT}/{ALT}Lascannon{ALT}/{ALT}Twin-Plasma Cannons{ALT} {NEWLINE}{NEWLINE}3: {ALT}Krak missiles{ALT}/{ALT}Plasma Missiles{ALT} {NEWLINE}{NEWLINE}4: {ALT}Modification{ALT}"
 
   STR_RHINO_NO_TT_UFOPAEDIA: "{NEWLINE} The Rhino is a common armoured troop transport produced by the Imperium. Armed with a Storm Bolter for close defense, which is remotely operated by the driver."
+  STR_RHINO_TRANSPORT_UFOPAEDIA: "{NEWLINE} Astartes vehicles are hard to come by, so it may take some time and a considerable amount of requisition capabilities, but we need more protected and combat ready ways to transport our brothers into battle. Of course, we can stick to our Landspeeders until better options arise. But with enemies getting reinforcements everyday - we may find ourselves outgunned and outperformed. {NEWLINE}{NEWLINE} Right now we have an option to switch to a more durable and combat proven transport - {ALT}Rhino{ALT}, an armored personnel carrier. Although even slower, it offers an impressive transporting capacity and brings two Storm Bolter turrets into battle. {NEWLINE}{NEWLINE} We've added a {ALT}CODEX{ALT} article with its characteristics, you can check it in the {ALT}CRAFTS AND ARMAMENT{ALT} section."
+
+  STR_STORMTALON_INTERCEPTOR_UFOPAEDIA: "{NEWLINE} We require ways to combat enemy aircraft that swarm the sky. At this point our only option is {ALT}Stormtalon{ALT}, a light interceptor. While not offering a lot of firepower and having a rather moderate durability, it's better than nothing. {NEWLINE}{NEWLINE} We've added a {ALT}CODEX{ALT} article with its characteristics, you can check it in the {ALT}CRAFTS AND ARMAMENT{ALT} section."
+
+  STR_POWER_SUIT_UFOPEDIA: "Terminator Armor or Tactical Dreadnought Armor is the toughest and most powerful form of personal armor humanity has ever developed, used in Terminator units.{NEWLINE}{NEWLINE}FORCE FIELD: {ALT}35{ALT}"
+  STR_ARMOR_CAPTAIN_MK7_UFOPEDIA: "Mark VII armor, also known as the 'Aquila', 'Imperator' or 'Eagle' armor, was developed during the Horus Heresy, and remains in use as the most common form of power armor.{NEWLINE}{NEWLINE}FORCE FIELD: {ALT}50{ALT} - OVERLOAD: {ALT}1{ALT}"
+
+  STR_ARMOR_ASPIRANT_UFOPEDIA: "Aspirants are humans selected from the best warriors among humanity for possible induction into the Space Marines. They must prove themselves on the battlefield, before they will be allowed to undergo the transformation on their way of becoming full fledged Astartes."
+
+  STR_ARMOR_NEOPHYTE_UFOPEDIA: "Neophytes are still in the process of the transformation into superhuman Astartes through the implantation of the gene-seed organs as well as their initial combat seasoning. At the end of this process they must receive their last implant - Black Carapace, together with a suit of power armor."
 
   ########################################################## eTweaks COMMENDATIONS ##########################################################
 

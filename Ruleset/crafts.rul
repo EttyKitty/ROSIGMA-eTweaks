@@ -4,30 +4,10 @@ crafts:
     requires: !add
       - "STR_HIGHTIER_PREREQ"
     speedMax: 12000
-    battlescapeTerrainData:
-      name: DROPPOD_GUARD
-      mapDataSets:
-        - BLANKS
-        - DROPPOD_GUARD
-      mapBlocks:
-        - name: DROPPOD_GUARD
-          width: 10
-          length: 20
-          items:
-            STR_DROPPOD_DEPLOY_CHARGE:
-              - [2, 2, 0]
-              - [5, 8, 0]
-              - [2, 15, 0]
-              - [2, 15, 1]
-              - [5, 8, 1]
-              - [2, 2, 1]
-            STR_STORMBOLTER_TURRET_SPAWNER:
-              - [2, 15, 1]
-              - [5, 8, 1]
-              - [2, 2, 1]
-          fuseTimers:
-            STR_DROPPOD_DEPLOY_CHARGE: [1, 1]
-            STR_STORMBOLTER_TURRET_SPAWNER: [1, 1]
+    soldiers: 20
+    vehicles: 20
+    maxLargeUnits: 3
+    costBuy: 700000
 
   - type: STR_DROP
     requires: !add
@@ -37,10 +17,25 @@ crafts:
   - type: STR_INTERCEPTOR
     requires:
       - STR_INTERCEPTOR_REQ
-    speedMax: 2200
-    accel: 6
+    costBuy: 800000
+    costSell: 600000
+    speedMax: 4500
+    accel: 10
+    armor: 10
+    avoidBonus: 15
     weapons: 3
-    weaponTypes: [[0, 3, 1, 2], [9], [50]]
+    weaponTypes: [[0, 3, 1, 2], [12], [50]]
+
+  - type: STR_STORMHAWK
+    costBuy: 900000
+    costSell: 700000
+    speedMax: 5500
+    damageMax: 200
+    armor: 15
+    avoidBonus: 15
+    accel: 10
+    weapons: 4
+    weaponTypes: [[0, 1, 2], [12], [3, 9], [50]]
 
   - type: STR_VALKYRIE
     speedMax: 1800
@@ -51,8 +46,10 @@ crafts:
     requires:
       - STR_RHINO_NO_TT_REQ
     craftInventoryTile: [4, 11, 0]
+    costBuy: 800000
+    costSell: 640000
     soldiers: 10
-    speedMax: 70
+    speedMax: 1000
     vehicles: 10
     maxLargeUnits: 0
     battlescapeTerrainData:
@@ -66,18 +63,72 @@ crafts:
           width: 10
           length: 20
           items:
+            STR_STORMBOLTER_TURRET_1X1_SPAWNER:
+              - [4, 5, 1]
+          fuseTimers:
+            STR_STORMBOLTER_TURRET_1X1_SPAWNER: [0, 0]
+    deployment:
+      - [4, 5, 0, 0]
+      - [5, 5, 0, 0]
+      - [4, 4, 0, 6]
+      - [5, 4, 0, 2]
+      - [4, 3, 0, 0]
+      - [5, 3, 0, 0]
+      - [4, 2, 0, 0]
+      - [5, 2, 0, 0]
+      - [6, 4, 0, 2]
+      - [3, 4, 0, 6]
+
+  - type: STR_CRAFT_RAZORBACK
+    requires:
+      - STR_RHINO_NO_TT_REQ
+    spacecraft: true
+    marker: 30
+    fuelMax: 1000
+    damageMax: 1000
+    maxAltitude: 1
+    accel: 2
+    repairRate: 10
+    weapons: 1
+    weaponTypes:
+      - 0
+    weaponStrings:
+      - STR_WEAPON_ONE
+    fixedWeapons: ["STR_CANNON_UC"]
+    craftInventoryTile: [4, 11, 0]
+    costBuy: 800000
+    costRent: 480000
+    costSell: 640000
+    soldiers: 6
+    speedMax: 1000
+    vehicles: -1
+    maxLargeUnits: 0
+    refuelRate: 1000
+    transferTime: 96
+    score: 250
+    battlescapeTerrainData:
+      name: RHINOASS_NO_TT
+      mapDataSets:
+        - BLANKS
+        - THUNDERHAWKTEX
+        - RHINO
+      mapBlocks:
+        - name: RHINOASS_NO_TT
+          width: 10
+          length: 20
+          items:
             STR_RAZORBACK_SPAWNER:
-              - [4, 7, 1] #[5, 6, 1]
+              - [4, 3, 1]
           fuseTimers:
             STR_RAZORBACK_SPAWNER: [0, 0]
     deployment:
-      - [4, 6, 0, 0]
-      - [5, 6, 0, 0]
-      - [4, 7, 0, 0]
-      - [5, 7, 0, 0]
-      - [4, 8, 0, 0]
-      - [5, 8, 0, 0]
-      - [4, 8, 0, 0]
+      - [4, 5, 0, 0]
+      - [5, 5, 0, 0]
+      - [4, 4, 0, 6]
+      - [5, 4, 0, 2]
+      - [4, 3, 0, 0]
+      - [5, 3, 0, 0]
+
   - type: STR_CRAFT_LANDRAIDER
     requires:
       - STR_RHINO_NO_TT_REQ

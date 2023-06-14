@@ -1,0 +1,242 @@
+extended:
+  tags:
+    RuleItem:
+      TERMINATOR_WEAPON: int # 0=ignored, 1=50% one hand accuracy; 2=0% one hand accuracy; 3=exclusively terminator weapon; 4=is not used, but would mean that the weapon is supported by terminator armor.
+    RuleArmor:
+      TERMINATOR_ARMOR: int # 0=no, 1=yes
+
+  scripts:
+    accuracyMultiplierBonusStats:
+      - new: eTweaks_aMBS_terminator_weapon
+        offset: 10
+        code: |
+          var int terminatorWeapon;
+          var int terminatorArmor;
+          var ptr RuleArmor ruleA;
+          var ptr BattleItem otherWeapon;
+
+          weapon.getTag terminatorWeapon Tag.TERMINATOR_WEAPON;
+          # debug_log "terminatorWeapon:" terminatorWeapon;
+          unit.getRuleArmor ruleA;
+          ruleA.getTag terminatorArmor Tag.TERMINATOR_ARMOR;
+          # debug_log "terminatorArmor:" terminatorArmor;
+
+          # if you want for terminator armor to support only specific weapons
+          # if and eq terminatorWeapon 0 eq terminatorArmor 1;
+          #   set bonus 0;
+          #   return bonus;
+          # end;
+
+          if or eq terminatorWeapon 0 eq terminatorArmor 1;
+            return bonus;
+          end;
+
+          if eq terminatorWeapon 3;
+            set bonus 0;
+            return bonus;
+          end;
+
+          unit.getLeftHandWeapon otherWeapon;
+          if eq weapon otherWeapon;
+            unit.getRightHandWeapon otherWeapon;
+          end;
+
+          if eq null otherWeapon;
+            return bonus;
+          else eq terminatorWeapon 1;
+            set bonus 50;
+            return bonus;
+          else eq terminatorWeapon 2;
+            set bonus 0;
+            return bonus;
+          end;
+
+          return bonus;
+
+armors:
+  - &TERMINATOR_ARMOR_1
+    type: STR_POWER_SUIT_UC
+    tags:
+      TERMINATOR_ARMOR: 1
+  - type: STR_TSARGENT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_FLYING_SUIT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_CAPTAIN_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_CHAOS_TERMINATOR_ARMOR
+    refNode: *TERMINATOR_ARMOR_1
+  - type: MUTON_ARMORTZEENTCH_PLAYER
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_DW_CAP_ARMOR_ULTRA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_SALA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_BA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_BT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_IF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_WS_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_SW_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_DA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_CAP_ARMOR_CF_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_DW_WM_ARMOR_ULTRA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_SALA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_BA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_BT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_IF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_WS_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_SW_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_DA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_WM_ARMOR_CF_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_DW_TER_ARMOR_ULTRA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_SALA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_BA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_BT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_IF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_WS_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_SW_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_DA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TER_ARMOR_CF_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_DW_TASS_ARMOR_ULTRA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_SALA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_BA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_BT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_IF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_WS_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_SW_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_DA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TASS_ARMOR_CF_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+  - type: STR_DW_TSARGENT_ARMOR_ULTRA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_SALA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_BA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_BT_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_IF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_WS_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_SW_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_DA_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_DW_TSARGENT_ARMOR_CF_UC
+    refNode: *TERMINATOR_ARMOR_1
+  
+  - type: STR_GREYKNIGHT_UC 
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_GK_TAC_LV1_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_GK_TAC_LV2_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_GK_TAC_LV3_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_GK_TAC_LV4_UC
+    refNode: *TERMINATOR_ARMOR_1
+  - type: STR_GK_TAC_LV5_UC
+    refNode: *TERMINATOR_ARMOR_1
+
+items:
+  - &TERMINATOR_WEAPON_2
+    type: STR_ASSC
+    tags:
+      TERMINATOR_WEAPON: 2
+    twoHanded: true
+    blockBothHands: false
+    oneHandedPenalty: 100
+
+  - type: STR_AUTO_CANNON 
+    refNode: *TERMINATOR_WEAPON_2
+
+  - type: STR_AUTO_CANNON_DW
+    refNode: *TERMINATOR_WEAPON_2
+
+  - type: STR_AUTO_CANNON_RETRIBUTOR_2  
+    refNode: *TERMINATOR_WEAPON_2
+
+  - type: STR_AUTO_CANNON_POTESTAS 
+    refNode: *TERMINATOR_WEAPON_2
+
+  - type: STR_AUTO_CANNON_CHAOSRETRIBUTOR
+    refNode: *TERMINATOR_WEAPON_2
+
+  - type: STR_HFLAMER
+    refNode: *TERMINATOR_WEAPON_2
+
+  - &TERMINATOR_WEAPON_1
+    type: STR_HB
+    tags:
+      TERMINATOR_WEAPON: 1
+    twoHanded: true
+    blockBothHands: false
+    oneHandedPenalty: 100
+
+  - type: STR_CHB
+    refNode: *TERMINATOR_WEAPON_1
+
+
+  # - &TERMINATOR_WEAPON_4
+  #   type: AUX_MORTAR
+
+  # - type: STR_POWER_SWORD
+  #   refNode: *TERMINATOR_WEAPON_4
+
+  # - type: STR_POWER_SWORD_MC
+  #   refNode: *TERMINATOR_WEAPON_4
+
+  # - type: STR_HAMMER_MC
+  #   refNode: *TERMINATOR_WEAPON_4
+
+  # - type: STR_HAMMER
+  #   refNode: *TERMINATOR_WEAPON_4
+
+  # - type: STR_CLAWS
+  #   refNode: *TERMINATOR_WEAPON_4
+  
+  # - type: STR_POWERFIST
+  #   refNode: *TERMINATOR_WEAPON_4
+
+  # - type: AUX_SHIELD
+  #   refNode: *TERMINATOR_WEAPON_4

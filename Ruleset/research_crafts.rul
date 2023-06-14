@@ -7,20 +7,16 @@ research:
   - name: STR_RHINO_NO_TT_REQ
     cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
+      - STR_RHINO_TRANSPORT
       - STR_CHAPTER_PURITY
-    unlocks:
-      - STR_RHINO_NO_TT
     lookup: STR_RHINO_NO_TT
 
   - name: STR_RHINO_NO_TT_MANU
-    cost: 400
+    cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
+      - STR_RHINO_TRANSPORT
       - STR_CHAPTER_PURITY
       - STR_RHINO_NO_TT_REQ
-    unlocks:
-      - STR_RHINO_NO_TT
     lookup: STR_RHINO_NO_TT
 
 
@@ -31,20 +27,15 @@ research:
   - name: STR_INTERCEPTOR_REQ
     cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
+      - STR_STORMTALON_INTERCEPTOR
       - STR_CHAPTER_PURITY
-    unlocks:
-      - STR_INTERCEPTOR
     lookup: STR_INTERCEPTOR
 
   - name: STR_INTERCEPTOR_MANU
-    cost: 400
+    cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_INTERCEPTOR_REQ
-    unlocks:
-      - STR_INTERCEPTOR
     lookup: STR_INTERCEPTOR
 
 
@@ -55,19 +46,39 @@ research:
   - name: STR_STORMHAWKR
     cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
-      - STR_MIDTIER_PREREQ
+      - STR_STORMHAWK_INTERCEPTOR
     unlocks:
       - STR_STORMHAWK
     lookup: STR_STORMHAWK
 
   - name: STR_STORMHAWK_MANU
-    cost: 400
+    cost: 100
     dependencies:
-      - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_STORMHAWKR
     unlocks:
       - STR_STORMHAWK
     lookup: STR_STORMHAWK
+
+
+  - name: STR_RHINO_TRANSPORT
+    cost: 5
+    dependencies:
+      - STR_MT
+    unlocks:
+      - STR_RHINO_NO_TT
+
+  - name: STR_STORMTALON_INTERCEPTOR
+    cost: 5
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_INTERCEPTOR
+
+  - name: STR_STORMHAWK_INTERCEPTOR
+    cost: 5
+    dependencies:
+      - STR_MT
+    unlocks:
+      - STR_STORMHAWK

@@ -8,7 +8,7 @@ extended:
 
   scripts:
     hitUnit:
-      - new: eTweaks_hU_force_field
+      - new: eTweaks_hU_force_fields
         offset: 20
         code: |
           var int temp;
@@ -33,12 +33,12 @@ extended:
           damagingItem.getDamageType damageType;
           damageType.getResistType temp;
 
-          # don't dodge on psi
+          # don't nullify on psi
           if or eq battle_action BA_PANIC eq battle_action BA_MINDCONTROL eq battle_action BA_USE;
             return power part side;
           end;
 
-          # don't dodge support skills
+          # don't nullify support skills
           # terrain artillery shell (terror city map) do damageType 0
           if or eq temp 0 eq temp 10; # Support or Impact (IG Support, non-IG drop deploy) damage type
             return power part side;
@@ -68,7 +68,7 @@ extended:
           return 0 part side;
 
     statsForNerdsArmor:
-      - new: RT_sFNA_stats_for_nerds_armor_2
+      - new: eTweaks_sFNA_force_fields
         offset: 30
         code: |
           var int temp;
@@ -83,25 +83,45 @@ extended:
           return;
 
 armors:
-  - &TERMINATOR_ARMOR_1
+  - &RATING_30_10
+    type: STR_CHAOS_HERETEK_ARMOR
+    tags:
+      FORCE_FIELD_RATING: 30
+      FORCE_FIELD_OVERLOAD_RATING: 10
+
+  - type: SNAKEMAN_ARMORC
+    refNode: *RATING_30_10
+
+  - &RATING_35_0
     type: STR_POWER_SUIT_UC
     tags:
       FORCE_FIELD_RATING: 35
     
   - type: STR_TSARGENT_UC
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
 
   - type: STR_FLYING_SUIT_UC
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
 
   - type: STR_CAPTAIN_UC
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
 
   - type: STR_GREYKNIGHT_UC 
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
 
   - type: STR_CHAOS_TERMINATOR_ARMOR
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
 
   - type: MUTON_ARMORTZEENTCH_PLAYER
-    refNode: *TERMINATOR_ARMOR_1
+    refNode: *RATING_35_0
+
+  - &RATING_45_0
+    type: STR_CHAP_ARMOR_UC
+    tags:
+      FORCE_FIELD_RATING: 45
+
+  - &RATING_50_1
+    type: STR_ARMOR_CAPTAIN_MK7_UC
+    tags:
+      FORCE_FIELD_RATING: 50
+      FORCE_FIELD_OVERLOAD_RATING: 1

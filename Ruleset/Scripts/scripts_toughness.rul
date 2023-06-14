@@ -1,0 +1,102 @@
+extended:
+  tags:
+    RuleArmor:
+      TOUGHNESS_ARMOR: int
+    RuleSoldier:
+      TOUGHNESS_SOLDIER: int
+
+  scripts:
+
+    damageUnit:
+      - new: eTweaks_dU_toughness
+        offset: 2 #toughness
+        code: |
+          var int toughness;
+          var int armorValue;
+          var int temp;
+          var ptr RuleSoldier ruleS;
+
+          if le to_armor 0;
+            return;
+          end;
+
+          unit.getTag toughness Tag.TOUGHNESS_ARMOR;
+          if eq toughness 0;
+            unit.getRuleSoldier ruleS;
+            ruleS.getTag toughness Tag.TOUGHNESS_SOLDIER;
+            if eq toughness 0;
+              return;
+            end;
+          end;
+
+          unit.getArmor armorValue side;
+          add temp armorValue;
+          sub temp to_armor;
+          if lt temp toughness;
+            unit.setArmor side toughness;
+            set to_armor 0;
+          end;
+
+          return;
+
+    statsForNerdsArmor:
+      - new: RT_sFNA_stats_for_nerds_armor
+        offset: 30
+        code: |
+          var int toughness;
+
+          rule.getTag toughness Tag.TOUGHNESS_ARMOR;
+          if gt toughness 0;
+            stats_state.addIntRow "TOUGHNESS_ARMOR" toughness;
+          end;
+
+          return;
+  
+
+soldiers:
+
+  - type: STR_SOLDIER_ASPIRANT
+    tags:
+      TOUGHNESS_SOLDIER: 20
+
+  - type: STR_SOLDIER_SCOUT
+    tags:
+      TOUGHNESS_SOLDIER: 45
+
+  - &SPACE_MARINE
+    type: STR_SOLDIER
+    tags:
+      TOUGHNESS_SOLDIER: 55
+
+  - type: STR_SOLDIER_DEVASTATOR
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_ASSAULT
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_STERNGUARD
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_VANGUARD
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_APOTHECARY
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_TECHMARINE
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_CAPTAIN
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_TERMINATOR
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_CHAPLAIN
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_LIBRARIAN
+    refNode: *SPACE_MARINE
+
+  - type: STR_SOLDIER_SERGEANT
+    refNode: *SPACE_MARINE

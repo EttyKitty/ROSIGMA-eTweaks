@@ -1,16 +1,17 @@
 soldierTransformation:
 
-  - name: STR_PROMOTE_SCOUT
+  - name: STR_PROMOTION_SCOUT
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
     requiresBaseFunc: [MED]
     producedSoldierType: STR_SOLDIER_SCOUT
     allowsLiveSoldiers: true
     allowedSoldierTypes:
-      - STR_SOLDIER_NEOPHYTE
+      - STR_SOLDIER_ASPIRANT
     transferTime: 46
-    cost: 100000
+    cost: 70000
     showMinMax: false
     lowerBoundAtMinStats: true
     upperBoundAtMaxStats: false
@@ -18,10 +19,12 @@ soldierTransformation:
     requiredCommendations:
       STR_MEDAL_STATGAIN: 0
 
-  - name: STR_PROMOTE_DEVASTATOR
+  - name: STR_PROMOTION_DEVASTATOR
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     producedSoldierType: STR_SOLDIER_DEVASTATOR
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -36,10 +39,12 @@ soldierTransformation:
       STR_KILLPOINT_TOKEN: 60
       STR_TATICAL_ARMOR: 1
 
-  - name: STR_PROMOTE_ASSAULT
+  - name: STR_PROMOTION_ASSAULT
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     producedSoldierType: STR_SOLDIER_ASSAULT
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -49,14 +54,16 @@ soldierTransformation:
     transferTime: 0
     cost: 50000
     requiredMinStats:
-      firing: 100
+      firing: 90
     requiredItems:
       STR_KILLPOINT_TOKEN: 60
 
-  - name: STR_PROMOTE_TACTICAL
+  - name: STR_PROMOTION_TACTICAL
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     producedSoldierType: STR_SOLDIER
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -68,17 +75,24 @@ soldierTransformation:
     transferTime: 0
     cost: 50000
     requiredMinStats:
-      melee: 100
+      melee: 90
 
-  - name: STR_PROMOTE_TERMINATOR
+  - name: STR_PROMOTION_TERMINATOR
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     requiredItems:
       STR_KILLPOINT_TOKEN: 180
       STR_POWER_SUIT: 1
 
-  - name: STR_PROMOTE_STERNGUARD
+  - name: STR_PROMOTION_STERNGUARD
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     producedSoldierType: STR_SOLDIER_STERNGUARD
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -90,12 +104,14 @@ soldierTransformation:
     transferTime: 0
     cost: 50000
     requiredMinStats:
-      firing: 120
+      firing: 100
 
-  - name: STR_PROMOTE_VANGUARD
+  - name: STR_PROMOTION_VANGUARD
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
     producedSoldierType: STR_SOLDIER_VANGUARD
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -107,13 +123,36 @@ soldierTransformation:
     transferTime: 0
     cost: 50000
     requiredMinStats:
-      melee: 120
+      melee: 100
 
-  - name: STR_PROMOTE_APOTHECARY
+  - name: STR_PROMOTION_CAPTAIN
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_CHAPTER_INITIATION
+      - STR_PERSONAL_ARMOR
+    producedSoldierType: STR_SOLDIER_CAPTAIN
+    allowsLiveSoldiers: true
+    allowsWoundedSoldiers: true
+    keepSoldierArmor: true
+    allowedSoldierTypes:
+      - STR_SOLDIER_VANGUARD
+      - STR_SOLDIER_STERNGUARD
+    requiredItems:
+      STR_KILLPOINT_TOKEN: 200
+    transferTime: 0
+    cost: 50000
+    requiredMinStats:
+      melee: 120
+      firing: 120
+
+  - name: STR_PROMOTION_APOTHECARY
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_APOC_BAY
+      - STR_PERSONAL_ARMOR
+    requiresBaseFunc: [MED]
     producedSoldierType: STR_SOLDIER_APOTHECARY
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -125,11 +164,13 @@ soldierTransformation:
       STR_KILLPOINT_TOKEN: 120
       STR_TATICAL_ARMOR: 1
 
-  - name: STR_PROMOTE_TECHMARINE
+  - name: STR_PROMOTION_TECHMARINE
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
       - STR_TEC_BAYR
+      - STR_PERSONAL_ARMOR
+    requiresBaseFunc: [TEC]
     producedSoldierType: STR_SOLDIER_TECHMARINE
     allowsLiveSoldiers: true
     allowsWoundedSoldiers: true
@@ -146,7 +187,9 @@ soldierTransformation:
       - STR_NOT_PRIMARIS
     requiredCommendations:
       STR_MEDAL_SERVICE_TIME: 0
-    upperBoundAtMaxStats: true
+    upperBoundAtStatCaps: true
+    rerollStats:
+      health: 1
     allowedSoldierTypes: !add
       - STR_SOLDIER_TECHMARINE
       - STR_SOLDIER_APOTHECARY

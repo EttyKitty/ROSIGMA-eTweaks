@@ -5,16 +5,16 @@ manufacture:
       - STR_NOT_PRIMARIS
 
   - name: STR_CRATED_DROPPODS
-    requires: !remove
-      - STR_CRATED_DROPPODS
+    requires:
+      - STR_GENERALLOCK
 
   - name: STR_CRATED_LANDSPEEDER
-    requires: !remove
-      - STR_CRATED_LANDSPEEDER
+    requires:
+      - STR_GENERALLOCK
 
   - name: STR_CRATED_RHINO
-    requires: !remove
-      - STR_CRATED_RHINO
+    requires:
+      - STR_GENERALLOCK
 
   - name: STR_DREAD2_ARMOR
     requires: !remove
@@ -35,3 +35,18 @@ manufacture:
   - name: STR_FIRESTORM
     requires: !remove
       - STR_NOT_PRIMARIS
+
+  - name: STR_LASGUN_CLIP
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - name: STR_PROCESS_CORPSE_MK7
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_PERSONAL_ARMOR
+    time: 400
+    cost: 50000
+    requiredItems:
+      STR_MK7_CORPSE: 1
+    producedItems:
+      STR_TATICAL_ARMOR: 1

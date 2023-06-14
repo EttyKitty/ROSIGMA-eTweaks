@@ -1,0 +1,23 @@
+extended:
+  scripts:
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: int
+      ARMOR_ENERGY_SHIELD_DECAY: int
+
+armors:
+
+  - type: TG_BATTLESERVITOR_HBARMOR
+    antiCamouflageAtDay: 0
+    antiCamouflageAtDark: 0
+    heatVision: 0 #% of smoke that is ignored by superior sensors
+
+
+  - type: STR_CHAOS_HERETEK_ARMOR
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 0
+      ARMOR_ENERGY_SHIELD_DECAY: 0
+
+  - type: SNAKEMAN_ARMORC
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 0
+      ARMOR_ENERGY_SHIELD_DECAY: 0

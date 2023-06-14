@@ -1,125 +1,268 @@
 items:
 
-  - &RANGE_1
+  - &RANGE_8
     type: STR_LASCUTTER
-    dropoff: 4
-    autoRange: 1
-    snapRange: 2
-    aimRange: 3
+    dropoff: 150
+    autoRange: 4
+    snapRange: 8
+    aimRange: 12
+    maxRange: 12
 
   - type: STR_INFERNO_PISTOL
-    refNode: *RANGE_1
+    refNode: *RANGE_8
 
-  - &RANGE_2
-    type: STR_HEAVY_LASER
-    dropoff: 4
-    autoRange: 2
-    snapRange: 4
-    aimRange: 6
-
-  - type: STR_HARMONIC_MELTAGUN
-    refNode: *RANGE_2
-
-  - type: STR_CHAOSHARMONIC_MELTAGUN
-    refNode: *RANGE_2
-
-  - type: STR_CHAOS_MELTAGUN
-    refNode: *RANGE_2
-
-  - &RANGE_3
+  - &RANGE_24
     type: STR_PISTOLB
-    dropoff: 4
-    autoRange: 3
-    snapRange: 6
-    aimRange: 9
+    dropoff: 150
+    autoRange: 6
+    snapRange: 12
+    aimRange: 18
+    maxRange: 18
 
   - type: STR_PISTOLH
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
   - type: STR_BOLTPISTOL_CHAOS
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
   - type: STR_PISTOL
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
   - type: STR_PLASMA_PISTOL
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
   - type: STR_PLASMA_PISTOL_TERRAN
-    refNode: *RANGE_3
-
-  - type: STR_SMALL_LAUNCHER_TERRAN
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
   - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
-    refNode: *RANGE_3
+    refNode: *RANGE_24
 
-  - &RANGE_10
-    type: STR_RIFLE
-    dropoff: 4
-    autoRange: 5
-    snapRange: 10
-    aimRange: 15
-
-  - type: STR_RIFLEB
-    refNode: *RANGE_10
-    
   - type: STR_PISTOLS
-    refNode: *RANGE_10
+    refNode: *RANGE_24
 
-  - type: STR_PLASMA_RIFLE_TERRAN
-    refNode: *RANGE_10
+  - type: STR_FLAMETHROWER_CHAOS
+    refNode: *RANGE_24
 
-  - type: STR_PLASMA_RIFLE
-    refNode: *RANGE_10
+  - type: STR_STUB_GUN_CHAOS
+    refNode: *RANGE_24
 
-  - type: STR_HB
-    refNode: *RANGE_10
+  - type: STR_BOLTPISTOL_NURGLE
+    refNode: *RANGE_24
 
-  - &RANGE_15
-    type: STR_AUTO_CANNON
-    dropoff: 4
-    autoRange: 8
-    snapRange: 16
-    aimRange: 24
+  - type: STR_NURGLE_GRAVPISTOL
+    refNode: *RANGE_24
 
-  # - type: STR_HEAVY_CANNON
-  #   refNode: *RANGE_15
+  - type: STR_FLAMETHROWER
+    refNode: *RANGE_24
 
-  - type: STR_ASSC
-    refNode: *RANGE_15
+  - type: STR_HARMONIC_MELTAGUN
+    refNode: *RANGE_24
 
-  - type: STR_BLASTER_LAUNCHER
-    refNode: *RANGE_15
+  - type: STR_CHAOSHARMONIC_MELTAGUN
+    refNode: *RANGE_24
 
-  - type: STR_BLASTER_LAUNCHER_TERRAN
-    refNode: *RANGE_15
+  - type: STR_CHAOS_MELTAGUN
+    refNode: *RANGE_24
 
-  - type: STR_SENTINEL_MULTIMELTA
-    refNode: *RANGE_15
+  - type: NURGLING_SPIT
+    refNode: *RANGE_24
 
-  - type: STR_CSERVITOR_HB
-    refNode: *RANGE_15
-  
-  - type: AUX_BOLTER
-    refNode: *RANGE_15
+  - type: CELATID_WEAPON
+    refNode: *RANGE_24
 
-  - &RANGE_20
-    type: STR_RIFLEC
-    dropoff: 4
-    autoRange: 10
-    snapRange: 20
-    aimRange: 30
+  - type: STR_HEAVY_LASER
+    refNode: *RANGE_24
 
-  - &RANGE_30
-    type: STR_LASCAN
-    dropoff: 4
+  - type: STR_LASER_PISTOLC
+    refNode: *RANGE_24
+
+  - type: STR_PLASMA_PISTOL_SLAAN
+    refNode: *RANGE_24
+
+  - &RANGE_18
+    type: STR_GRAVGUN_AOE_CHAOS
+    dropoff: 150
+    autoRange: 9
+    snapRange: 18
+    aimRange: 27
+    maxRange: 27
+
+  - type: STR_CHAOS_RIPPERGUN
+    refNode: *RANGE_18
+
+  - type: STR_GRAVGUN_NURGLE
+    refNode: *RANGE_18
+
+  - type: STR_SMALL_LAUNCHER_TERRAN
+    refNode: *RANGE_18
+
+  - type: STR_SHOTGUN
+    refNode: *RANGE_18
+
+  - type: STR_SHOTGUN_CHAOS
+    refNode: *RANGE_18
+
+  - type: STR_PUMP_SHOTGUN_CHAOS
+    refNode: *RANGE_18
+
+  - &RANGE_24
+    type: STR_RIFLE
+    dropoff: 150
     autoRange: 12
     snapRange: 24
     aimRange: 36
+    maxRange: 36
+
+  - type: STR_RIFLEB
+    refNode: *RANGE_24
+
+  - type: STR_BOLTERC
+    refNode: *RANGE_24
+  
+  - type: STR_PLASMA_RIFLE_TERRAN
+    refNode: *RANGE_24
+
+  - type: STR_PLASMA_RIFLE
+    refNode: *RANGE_24
+
+  - type: STR_HB
+    refNode: *RANGE_24
+
+  - type: STR_AUTOGUN_CHAOS
+    refNode: *RANGE_24
+
+  - type: STR_LIGHT_BOLTER_CHAOS
+    refNode: *RANGE_24
+
+  - type: STR_AUTOGUN_CHAOS_NURGLE
+    refNode: *RANGE_24
+
+  - type: STR_BOLTERN_LIGHT
+    refNode: *RANGE_24
+
+  - type: STR_LASER_RIFLEC
+    refNode: *RANGE_24
+
+  - type: STR_LASER_RIFLEG
+    refNode: *RANGE_24
+
+  - type: STR_PLASMA_CARBINE_CHAOS
+    refNode: *RANGE_24
+
+  - type: STR_SMG_STUB_GUN_CHAOS
+    refNode: *RANGE_24
+
+  - type: STR_LIGHT_BOLTERSLAAN
+    refNode: *RANGE_24
+
+  - type: STR_BOLTER_HERETIC_DEAZ
+    refNode: *RANGE_24
+
+  - type: STR_LASGUN_LUCIUS
+    refNode: *RANGE_24
+
+  - type: STR_LASCARBINE_SLAAN
+    refNode: *RANGE_24
+
+  - type: STR_AUTOGUN_SLAANESH
+    refNode: *RANGE_24
+
+  - type: STR_LASGUN_SLAANESH_ESCHER
+    refNode: *RANGE_24
+
+  - type: STR_CHAOS_HELLGUN
+    refNode: *RANGE_24
+
+  - type: STR_STORMBOLTER_TURRET_DROPPOD
+    refNode: *RANGE_24
+    aimRange: 24
+
+  - type: STR_BOLTER_ELOHIM
+    refNode: *RANGE_24
+
+  - &RANGE_32
+    type: STR_RIFLEC
+    dropoff: 150
+    autoRange: 16
+    snapRange: 32
+    aimRange: 48
+    maxRange: 48
+
+  - type: STR_STUB_RIFLE_CHAOS
+    refNode: *RANGE_32
+
+  - type: STR_CHAOS_VOLLEYGUN
+    refNode: *RANGE_32
+
+  - &RANGE_36
+    type: STR_GRENADE_LAUNCHER
+    dropoff: 150
+    autoRange: 18
+    snapRange: 36
+    aimRange: 54
+    maxRange: 54
+
+  - type: STR_AUTO_CANNON
+    refNode: *RANGE_36
+
+  - type: STR_HEAVY_CANNON
+    refNode: *RANGE_36
+
+  - type: STR_ASSC
+    refNode: *RANGE_36
+
+  - type: STR_BLASTER_LAUNCHER
+    refNode: *RANGE_36
+
+  - type: STR_BLASTER_LAUNCHER_TERRAN
+    refNode: *RANGE_36
+
+  - type: STR_SENTINEL_MULTIMELTA
+    refNode: *RANGE_36
+
+  - type: STR_CSERVITOR_HB
+    refNode: *RANGE_36
+  
+  - type: AUX_BOLTER
+    refNode: *RANGE_36
+
+  - type: STR_HEAVY_STUBBER_CHAOS
+    refNode: *RANGE_36
+
+  - type: STR_SNIPER_CHAOS
+    refNode: *RANGE_36
+
+  - type: STR_LONGLAS_CHAOS
+    refNode: *RANGE_36
+
+  - type: STR_TRAITOR_CHIMERA_MULTI_LASER
+    refNode: *RANGE_36
+    autoRange: 18
+    minRange: 6
+    tuSnap: 0
+
+  - &RANGE_48
+    type: STR_LASCAN
+    dropoff: 150
+    autoRange: 24
+    snapRange: 48
+    aimRange: 72
+    maxRange: 72
 
   - type: AUX_LASCAN_CHAOS
-    refNode: *RANGE_30
+    refNode: *RANGE_48
 
   - type: STR_ROCKET_LAUNCHER
-    refNode: *RANGE_30
+    refNode: *RANGE_48
+  
+  - type: STR_CHAOS_ROCKET_LAUNCHER
+    refNode: *RANGE_48
+
+  - type: STR_NURGLE_ROCKET_LAUNCHER
+    refNode: *RANGE_48
+
+  - type: STR_CHAOS_LASCANNON_HANDHELD
+    refNode: *RANGE_48
+
+  - type: STR_SLAANESH_ROCKET_LAUNCHER
+    refNode: *RANGE_48

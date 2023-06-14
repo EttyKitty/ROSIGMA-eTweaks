@@ -1,115 +1,124 @@
 extended:
   tags:
     RuleItem:
-      MIN_DAMAGE: int
-      ARMOR_IGNORE: int
+      ITEM_RECOIL: int
 
 items:
 #################################### BOLT ####################################
 
-  - &BOLT_GUN
-    type: STR_RIFLE
+  - type: STR_RIFLE
+    requiresBuy:
+      - STR_MARINES_STRATEGY
     listOrder: 10300
-    compatibleAmmo:
-      - STR_RIFLE_CLIP
-      - STR_RIFLE_CLIP_AP
-      - STR_RIFLE_CLIP_EX
-    autoShots: 2
+    weight: 16
+    costBuy: 5000
+    tags:
+      ITEM_RECOIL: 30
 
   - type: STR_RIFLEB
-    refNode: *BOLT_GUN
+    weight: 16
     costBuy: 0
-    listOrder: 10310
+    listOrder: 10300
+    tags:
+      ITEM_RECOIL: 30
 
   - type: STR_RIFLEC
-    refNode: *BOLT_GUN
+    weight: 16
     costBuy: 0
-    listOrder: 10320
-    weight: 18
+    listOrder: 10300
+    tuAuto: 0
+    tags:
+      ITEM_RECOIL: 30
 
-  - &BOLT_PISTOL
-    type: STR_PISTOLB
-    listOrder: 10110
+  - type: STR_BOLTERC
+    weight: 16
+    costBuy: 0
+    listOrder: 10300
+    tags:
+      ITEM_RECOIL: 30
+
+  - type: STR_PISTOLB
+    requiresBuy:
+      - STR_MARINES_STRATEGY
     compatibleAmmo:
       - STR_PISTOL_CLIP
-      - STR_PISTOL_CLIP_AP
-      - STR_PISTOL_CLIP_EX
+    listOrder: 10110
     weight: 5
-    costBuy: 0
+    costBuy: 3000
+    tags:
+      ITEM_RECOIL: 30
 
   - type: STR_PISTOLH
-    refNode: *BOLT_PISTOL
     listOrder: 10120
     costBuy: 0
+    weight: 5
+    tags:
+      ITEM_RECOIL: 30
 
   - type: STR_PISTOLS
-    refNode: *BOLT_PISTOL
     listOrder: 10130
-    compatibleAmmo:
-      - STR_PISTOL_CLIP
-      - STR_PISTOL_CLIP_AP
-      - STR_PISTOL_CLIP_EX
-      - STR_RIFLE_CLIP
-      - STR_RIFLE_CLIP_AP
-      - STR_RIFLE_CLIP_EX
     costBuy: 0
-    
+    weight: 5
+    tags:
+      ITEM_RECOIL: 30
+
   - type: STR_BOLTPISTOL_CHAOS
-    refNode: *BOLT_PISTOL
     listOrder: 10140
+    costBuy: 0
 
   - type: STR_PISTOL
-    requiresBuy:
+    requiresBuy: !add
       - STR_LIGHT_BOLTERS
     listOrder: 10100
 
-  - type: STR_HB
-    costBuy: 500000
+  - type: STR_HB #STORMBOLTER
+    costBuy: 0
     monthlyBuyLimit: 1
     compatibleAmmo:
       - STR_HB_CLIP
-      - STR_STORMBOLTER_AMMO_KP
 
   - type: STR_AUTO_CANNON #HEAVYBOLTER                12000
-    confSnap:
-      shots: 3
-    confAimed:
-      shots: 6
     compatibleAmmo:
       - STR_AC_AP_AMMO
-      - STR_AC_KP_AMMO
-      - STR_AC_HE_AMMO
-      - STR_AC_I_AMMO
-    weight: 70
-    costBuy: 200000
+      - STR_AC_HF_AMMO
+    weight: 60
+    costBuy: 20000
     monthlyBuyLimit: 1
+    tuAuto: 0
+    tuAimed: 0
 
 #################################### SOLID PROJECTILE ####################################
 
-  # - type: STR_HEAVY_CANNON # done # Sniper
-  #   tags:
-  #     ITEM_AIMED_ACCURACY_POWER_BONUS: 0
-  #     ITEM_POWER_BONUS_PERCENTILE: 0
+  - type: STR_HEAVY_CANNON
+    weight: 5
+    costBuy: 15000
+
+  - type: STR_SHOTGUN
+    costBuy: 5000
+    confSnap:
+      shots: 2
+    bulletSpeed: 50
+
+  - type: STR_SHOTGUN_CHAOS
+    confSnap:
+      shots: 2
+    bulletSpeed: 50
 
   - &ASSAULT_CANNON
     type: STR_ASSC
-    confSnap:
-      shots: 6
     weight: 80
     sprayWaypoints: 2
-    confAimed:
-      shots: 10
-    costBuy: 800000
+    costBuy: 0
     monthlyBuyLimit: 1
 
 #################################### LASER ####################################
 
   - type: STR_LASCAN #LASCANON                         2017  amied
-    weight: 75
+    weight: 70
     compatibleAmmo:
       - STR_LASCAN_CLIP
       - STR_LASCANNON_CLIP_SMALL
-    costBuy: 250000
+    costBuy: 0
     monthlyBuyLimit: 1
 
   - type: STR_LASCUTTER #Industrial Lascutter                   2019
@@ -121,8 +130,7 @@ items:
     requiresBuy:
       - STR_HEAVY_LASER
     weight: 14
-    costBuy: 200000
-    monthlyBuyLimit: 1
+    costBuy: 50000
 
   - &MELTAPISTOL
     type: STR_INFERNO_PISTOL
@@ -142,6 +150,12 @@ items:
   - type: STR_CHAOSHARMONIC_MELTAGUN
     refNode: *HARMONICMELTA
 
+#################################### FLAME ####################################
+
+  - &FLAMER
+    type: STR_FLAMETHROWER
+    costBuy: 10000
+
 #################################### PLASMA ####################################
 
   - &PLASMA_RIFLE
@@ -154,7 +168,7 @@ items:
       shortName: STR_POWER_SHOT_COUNT
     tags:
       ITEM_AIMED_POWER_BONUS: 20
-    costBuy: 250000
+    costBuy: 0
     monthlyBuyLimit: 1
 
   - &PLASMA_PISTOL
@@ -167,7 +181,7 @@ items:
       shortName: STR_POWER_SHOT_COUNT
     tags:
       ITEM_AIMED_POWER_BONUS: 20
-    costBuy: 80000
+    costBuy: 0
     monthlyBuyLimit: 1
 
   - type: STR_PLASMA_RIFLE
@@ -179,12 +193,14 @@ items:
 #################################### GRAVITON ####################################
 
   - type: STR_SMALL_LAUNCHER_TERRAN # done # Gravgun
-    costBuy: 130000
+    costBuy: 0
     monthlyBuyLimit: 1
 
 #################################### LAUNCHERS ####################################
 
   - type: STR_ROCKET_LAUNCHER
+    weight: 14
+    costBuy: 15000
     
 #################################### GRENADES ####################################
 
@@ -192,40 +208,25 @@ items:
   - type: STR_GRENADE #frag                #4006
     invWidth: 1
     invHeight: 1
-    damageAlter:
-      RadiusReduction: 5
-      RandomType: 8
-      FixRadius: 4
-    power: 40
-    throwRange: 8
+    throwRange: 6
     weight: 1
     fuseType: -2
     costPrime:
       time: 1
-    tags:
-      MIN_DAMAGE: 10
 
   - type: STR_KRAK_GRENADE #krak
     invWidth: 1
     invHeight: 1
-    damageAlter:
-      RandomType: 8
-      ArmorEffectiveness: 1.0
-      FixRadius: 1
-    power: 60
-    throwRange: 8
+    throwRange: 6
     weight: 1
     fuseType: -2
     costPrime:
       time: 1
-    tags:
-      MIN_DAMAGE: 15
-      ARMOR_IGNORE: 40
 
   - type: STR_SMOKE_GRENADE                #4000
     invWidth: 1
     invHeight: 1
-    throwRange: 8
+    throwRange: 12
     weight: 1
     fuseTriggerEvents:
       throwExplode: true
@@ -235,7 +236,7 @@ items:
   - type: STR_HOLOGRAM_GRENADE
     invWidth: 1
     invHeight: 1
-    throwRange: 14
+    throwRange: 12
     fuseType: 1
     costPrime:
       time: 1
@@ -253,21 +254,11 @@ items:
     throwRange: 1
     invWidth: 1
     invHeight: 2
-    power: 100
-    damageAlter:
-      RadiusReduction: 10
-      RandomType: 8
-      ArmorEffectiveness: 1.0
-      FixRadius: 5
-      ToHealth: 1.0
-    tags:
-      MIN_DAMAGE: 30
-      ARMOR_IGNORE: 110
 
   - type: STR_PHOTON_GRENADE
     invWidth: 1
     invHeight: 1
-    throwRange: 14
+    throwRange: 12
     costPrime:
       time: 1
 
@@ -275,160 +266,78 @@ items:
     throwRange: 10
 
   - type: STR_PROXIMITY_GRENADE            #4007
-    costBuy: 12000
-    costSell: 6000
+    costBuy: 5000
+    costSell: 2500
     invWidth: 1
     invHeight: 1
     throwRange: 1
-    damageAlter:
-      RadiusReduction: 5
-      RandomType: 8
-      FixRadius: 10
-    power: 60
     weight: 2
     costPrime:
       time: 1
-    tags:
-      MIN_DAMAGE: 35
-      ARMOR_IGNORE: 25
 
 
 #################################### MELEE ####################################
 
-  - type: STR_POWERFIST            #12600           DA POWER
-    weight: 30
-    power: 40
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToArmorPre: 0.6
-      ToHealth: 1.0
-      ToStun: 0.6
-      RandomType: 8
-      ToTile: 0.6
-      TileDamageMethod: 2
-    flatRate: false
+  - type: STR_UNARMED_GAUNTLET_PLUS 
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
     skillApplied: true
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
-    damageBonus:
-      strength: 0.55
-    tags:
-      ARMOR_IGNORE: 60
-
-  - type: STR_UNARMED_GAUNTLET_PLUS            #12600           DA POWER
-    meleeSound: {mod: 40k, index: 754} #754 knif miss
-    meleeHitSound: {mod: 40k, index: 773} #773 knif hit
-    power: 20
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToArmorPre: 0.4
-      ToHealth: 1.0
-      ToStun: 0.4
-      RandomType: 8
-      ToTile: 0.4
-      TileDamageMethod: 2
-    flatRate: false
-    skillApplied: true
-    meleeMultiplier:
-      melee: 1.0
-      flatHundred: 0.0
-    damageBonus:
-      strength: 0.55
-    tags:
-      ARMOR_IGNORE: 40
 
   - type: STR_KNIF
+    costBuy: 3000
     weight: 2
-    power: 20
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToHealth: 1.0
-      ToStun: 0.1
-      RandomType: 8
-      ToArmorPre: 0.0
-    damageType: 1
-    flatRate: false
     skillApplied: true
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
-    damageBonus:
-      strength: 0.4
-    tags:
-      ARMOR_IGNORE: 40
 
   - type: STR_CHAINSWORD
-    power: 20
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToHealth: 1.0
-      ToStun: 0.1
-      RandomType: 7
-      ToArmorPre: 0.1
-      ToWound: 0.2
-      RandomWound: false
-    damageType: 7
-    flatRate: false
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
-    damageBonus:
-      strength: 0.4
-    tags:
-      ARMOR_IGNORE: 20
-      MIN_DAMAGE: 10
 
   - type: STR_EVISCERATOR
     requiresBuy:
       - STR_MARINES_AND_ADEPTAS
     weight: 20
-    power: 40
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToHealth: 1.0
-      ToStun: 0.1
-      RandomType: 7
-      ToArmorPre: 0.1
-      ToWound: 0.2
-      RandomWound: false
-    damageType: 7
-    flatRate: false
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
-    damageBonus:
-      strength: 0.4
-    tags:
-      ARMOR_IGNORE: 80
-      MIN_DAMAGE: 10
 
   - type: STR_STUN_ROD
-    power: 20
-    damageAlter:     #DA POWER
-      ArmorEffectiveness: 1.0
-      ToHealth: 1.0
-      ToStun: 1.0
-      RandomType: 8
-      ToArmorPre: 0.05
-    flatRate: false
+    costBuy: 1500
     meleeMultiplier:
       melee: 1.0
       flatHundred: 0.0
-    damageBonus:
-      strength: 0.4
-    tags:
-      MIN_DAMAGE: 10
+
+#################################### MELEE POWER
+
+  - type: STR_POWERFIST
+    costBuy: 30000
+    weight: 30
+    flatRate: false
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+
+  - type: STR_POWER_SWORD
+    invWidth: 1
 
 #################################### TAINTED WEAPON ####################################
 
   - type: STR_CSERVITOR_HB
     compatibleAmmo:
       - STR_CSERVITOR_HB_AMMO
-    confSnap:
-      shots: 3
-    confAimed:
-      shots: 6
 
   - type: STR_ALIEN_GRENADE
-    throwRange: 10
+    throwRange: 6
+
+  - type: STR_PLAGUEBEARERSPAWNER_GRENADE
+    throwRange: 6
+
+  - type: STR_NURGLINGSPAWNER_GRENADE
+    throwRange: 6

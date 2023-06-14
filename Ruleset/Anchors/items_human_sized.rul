@@ -56,18 +56,6 @@ items:
   - type: STR_LASGUN_LUCIUS
     refNode: *HUMAN_SIZED
 
-  - type: STR_SHOTGUN
-    refNode: *HUMAN_SIZED
-
-  - type: STR_SHOTGUN_SHELLS
-    refNode: *HUMAN_SIZED
-
-  - type: STR_STUN_SHELLS
-    refNode: *HUMAN_SIZED
-
-  - type: STR_STUN_GAS_SHELLS
-    refNode: *HUMAN_SIZED
-
   - type: STR_AUTOGUN_CLIP
     refNode: *HUMAN_SIZED
 
@@ -75,4 +63,13 @@ items:
     refNode: *HUMAN_SIZED
 
   - type: STR_LASER_PISTOL
+    refNode: *HUMAN_SIZED
+
+  - type: STR_LASGUN_ESCHER
+    refNode: *HUMAN_SIZED
+
+  - type: STR_ROTOR_KOMBI_BUCKSHOT40
+    refNode: *HUMAN_SIZED
+
+  - type: STR_ROTOR_KOMBI_SLUG40
     refNode: *HUMAN_SIZED

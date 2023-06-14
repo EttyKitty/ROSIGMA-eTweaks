@@ -1,0 +1,107 @@
+items:
+
+  - type: AUX_DREAD_FLAMER
+    weight: 150
+    tuThrow: 0
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_LEFT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+    compatibleAmmo:
+      - STR_HFLAMER_CLIP
+
+  - type: AUX_HOVERTANK_LAUNCHER
+    weight: 150
+    tuThrow: 0
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_LEFT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+
+  - type: AUX_DREAD_ASSC
+    weight: 150
+    tuThrow: 0
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_RIGHT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+    compatibleAmmo:
+      - STR_ASSC_CLIP
+
+  - type: AUX_HOVERTANK_PLASMA
+    weight: 150
+    tuThrow: 0
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_RIGHT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+    compatibleAmmo:
+      - STR_HEAVY_PLASMA_CLIP
+
+  - type: AUX_HOVERTANK_LASER
+    weight: 150
+    tuThrow: 0
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_RIGHT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+
+
+  - type: AUX_DREAD_MULTIMELTA
+    weight: 150
+    bigSprite: 62
+    floorSprite: {mod: 40k, index: 132}
+    bulletSprite: {mod: 40k, index: 16}
+    fireSound: {mod: 40k, index: 739}
+    compatibleAmmo:
+      - STR_BLASTER_BOMB
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    accuracySnap: 80
+    tuSnap: 50
+    tuThrow: 0
+    confSnap:
+      shots: 2
+    maxRange: 40
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_RIGHT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000
+
+  - type: AUX_DREAD_STORMBOLTER
+    weight: 150
+    floorSprite: {mod: 40k, index: 115}
+    bigSprite: 61
+    bulletSprite: {mod: 40k, index: 15}
+    fireSound: {mod: 40k, index: 12}
+    battleType: 1
+    accuracySnap: 75
+    tuSnap: 25
+    tuThrow: 0
+    autoRange: 30
+    compatibleAmmo:
+      - STR_HB_CLIP
+    invWidth: 2
+    invHeight: 3
+    twoHanded: false
+    meleeSound: {mod: 40k, index: 710}
+    meleeHitSound: {mod: 40k, index: 772}
+    meleeAnimation: {mod: 40k, index: 28}
+    meleeType: 7
+    meleePower: 110
+    accuracyMelee: 100
+    tuMelee: 15
+    flatMelee:
+      time: true
+    fixedWeapon: false
+    recover: true
+    supportedInventorySections: [STR_LEFT_HAND]
+    inventoryMoveCost:
+      basePercent: 5000

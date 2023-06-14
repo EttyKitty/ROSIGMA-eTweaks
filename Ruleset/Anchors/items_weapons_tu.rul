@@ -1,28 +1,20 @@
 items:
-#################################### BASIC AUTO ####################################
+# #################################### BASIC AUTO ####################################
 
   - &BASIC_AUTO
-    type: STR_RIFLE
-    tuSnap: 22
-    tuAuto: 22
+    type: STR_AUTOGUN_CHAOS
+    tuSnap: 25
+    tuAuto: 25
     tuAimed: 0
+    autoShots: 2
+
+  - type: STR_RIFLE
+    refNode: *BASIC_AUTO
 
   - type: STR_RIFLEB
     refNode: *BASIC_AUTO
 
-  - type: STR_PISTOLB
-    refNode: *BASIC_AUTO
-
-  - type: STR_PISTOLH
-    refNode: *BASIC_AUTO
-
-  - type: STR_PISTOLS
-    refNode: *BASIC_AUTO
-
-  - type: STR_BOLTPISTOL_CHAOS
-    refNode: *BASIC_AUTO
-
-  - type: STR_PISTOL
+  - type: STR_BOLTERC
     refNode: *BASIC_AUTO
 
   - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
@@ -31,22 +23,81 @@ items:
   - type: STR_HB
     refNode: *BASIC_AUTO
 
+  - type: STR_FLAMETHROWER_CHAOS
+    refNode: *BASIC_AUTO
+
+  - type: STR_CHAOS_RIPPERGUN
+    refNode: *BASIC_AUTO
+
+  - type: STR_LIGHT_BOLTER_CHAOS
+    refNode: *BASIC_AUTO
+
+  - type: STR_AUTOGUN_CHAOS_NURGLE
+    refNode: *BASIC_AUTO
+
+  - type: STR_BOLTERN_LIGHT
+    refNode: *BASIC_AUTO
+
+  - type: STR_LASER_RIFLEC
+    refNode: *BASIC_AUTO
+
+  - type: STR_LASER_RIFLEG
+    refNode: *BASIC_AUTO
+
+  - type: STR_PLASMA_CARBINE_CHAOS
+    refNode: *BASIC_AUTO
+
+  - type: STR_SMG_STUB_GUN_CHAOS
+    refNode: *BASIC_AUTO
+
+  - type: STR_LIGHT_BOLTERSLAAN
+    refNode: *BASIC_AUTO
+
+  - type: STR_BOLTER_HERETIC_DEAZ
+    refNode: *BASIC_AUTO
+
+  - type: STR_CHAOS_VOLLEYGUN
+    refNode: *BASIC_AUTO
+    autoShots: 4
+
+  - type: STR_CHAOS_HELLGUN
+    refNode: *BASIC_AUTO
+
+  - type: STR_STORMBOLTER_TURRET_DROPPOD
+    refNode: *BASIC_AUTO
+    costAuto:
+      time: 1
+      energy: 4
+    costSnap:
+      time: 0
+      energy: 0
+    costAimed:
+      time: 1
+      energy: 2
+    confAimed:
+      name: STR_SNAP
+
+  - type: STR_TRAITOR_CHIMERA_MULTI_LASER
+    refNode: *BASIC_AUTO
+    tuSnap: 0
+    autoShots: 4
+
+  - type: STR_BOLTER_ELOHIM
+    refNode: *BASIC_AUTO
+
 #################################### BASIC SINGLE ####################################
 
   # - &BASIC_SINGLE
   #   type: STR_HEAVY_CANNON # done # Sniper
-  #   tuSnap: 22
+  #   tuSnap: 33
   #   tuAuto: 0
   #   tuAimed: 0
 
   - &BASIC_SINGLE
-    type: STR_RIFLEC
-    tuSnap: 22
+    type: STR_HEAVY_LASER
+    tuSnap: 25
     tuAuto: 0
     tuAimed: 0
-
-  - type: STR_HEAVY_LASER
-    refNode: *BASIC_SINGLE
 
   - type: STR_INFERNO_PISTOL
     refNode: *BASIC_SINGLE
@@ -63,13 +114,101 @@ items:
   - type: STR_SMALL_LAUNCHER_TERRAN # done # Gravgun
     refNode: *BASIC_SINGLE
 
+  - type: STR_PISTOLB
+    refNode: *BASIC_SINGLE
+
+  - type: STR_PISTOLH
+    refNode: *BASIC_SINGLE
+
+  - type: STR_BOLTPISTOL_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_PISTOL
+    refNode: *BASIC_SINGLE
+
+  - type: STR_SHOTGUN_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_GRAVGUN_AOE_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_STUB_GUN_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_PUMP_SHOTGUN_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: NURGLING_SPIT
+    refNode: *BASIC_SINGLE
+
+  - type: CELATID_WEAPON
+    refNode: *BASIC_SINGLE
+
+  - type: STR_BOLTPISTOL_NURGLE
+    refNode: *BASIC_SINGLE
+
+  - type: STR_NURGLE_GRAVPISTOL
+    refNode: *BASIC_SINGLE
+  
+  - type: STR_FLAMETHROWER
+    refNode: *BASIC_SINGLE
+    confSnap:
+      shots: 3
+
+  - type: STR_RIFLEC
+    refNode: *BASIC_SINGLE
+
+  - type: STR_PISTOLS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_LASER_PISTOLC
+    refNode: *BASIC_SINGLE
+
+  - type: STR_STUB_RIFLE_CHAOS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_GRENADE_LAUNCHER
+    refNode: *BASIC_SINGLE
+
+  - type: STR_LASGUN_LUCIUS
+    refNode: *BASIC_SINGLE
+
+  - type: STR_LASCARBINE_SLAAN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_AUTOGUN_SLAANESH
+    refNode: *BASIC_SINGLE
+
+  - type: STR_LASGUN_SLAANESH_ESCHER
+    refNode: *BASIC_SINGLE
+
+  - type: STR_PLASMA_PISTOL_SLAAN
+    refNode: *BASIC_SINGLE
+
+  - type: STR_SHOTGUN
+    refNode: *BASIC_SINGLE
+
+#################################### SCOPED SINGLE ####################################
+
+  - &SCOPED_SINGLE
+    type: STR_SNIPER_CHAOS
+    tuSnap: 45
+    tuAuto: 0
+    tuAimed: 0
+  
+  - type: STR_HEAVY_CANNON
+    refNode: *SCOPED_SINGLE
+
+  - type: STR_LONGLAS_CHAOS
+    refNode: *SCOPED_SINGLE
+
 #################################### BASIC POWER ####################################
 
   - &BASIC_POWER
     type: STR_PLASMA_RIFLE_TERRAN # done
-    tuSnap: 22
-    tuAuto: 44
-    tuAimed: 22
+    tuSnap: 25
+    tuAuto: 0
+    tuAimed: 0
 
   - type: STR_PLASMA_PISTOL_TERRAN #                11200
     refNode: *BASIC_POWER
@@ -84,23 +223,28 @@ items:
 
   - &HEAVY_AUTO
     type: STR_AUTO_CANNON
-    kneelBonus: 100
-    tuSnap: 22
+    tuSnap: 45
     tuAuto: 0
     tuAimed: 0
+    confSnap:
+      shots: 6
 
   - type: STR_ASSC
     refNode: *HEAVY_AUTO
+    confSnap:
+      shots: 12
 
   - type: STR_CSERVITOR_HB
+    refNode: *HEAVY_AUTO
+
+  - type: STR_HEAVY_STUBBER_CHAOS
     refNode: *HEAVY_AUTO
 
 #################################### HEAVY SINGLE ####################################
 
   - &HEAVY_SINGLE
     type: STR_LASCAN
-    kneelBonus: 100
-    tuSnap: 22
+    tuSnap: 45
     tuAuto: 0
     tuAimed: 0
 
@@ -125,21 +269,41 @@ items:
   - type: AUX_LASCAN_CHAOS
     refNode: *HEAVY_SINGLE
 
+  - type: STR_CHAOS_ROCKET_LAUNCHER
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_NURGLE_ROCKET_LAUNCHER
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_CHAOS_LASCANNON_HANDHELD
+    refNode: *HEAVY_SINGLE
+
+  - type: STR_SLAANESH_ROCKET_LAUNCHER
+    refNode: *HEAVY_SINGLE
+
 #################################### MELEE ####################################
 
-  - &MELEE
-    type: STR_POWERFIST            #12600           DA POWER
-    tuMelee: 16
+  - &MELEE_QUICK
+    type: STR_KNIF
+    tuMelee: 10
     flatRate: true
 
-  - type: STR_UNARMED_GAUNTLET_PLUS            #12600           DA POWER
-    refNode: *MELEE
+  - type: STR_UNARMED_GAUNTLET_PLUS
+    refNode: *MELEE_QUICK
 
-  - type: STR_KNIF
-    refNode: *MELEE
+  - type: STR_POWERFIST
+    refNode: *MELEE_QUICK
 
-  - type: STR_CHAINSWORD
-    refNode: *MELEE
+  - type: STR_NURGLING_CLAWS
+    refNode: *MELEE_QUICK
+
+  - type: STR_CPOWER_SWORD
+    refNode: *MELEE_QUICK
 
   - type: STR_STUN_ROD
-    refNode: *MELEE
+    refNode: *MELEE_QUICK
+
+  - &MELEE_AUTO
+    type: STR_CHAINSWORD 
+    tuMelee: 5
+    flatRate: true

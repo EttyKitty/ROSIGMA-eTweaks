@@ -1,42 +1,98 @@
 manufacture:
 
-  - name: STR_AC_HE_AMMO
+  # - name: STR_AC_HE_AMMO
+  #   category: STR_AMMUNITION
+  #   space: 0
+  #   time: 200
+  #   cost: 0
+  #   requiredItems:
+  #     STR_ALIEN_ALLOYS: 1
+  #   producedItems:
+  #     STR_AC_HE_AMMO: 1
+
+  # - name: STR_AC_KP_AMMO
+  #   category: STR_AMMUNITION
+  #   space: 0
+  #   time: 200
+  #   cost: 0
+  #   requiredItems:
+  #     STR_ALIEN_ALLOYS: 1
+  #   producedItems:
+  #     STR_AC_KP_AMMO: 1
+
+  # - name: STR_AC_I_AMMO
+  #   category: STR_AMMUNITION
+  #   space: 0
+  #   time: 200
+  #   cost: 0
+  #   requiredItems:
+  #     STR_ELERIUM_115: 2
+  #   producedItems:
+  #     STR_AC_I_AMMO: 1
+
+  - name: STR_AC_HF_AMMO
     category: STR_AMMUNITION
     space: 0
-    time: 400
-    cost: 2000
+    time: 200
+    cost: 0
+    requires:
+      - STR_SPECIAL_AMMUNITION
     requiredItems:
       STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
     producedItems:
-      STR_AC_HE_AMMO: 1
-
-  - name: STR_AC_KP_AMMO
-    category: STR_AMMUNITION
-    space: 0
-    time: 400
-    cost: 2000
-    requiredItems:
-      STR_ALIEN_ALLOYS: 1
-    producedItems:
-      STR_AC_KP_AMMO: 1
-
-  - name: STR_AC_I_AMMO
-    category: STR_AMMUNITION
-    space: 0
-    time: 400
-    cost: 2000
-    requiredItems:
-      STR_ELERIUM_115: 2
-    producedItems:
-      STR_AC_I_AMMO: 1
-
+      STR_AC_HF_AMMO: 2
 
   - name: STR_STORMBOLTER_AMMO_KP
     category: STR_AMMUNITION
+    requires:
+      - STR_HB
+      - STR_SPECIAL_AMMUNITION
     space: 0
-    time: 400
+    time: 200
     cost: 0
     requiredItems:
       STR_ALIEN_ALLOYS: 2
     producedItems:
-      STR_AC_KP_AMMO: 5
+      STR_STORMBOLTER_AMMO_KP: 5
+
+  - name: STR_PISTOL_CLIP_AP
+    requires:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_PISTOL_CLIP_EX
+    requires:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_RIFLE_CLIP_AP
+    requires:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_RIFLE_CLIP_EX
+    requires:
+      - STR_SPECIAL_AMMUNITION
+
+
+  - name: STR_LIGHT_BOLTER_AMMO_PEN
+    requires: !add
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_LIGHT_BOLTER_AMMO_EX
+    requires: !add
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_LIGHT_BOLTPISTOL_AMMO_AP
+    requires: !add
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_LIGHT_BOLTPISTOL_AMMO_EX
+    requires: !add
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_LIGHT_MELTA_AMMO
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_LIGHT_BOLTPISTOL_AMMO
+    requires: !add
+      - STR_LIGHT_BOLTERS

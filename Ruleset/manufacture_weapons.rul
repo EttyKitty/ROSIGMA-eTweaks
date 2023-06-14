@@ -1,15 +1,5 @@
 manufacture:
 
-  - delete: STR_LASCAN
-  - delete: STR_AUTO_CANNON
-  - delete: STR_ASSC
-  - delete: STR_HEAVY_LASER
-  - delete: STR_PLASMA_RIFLE_TERRAN
-  - delete: STR_PLASMA_PISTOL_TERRAN
-  - delete: STR_HB
-  - delete: STR_SMALL_LAUNCHER_TERRAN
-
-
   # - &MARINES_WEAPONS
   #   name: STR_RIFLEB
   #   category: STR_WEAPON

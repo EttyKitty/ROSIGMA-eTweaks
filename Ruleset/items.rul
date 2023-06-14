@@ -38,18 +38,47 @@ items:
 
         return;
 
-  - type: STR_BACKPACK_AMMO_SUPPLY
-    weight: 50
-    bigSprite: {mod: 40k, index: 247}
-    floorSprite: {mod: 40k, index: 128}
-    handSprite: {mod: 40k, index: 456}
-    costBuy: 60000
-    battleType: 2
-    invWidth: 2
-    invHeight: 3
-    clipSize: 20
-    armor: 40
+  - type: AUX_MEDI_KIT
+    healthRecovery: 6
+
+  - type: STR_TANK_ROCKET_LAUNCHER
+    requiresBuy:
+      - STR_HIGHTIER_PREREQ
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+    costBuy: 1500
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+    costBuy: 4500
+
+  - &TURRET_TWINLASCANNON_SPAWNER
+    type: STR_TURRET_TWINLASCANNON_LEFT_SPAWNER
+    spawnUnit: STR_TURRET_TWINLASCANNON_LEFT
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+    recover: false
+    hitAnimation: {mod: 40k, index: 1992}
+
+  - type: STR_TURRET_TWINLASCANNON_RIGHT_SPAWNER
+    refNode: *TURRET_TWINLASCANNON_SPAWNER
+    spawnUnit: STR_TURRET_TWINLASCANNON_RIGHT
+
+  - type: STR_MK7_CORPSE
     recover: true
-
-  - type: STR_MOTION_SCANNER
-
+    size: 1
+    recoveryPoints: 10
+    ignoreInBaseDefense: true

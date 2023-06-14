@@ -1,42 +1,41 @@
 extended:
   tags:
     RuleSoldier:
-      TOUGHNESS_SOLDIER: int
       SOLDIER_WOUND_TIME_MULTIPLIER: int
 
 soldiers:
 
-  - type: STR_SOLDIER_NEOPHYTE
-    costBuy: 30000
-    costSalary: 10000
+  - type: STR_SOLDIER_ASPIRANT
+    costBuy: 10000
+    costSalary: 2000
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
     allowPromotion: false
     minStats:
-      tu: 50
+      tu: 55
       stamina: 60
       health: 35
       bravery: 50
-      reactions: 45
-      firing: 55
-      throwing: 55
-      strength: 40
+      reactions: 50
+      firing: 60
+      melee: 60
+      throwing: 60
+      strength: 30
       psiStrength: 0
       psiSkill: 0
-      melee: 55
     maxStats:
       tu: 60
       stamina: 70
       health: 40
-      bravery: 70
+      bravery: 60
       reactions: 60
       firing: 70
+      melee: 70
       throwing: 70
-      strength: 45
+      strength: 35
       psiStrength: 100
       psiSkill: 6
-      melee: 70
     statCaps:
       tu: 75
       stamina: 90
@@ -44,36 +43,36 @@ soldiers:
       bravery: 110
       reactions: 80
       firing: 100
+      melee: 100
       throwing: 90
+      strength: 65
+      psiStrength: 100
+      psiSkill: 50
+    trainingStatCaps:
+      tu: 70
+      stamina: 80
+      health: 50
+      firing: 90
+      melee: 80
+      throwing: 80
       strength: 50
       psiStrength: 100
       psiSkill: 50
-      melee: 100
-    trainingStatCaps:
-      tu: 60
-      stamina: 70
-      health: 30
-      firing: 70
-      throwing: 80
-      strength: 40
-      psiStrength: 100
-      psiSkill: 50
-      melee: 50
     dogfightExperience:
       bravery: 10
       reactions: 30
       firing: 25
     allowPiloting: true
-    armor: STR_SCOUT_UC
+    armor: STR_ARMOR_ASPIRANT_UC
     standHeight: 22
     kneelHeight: 14
-    avatarOffsetX: 67
+    avatarOffsetX: 66
     avatarOffsetY: 42
     rankStrings:
-      - STR_SOLDIER_NEOPHYTE
+      - STR_SOLDIER_ASPIRANT
     deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
     deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
-    value: 20
+    value: 5
     femaleFrequency: 0
     soldierNames:
       - delete
@@ -83,12 +82,13 @@ soldiers:
 
   - &SPACE_MARINE
     type: STR_SOLDIER
+    allowPromotion: false
     costBuy: 0
     costSalary: 50000
     minStats:
       tu: 60
       stamina: 70
-      health: 70
+      health: 65
       bravery: 60
       reactions: 65
       firing: 70
@@ -100,7 +100,7 @@ soldiers:
     maxStats:
       tu: 70
       stamina: 80
-      health: 80
+      health: 70
       bravery: 100
       reactions: 75
       firing: 80
@@ -113,7 +113,7 @@ soldiers:
       tu: 100
       stamina: 120
       health: 100
-      bravery: 110
+      bravery: 100
       reactions: 110
       firing: 130
       throwing: 100
@@ -149,13 +149,12 @@ soldiers:
     value: 50
     tags:
       SOLDIER_WOUND_TIME_MULTIPLIER: 33
-      TOUGHNESS_SOLDIER: 55
     rankSprite: 46
     rankBattleSprite: 24
 
   - type: STR_SOLDIER_SCOUT
     refNode: *SPACE_MARINE
-    armor: STR_SCOUT_UC
+    armor: STR_ARMOR_NEOPHYTE_UC
     rankStrings:
       - STR_SOLDIER_SCOUT
     value: 25
@@ -212,6 +211,15 @@ soldiers:
     rankSprite: 47
     rankBattleSprite: 25
 
+  - type: STR_SOLDIER_CAPTAIN
+    refNode: *SPACE_MARINE
+    armor: STR_ARMOR_CAPTAIN_MK7_UC
+    rankStrings:
+      - STR_SOLDIER_CAPTAIN
+    value: 200
+    rankSprite: 47
+    rankBattleSprite: 25
+
   - type: STR_SOLDIER_TERMINATOR
     refNode: *SPACE_MARINE
     armor: STR_POWER_SUIT_UC
@@ -222,17 +230,46 @@ soldiers:
     rankBattleSprite: 100
 
   - type: STR_FALLEN
-    refNode: *SPACE_MARINE
     rankStrings:
-      - STR_SOLDIER_ANCIENT
+      - STR_FALLEN
     costSalary: 80000
     minStats:
-      health: 8
+      tu: 2
+      stamina: 2
+      health: 35
+      bravery: 50
+      reactions: 45
+      firing: 55
+      throwing: 2
+      strength: 2
+      psiStrength: 0
+      psiSkill: 0
+      melee: 55
     maxStats:
-      health: 44
+      tu: 2
+      stamina: 2
+      health: 40
+      bravery: 70
+      reactions: 60
+      firing: 70
+      throwing: 2
+      strength: 2
+      psiStrength: 100
+      psiSkill: 6
+      melee: 70
     statCaps:
-      health: 54
-    value: 150
+      tu: 2
+      stamina: 2
+      health: 50
+      bravery: 110
+      reactions: 80
+      firing: 100
+      throwing: 2
+      strength: 2
+      psiStrength: 100
+      psiSkill: 50
+      melee: 100
+    value: 300
     rankSprite: 101
     rankBattleSprite: 101
 

@@ -1,6 +1,0 @@
-extended:
-  scripts:
-    damageUnit:
-      - delete: ROSIGMA_dU_overkill
-    accuracyMultiplierBonusStats:
-      - delete: ROSIGMA_aMBS_tu_accuracy_penalty

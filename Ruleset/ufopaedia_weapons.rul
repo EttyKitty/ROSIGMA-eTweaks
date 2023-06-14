@@ -6,6 +6,8 @@ ufopaedia:
   - id: STR_PISTOLH                      #10120
     image_id: 1BP.SPK
     listOrder: 10110
+    requires:
+      - STR_PISTOLH
 
   - id: STR_PISTOLS                     #10110
     listOrder: 10120
@@ -14,3 +16,23 @@ ufopaedia:
     type_id: 4
     section: STR_WEAPONS_AND_EQUIPMENT
     text: STR_AUTO_CANNON_UFOPEDIA
+
+  - id: STR_RIFLEA #Artifex boltgun
+    requires: !add
+      - STR_DEATHWATCH
+
+  - id: STR_RIFLED 
+    requires: !add
+      - STR_PRIMARIS
+
+  - id: STR_RIFLEB 
+    requires:
+      - STR_RIFLEB
+
+  - id: STR_PISTOLS 
+    requires:
+      - STR_RIFLEC
+
+  - id: STR_PISTOLH 
+    requires:
+      - STR_RIFLEC

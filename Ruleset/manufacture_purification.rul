@@ -1,0 +1,41 @@
+manufacture:
+
+  - &PURIFICATION_WEAPON
+    name: STR_PURIFICATION_GRAVGUN
+    category: STR_PURIFICATION_WEAPON
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_SMALL_LAUNCHER
+    time: 450
+    cost: 60000
+    requiredItems:
+      STR_SMALL_LAUNCHER: 1
+    producedItems:
+      STR_SMALL_LAUNCHER_TERRAN: 1
+
+  - name: STR_PURIFICATION_MULTIMELTA
+    refNode: *PURIFICATION_WEAPON
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_BLASTER_LAUNCHER
+    time: 600
+    cost: 90000
+    requiredItems:
+      STR_BLASTER_LAUNCHER: 1
+    producedItems:
+      STR_BLASTER_LAUNCHER_TERRAN: 1
+
+  - name: STR_PURIFICATION_PLASMAGUN
+    refNode: *PURIFICATION_WEAPON
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PLASMA_RIFLE
+    time: 350
+    cost: 100000
+    requiredItems:
+      STR_PLASMA_RIFLE: 1
+    producedItems:
+      STR_PLASMA_RIFLE_TERRAN: 1

@@ -1,0 +1,155 @@
+items:
+###################################### BOLT
+
+  - &BOLT_REGULAR
+    type: STR_RIFLE_CLIP
+    damageAlter: 
+      ToStun: 0.4
+
+  - type: STR_LIGHT_BOLTER_AMMO
+    refNode: *BOLT_REGULAR
+
+  - type: STR_PISTOL_CLIP
+    refNode: *BOLT_REGULAR
+
+  - type: STR_LIGHT_BOLTPISTOL_AMMO
+    refNode: *BOLT_REGULAR
+
+  - type: STR_AC_AP_AMMO
+    refNode: *BOLT_REGULAR
+
+  - type: AUX_BOLTER
+    refNode: *BOLT_REGULAR
+
+  - type: STR_CSERVITOR_HB_AMMO
+    refNode: *BOLT_REGULAR
+
+  - type: STR_HB_CLIP
+    refNode: *BOLT_REGULAR
+
+  - type: STR_STORMBOLTER_TURRET_DROPPOD
+    refNode: *BOLT_REGULAR
+
+  - &BOLT_ARMOR_PIERCING
+    type: STR_RIFLE_CLIP_AP
+    damageAlter: 
+      ToStun: 0.25
+
+  - type: STR_LIGHT_BOLTER_AMMO_AP
+    refNode: *BOLT_ARMOR_PIERCING
+
+  - type: STR_LIGHT_BOLTER_AMMO_MC
+    refNode: *BOLT_ARMOR_PIERCING
+
+  - type: STR_PISTOL_CLIP_AP
+    refNode: *BOLT_ARMOR_PIERCING
+
+  - type: STR_AC_KP_AMMO
+    refNode: *BOLT_ARMOR_PIERCING
+
+  - &BOLT_FRAGMENTATION
+    type: STR_RIFLE_CLIP_EX
+    damageAlter: 
+      ToStun: 0.5
+
+  - type: STR_PISTOL_CLIP_EX
+    refNode: *BOLT_FRAGMENTATION
+
+  - type: STR_AC_HE_AMMO
+    refNode: *BOLT_FRAGMENTATION
+
+  - &BOLT_INCENDIARY
+    type: STR_AC_I_AMMO
+    damageAlter: 
+      ToStun: 0.6
+
+###################################### SOLID PROJECTILE
+
+  - &FULL_METAL_JACKET
+    type: STR_HC_AP_AMMO
+    damageAlter: 
+      ToStun: 0.25
+
+  - type: STR_ASSC_CLIP
+    refNode: *FULL_METAL_JACKET
+
+  - type: STR_RIPPER_GUN_CLIP
+    refNode: *FULL_METAL_JACKET
+
+  - type: STR_SHOTGUN_SHELLS
+    refNode: *FULL_METAL_JACKET
+
+  - type: STR_AUTOGUN_CLIP
+    refNode: *FULL_METAL_JACKET
+
+  - type: STR_AUTOPISTOL_CLIP
+    refNode: *FULL_METAL_JACKET
+
+  - &HOLLOW_POINT
+    type: STR_STUB_GUN_AMMO_HP
+    damageAlter: 
+      ToStun: 0.4
+
+###################################### FLAME
+
+  - &FLAME_PURE
+    type: STR_FLAMETHROWER_CLIP
+    damageAlter: 
+      ToStun: 0.6
+
+###################################### LASER
+
+  - &LASER
+    type: STR_LASCAN_CLIP
+    damageAlter: 
+      ToStun: 0.35
+      ToWound: 1
+
+  - type: STR_LASCUTTER_SMALL_AMMO #Lascutter ammo small inventory size                2020
+    refNode: *LASER
+
+  - type: STR_LASCUTTER_BIG_AMMO #Lascutter ammo big inventory size                2020
+    refNode: *LASER
+
+  - type: STR_LASGUN_CLIP_HOTSHOT
+    refNode: *LASER
+
+  - type: STR_LASPISTOL_CLIP
+    refNode: *LASER
+
+  - type: STR_CHAOS_VOLLEYGUN
+    refNode: *LASER
+
+###################################### MELTA
+
+  - type: STR_MELTA_AMMO
+    refNode: *LASER
+
+  - type: STR_MELTA_AMMO_HARMONIC
+    refNode: *LASER
+
+###################################### PLASMA
+
+  - type: STR_PLASMA_RIFLE_CLIP
+    refNode: *LASER
+
+  - type: STR_PLASMA_PISTOL_CLIP
+    refNode: *LASER
+
+###################################### GRAVITON
+
+  - &GRAVITON
+    type: STR_STUN_BOMB #GRAVGUN                               2062
+    damageAlter: 
+      ToStun: 0.6
+
+#################################### MISSILES
+
+  - type: STR_SMALL_ROCKET
+    refNode: *BOLT_FRAGMENTATION
+
+  - type: STR_LARGE_ROCKET
+    refNode: *BOLT_ARMOR_PIERCING
+
+  - type: STR_INCENDIARY_ROCKET
+    refNode: *BOLT_INCENDIARY

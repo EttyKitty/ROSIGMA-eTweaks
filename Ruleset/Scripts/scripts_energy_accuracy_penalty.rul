@@ -1,0 +1,180 @@
+extended:
+  tags:
+    RuleItem:
+      ITEM_RECOIL: int
+      ITEM_HAS_BIPOD: int
+      ITEM_IS_HEAVY_WEAPON: int # infantry but not mounted/vehicle heavy weapons
+    RuleArmor:
+      TERMINATOR_ARMOR: int # 1=yes
+
+  scripts:
+    accuracyMultiplierBonusStats:
+      - delete: ROSIGMA_aMBS_tu_accuracy_penalty
+      - new: eTweaks_aMBS_energy_accuracy_penalty
+        offset: 30
+        code: |
+          var int temp;
+          var int currentEnergy;
+          var int accuracyScore;
+          var int weaponWithBipod;
+          var int kneeling;
+          var ptr RuleItem rItem;
+          var ptr RuleArmor rArmor;
+          var int tag;
+  
+          unit.getRuleArmor rArmor;
+          rArmor.getTag temp Tag.TERMINATOR_ARMOR;
+          if eq temp 1;
+            return bonus;
+          end;
+
+          weapon.getRuleItem rItem;
+          rItem.getTag tag Tag.ITEM_IS_HEAVY_WEAPON;
+          if eq tag 2;
+            return bonus; # final accuracy
+          end;
+
+          unit.isKneeled kneeling; # 1 when kneeling
+          rItem.getTag weaponWithBipod Tag.ITEM_HAS_BIPOD;
+
+          unit.getEnergy currentEnergy; # absolute
+          unit.getEnergyMax temp;
+          muldiv currentEnergy 100 temp; # relative
+          # debug_log "currentEnergy %" currentEnergy;
+
+          set temp bonus; # starting bonus
+
+          if le currentEnergy 98;
+
+            if and eq kneeling 1 eq weaponWithBipod 1;
+              # debug_log "currentEnergy:" currentEnergy;
+              # debug_log "Basic Bonus:" bonus;
+              # set temp 100;
+              # sub temp currentEnergy;
+              # mul temp 6;
+              # set currentEnergy 100;
+              # sub currentEnergy temp;
+              mul bonus 8;
+              div bonus 10;
+              # debug_log "Final Bonus:" bonus;
+
+            else and eq kneeling 1 eq weaponWithBipod 0;
+              # debug_log "currentEnergy:" currentEnergy;
+              # debug_log "Basic Bonus:" bonus;
+              # set temp 100;
+              # sub temp currentEnergy;
+              # mul temp 10;
+              # set currentEnergy 100;
+              # sub currentEnergy temp;
+              mul bonus 8;
+              div bonus 10;
+              # debug_log "Final Bonus:" bonus;
+
+            else eq tag 1;
+              # debug_log "currentEnergy:" currentEnergy;
+              # debug_log "Basic Bonus:" bonus;
+              # set temp 100;
+              # sub temp currentEnergy;
+              # mul temp 14;
+              # set currentEnergy 100;
+              # sub currentEnergy temp;
+              mul bonus 7;
+              div bonus 10;
+              # debug_log "Final Bonus:" bonus;
+
+            else;
+              # debug_log "currentEnergy:" currentEnergy;
+              # debug_log "Basic Bonus:" bonus;
+              set temp 100;
+              sub temp currentEnergy;
+              set currentEnergy 100;
+              sub currentEnergy temp;
+              mul bonus currentEnergy;
+              div bonus 100;
+              # debug_log "Final Bonus:" bonus;
+            end;
+          end;
+
+          return bonus; # final accuracy
+
+items:
+
+  - &IS_HEAVY
+    type: STR_SNIPER_CHAOS
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 1
+
+  - type: STR_CHAOS_LASCANNON_HANDHELD
+    refNode: *IS_HEAVY
+
+  - type: STR_CSERVITOR_HB
+    refNode: *IS_HEAVY
+
+
+  - &IS_LIGHT
+    type: STR_FLAMETHROWER
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 2
+
+  - type: STR_FLAMETHROWER_CHAOS
+    refNode: *IS_LIGHT
+
+  - type: STR_PUMP_SHOTGUN_CHAOS
+    refNode: *IS_LIGHT
+
+  - type: STR_SHOTGUN
+    refNode: *IS_LIGHT
+
+  - type: STR_CHAOS_MELTAGUN
+    refNode: *IS_LIGHT
+
+  - type: STR_INFERNO_PISTOL
+    refNode: *IS_LIGHT
+
+  - type: STR_HEAVY_LASER
+    refNode: *IS_LIGHT
+
+  - type: STR_PISTOLB
+    refNode: *IS_LIGHT
+
+  - type: STR_PISTOLH
+    refNode: *IS_LIGHT
+
+  - type: STR_BOLTPISTOL_CHAOS
+    refNode: *IS_LIGHT
+
+  - type: STR_PISTOL
+    refNode: *IS_LIGHT
+
+  - type: STR_PLASMA_PISTOL
+    refNode: *IS_LIGHT
+
+  - type: STR_PLASMA_PISTOL_TERRAN
+    refNode: *IS_LIGHT
+
+  - type: STR_PISTOLS
+    refNode: *IS_LIGHT
+
+  - type: STR_BOLTPISTOL_NURGLE
+    refNode: *IS_LIGHT
+
+  - type: STR_NURGLE_GRAVPISTOL
+    refNode: *IS_LIGHT
+
+  - type: STR_LASER_PISTOLC
+    refNode: *IS_LIGHT
+
+  - type: STR_PLASMA_PISTOL_SLAAN
+    refNode: *IS_LIGHT
+
+  - type: STR_SHOTGUN_CHAOS
+    refNode: *IS_LIGHT
+
+  - type: STR_CHAOS_RIPPERGUN
+    refNode: *IS_LIGHT
+
+  - type: STR_GRENADE_LAUNCHER
+    refNode: *IS_LIGHT
+
+  - type: STR_LASCARBINE_SLAAN
+    refNode: *IS_LIGHT

@@ -39,7 +39,7 @@ research:
       # - STR_ASS_ARMOR
       - STR_MOTION_SCANNER
       # - STR_MEDI_KIT
-      - STR_LASER_WEAPONS
+      # - STR_LASER_WEAPONS
       # - STR_CRAFTADD
       - STR_HOLOGRAM_GRENADE_REQUISITION
       - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
@@ -49,6 +49,7 @@ research:
       # - STR_APOTHECARY
       # - STR_PERSONAL_ARMOR
       # - STR_MELTABOMB
+      - STR_SPEEDC
 
   - name: STR_PRIMARIS
     dependencies:
@@ -86,6 +87,7 @@ research:
   - name: STR_SCOUTH_RESEARCH
     dependencies:
       - STR_MARINES_STRATEGY
+      - STR_ALIEN_ALLOYS
 
   - name: STR_SARGENT_ARMOR
     dependencies: !remove
@@ -139,3 +141,78 @@ research:
   - name: STR_CRAFTADD
     dependencies:
       - STR_MIDTIER_PREREQ
+
+  - name: STR_CHAPTER_INITIATION
+    cost: 50
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_MEDI_KIT_PREREQ
+
+  - name: STR_APOC_BAY
+    dependencies: !remove
+      - STR_MIDTIER_PREREQ
+    unlocks:
+      - STR_MEDI_KIT_PREREQ
+
+  - name: STR_MT
+    dependencies: !remove
+      - STR_HEAVY_LASER
+      - STR_MOTION_SCANNER
+      - STR_MEDI_KIT_PREREQ
+
+  - name: STR_MT
+    dependencies: !add
+      - STR_ELERIUM_115
+
+  - name: STR_RIFLEB
+    cost: 50
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_RIFLEC
+    cost: 50
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_PISTOLS
+    cost: 50
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_PISTOLH
+    cost: 50
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_SPECIAL_AMMUNITION
+
+  - name: STR_SPECIAL_AMMUNITION
+    cost: 50
+    points: 25
+    dependencies:
+      - STR_PISTOLH
+      - STR_PISTOLS
+      - STR_RIFLEC
+      - STR_RIFLEB
+
+  - name: STR_HEAVY_LASER
+    dependencies:
+      - STR_CHAOS_MELTAGUN
+
+  - name: STR_LASCAN
+    dependencies:
+      - STR_CHAOS_LASCANNON_HANDHELD

@@ -21,6 +21,7 @@ extended:
           if neq temp 0;
             # debug_log "isFlying found";
             unit.setMovementType movement_type_walk;
+            unit.MoveCost.setBaseTimePercent 100;
             unit.setTag Tag.CooldownTime 1;
             # debug_log "isFlying grounded";
             return;
@@ -31,7 +32,7 @@ extended:
             # debug_log "CooldownTime found";
             unit.setTag Tag.CooldownTime 0;
             unit.setMovementType movement_type_fly;
-            unit.MoveCost.setBaseFlyTimePercent 50;
+            unit.MoveCost.setBaseTimePercent 50;
             # debug_log "CooldownTime reset";
           end;
 

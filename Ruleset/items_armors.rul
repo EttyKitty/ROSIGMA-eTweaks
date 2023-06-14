@@ -1,12 +1,16 @@
 items:
 
+  - type: STR_PERSONAL_ARMOR
+    ufopediaType: STR_PERSONAL_ARMOR_UC
+
   - type: STR_ARMOR_ARTIFICER
-    size: 0.8
-    costBuy: 1500000
-    monthlyBuyLimit: 1
+    size: 1
     monthlyMaintenance: 100000
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
+    ufopediaType: STR_ARMOR_ARTIFICER_UC
+
+  - type: STR_ARMOR_SCOUT
+    size: 0.5
+    ufopediaType: STR_SCOUT_UC
 
   - type: STR_BIKE_ARMOR
     requiresBuy: !remove

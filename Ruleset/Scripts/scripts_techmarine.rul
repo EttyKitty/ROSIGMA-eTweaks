@@ -1,0 +1,139 @@
+armors:
+  - &IS_TECHMARINE
+    type: STR_TECH_ARMOR_UC
+    tags:
+      IS_TECHMARINE: 1
+
+  - &IS_VEHICLE
+    type: DREAD_ARMOR_UC
+    tags:
+      IS_VEHICLE: 1
+
+  - type: DREAD_ARMOR2_UC
+    refNode: *IS_VEHICLE
+
+  - type: DREAD_ARMOR3_UC
+    refNode: *IS_VEHICLE
+
+  - type: DREAD_ARMOR4_UC
+    refNode: *IS_VEHICLE
+
+  - type: DREAD_ARMOR5_UC
+    refNode: *IS_VEHICLE
+
+  - type: SECTOPOD_ARMOR
+    refNode: *IS_VEHICLE
+
+  - type: SECTOPOD_ARMOR2
+    refNode: *IS_VEHICLE
+
+  - type: RAZORBACK_ARMOR
+    refNode: *IS_VEHICLE
+
+items:
+  - type: AUX_PROBE                                                 #TOME
+    skillApplied: false
+
+extended:
+  tags:
+    RuleArmor:
+      IS_TECHMARINE: int
+      IS_VEHICLE: int
+    RuleItem:
+      ITEM_REPAIRS_ARMOR: int
+
+  scripts:
+    hitUnit:
+      - modify: 40k_hU_repair_armor
+        offset: 13
+        code: |
+          var ptr RuleItem weaponRuleset;
+          var ptr RuleArmor armorRuleset;
+          var int itemRepairsArmor;
+          var int currentArmor;
+          var int maxArmor;
+          var int compareArmor 100;
+          var int isTechmarine;
+          var int isVehicle;
+          var int temp;
+
+          weapon_item.getRuleItem weaponRuleset;
+          weaponRuleset.getTag itemRepairsArmor Tag.ITEM_REPAIRS_ARMOR;
+          unit.getFaction temp;
+
+          if or eq 0 itemRepairsArmor neq battle_action battle_action_hit neq temp FACTION_PLAYER;
+            return power part side;
+
+          end;
+
+          unit.getArmor currentArmor SIDE_FRONT;
+          unit.getArmorMax maxArmor SIDE_FRONT;
+          muldiv currentArmor 100 maxArmor;
+          if lt currentArmor compareArmor;
+
+            set side SIDE_FRONT;
+            set compareArmor currentArmor;
+
+          end;
+
+          unit.getArmor currentArmor SIDE_LEFT;
+          unit.getArmorMax maxArmor SIDE_LEFT;
+          muldiv currentArmor 100 maxArmor;
+          if lt currentArmor compareArmor;
+
+            set side SIDE_LEFT;
+            set compareArmor currentArmor;
+
+          end;
+
+          unit.getArmor currentArmor SIDE_RIGHT;
+          unit.getArmorMax maxArmor SIDE_RIGHT;
+          muldiv currentArmor 100 maxArmor;
+          if lt currentArmor compareArmor;
+
+            set side SIDE_RIGHT;
+            set compareArmor currentArmor;
+
+          end;
+
+          unit.getArmor currentArmor SIDE_REAR;
+          unit.getArmorMax maxArmor SIDE_REAR;
+          muldiv currentArmor 100 maxArmor;
+          if lt currentArmor compareArmor;
+
+            set side SIDE_REAR;
+            set compareArmor currentArmor;
+
+          end;
+
+          unit.getArmor currentArmor SIDE_UNDER;
+          unit.getArmorMax maxArmor SIDE_UNDER;
+          muldiv currentArmor 100 maxArmor;
+          if lt currentArmor compareArmor;
+
+            set side SIDE_UNDER;
+            set compareArmor currentArmor;
+
+          end;
+
+          attacker.getRuleArmor armorRuleset;
+          armorRuleset.getTag isTechmarine Tag.IS_TECHMARINE;
+          unit.getRuleArmor armorRuleset;
+          armorRuleset.getTag isVehicle Tag.IS_VEHICLE;
+
+          if and eq 1 isVehicle eq 1 isTechmarine;
+            unit.getHealth currentArmor;
+            unit.getHealthMax maxArmor;
+            if neq currentArmor maxArmor;
+              sub maxArmor currentArmor;
+              battle_game.randomRange temp 10 30;
+              debug_log "currentHealth:" maxArmor; 
+              mul maxArmor temp;
+              debug_log "currentHealth2:" maxArmor; 
+              div maxArmor 100;
+              debug_log "currentHealth3:" maxArmor; 
+              unit.addHealth maxArmor;
+            end;
+          end;
+
+          return power part side;

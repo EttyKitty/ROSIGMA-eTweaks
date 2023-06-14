@@ -5,7 +5,7 @@ extended:
       MARINE_SIZED_WEAPON: int
       TERMINATOR_WEAPON: int
     RuleArmor:
-      POWER_ARMOR: int # 1=yes
+      IS_POWER_ARMOR: int # 1=yes
       TERMINATOR_ARMOR: int
 
   scripts:
@@ -21,7 +21,7 @@ extended:
 
           unit.getRuleArmor ruleA;
 
-          ruleA.getTag isPowerArmor Tag.POWER_ARMOR;
+          ruleA.getTag isPowerArmor Tag.IS_POWER_ARMOR;
           # debug_log "isPowerArmor:" isPowerArmor;
           weapon.getTag isSmallWeapon Tag.HUMAN_SIZED_WEAPON;
           # debug_log "isSmallWeapon:" isSmallWeapon;
@@ -48,43 +48,43 @@ extended:
           return bonus;
 
 armors:
-  - &POWER_ARMOR
+  - &IS_POWER_ARMOR
     type: STR_PERSONAL_ARMOR_UC
     tags:
-      POWER_ARMOR: 1
+      IS_POWER_ARMOR: 1
 
   - type: STR_SARGENT_ARMOR_UC
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_APOT_ARMOR_UC
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_LIB_ARMOR_UC  #LIBRARIAN
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_TECH_ARMOR_UC
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_HONOR_ARMOR_UC #HONOR
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_DEV_ARMOR_UC
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_SIGNALFALSE_ARMOR_UC #HONOR
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_SIGNAL_ARMOR_UC #HONOR
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_ASS_ARMOR_UC #ASSAULT
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
   - type: STR_ASS_ARMOR_HONOR_UC #ASSAULT HONOR
-    refNode: *POWER_ARMOR
+    refNode: *IS_POWER_ARMOR
 
 items:
   - &HUMAN_SIZED_WEAPON

@@ -1,7 +1,79 @@
 armors:
 
+  - type: STR_ARMOR_ASPIRANT_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 20
+    customArmorPreviewIndex: 2
+    spriteSheet: ASPIRANT.PCK
+    corpseBattle:
+      - STR_TANITH_CAMO_CORPSE
+    storeItem: STR_NONE
+    frontArmor: 20
+    sideArmor: 20
+    rearArmor: 20
+    underArmor: 20
+    camouflageAtDay: -4
+    camouflageAtDark: -4
+    drawingRoutine: 0
+    moveCost:
+      sneakPercent: [125, 25]
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.0 #FLAMES
+      - 1.0 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 1.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_SOLDIER_ASPIRANT
+    loftempsSet: [ 3 ]
+    builtInWeapons:
+      - INV_NULL_4X2
+      - INV_NULL_3X3
+      - STR_MEDICAE_POUCH
+
+  - type: STR_ARMOR_NEOPHYTE_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    customArmorPreviewIndex: {mod: 40k, index: 808}
+    spriteSheet: OGRYN.PCK
+    corpseBattle:
+      - STR_OGRYN_CORPSE
+    storeItem: STR_NONE
+    frontArmor: 35
+    sideArmor: 35
+    rearArmor: 35
+    underArmor: 35
+    drawingRoutine: 0
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.0 #FLAMES
+      - 1.0 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 1.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_SOLDIER_SCOUT
+    loftempsSet: [ 3 ]
+    builtInWeapons:
+      - INV_NULL_4X2
+      - STR_MEDICAE_POUCH
+
   - &SCOUT_ARMOR
     type: STR_SCOUT_UC #SCOUT
+    storeItem: STR_ARMOR_SCOUT
     frontArmor: 85
     sideArmor: 70
     rearArmor: 85
@@ -9,21 +81,22 @@ armors:
     stats:
       tu: 1
       stamina: 1
-      firing: 0
-      health: 0
-      bravery: 0
+      firing: 1
+      health: 1
+      bravery: 1
       reactions: 1
       throwing: 1
-      strength: 0
+      strength: 1
       psiStrength: 0
       psiSkill: 0
-      melee: 0
+      melee: 1
     visibilityAtDay: 40
     visibilityAtDark: 25
-    camouflageAtDay: -5
-    camouflageAtDark: -5
-    antiCamouflageAtDark: 5
-    antiCamouflageAtDay: 5
+    camouflageAtDay: 0
+    camouflageAtDark: 0
+    antiCamouflageAtDark: 0
+    antiCamouflageAtDay: 0
+    customArmorPreviewIndex: {mod: 40k, index: 0}
     units: !add
       - STR_SOLDIER_APOTHECARY
       - STR_SOLDIER_TECHMARINE
@@ -36,17 +109,20 @@ armors:
 
   - type: STR_SCOUTH_UC
     refNode: *SCOUT_ARMOR
+    storeItem: STR_SCOUTH
     visibilityAtDark: 30
-    camouflageAtDay: -10
-    camouflageAtDark: -10
+    camouflageAtDay: -5
+    camouflageAtDark: -5
     antiCamouflageAtDark: 5
     antiCamouflageAtDay: 5
+    customArmorPreviewIndex: {mod: 40k, index: 14}
     builtInWeapons:
       - INV_NULL_4X2
       - INV_NULL_3X3
       - STR_MEDICAE_POUCH
     units:
       - STR_SOLDIER_SCOUT
+
 
   - &STR_MK7_ARMOR
     type: STR_PERSONAL_ARMOR_UC
@@ -60,28 +136,28 @@ armors:
     rearArmor: 125
     underArmor: 100
     damageModifier:
-      - 1.0 #none
-      - 1.0 #AP
-      - 0.2 #FLAMES
-      - 1.0 #HE
-      - 1.0 #LASCANON
-      - 1.0 #PLASMA
-      - 1.0 #STUN
-      - 1.0 #MELEE
-      - 1.0 #ACID
-      - 0.0 #SMOKE
-      - 1.0 #IMPACT
-      - 1.0 #MELTA
+      - 1.0 #0 Piercing
+      - 1.0 #1 
+      - 0.8 #2
+      - 0.8 #3
+      - 1.0 #4
+      - 1.0 #5
+      - 1.0 #6
+      - 1.0 #7
+      - 0.8 #8
+      - 0.0 #9
+      - 0.8 #10
+      - 1.0 #11
     stats:
       strength: 20
       health: 4
-      tu: 10
-      stamina: 10
+      tu: 12
+      stamina: 6
       bravery: 10
-      firing: 2
-      reactions: 2
-      throwing: 2
-      melee: 2
+      firing: 4
+      reactions: 4
+      throwing: 4
+      melee: 4
     weight: 0
     units: !add
       - STR_SOLDIER_DEVASTATOR
@@ -90,6 +166,7 @@ armors:
       - INV_NULL_3X3
       - INV_NULL_4X2
     storeItem: STR_TATICAL_ARMOR
+    corpseGeo: STR_MK7_CORPSE
 
   - type: STR_SARGENT_ARMOR_UC
     refNode: *STR_MK7_ARMOR
@@ -106,6 +183,7 @@ armors:
       - INV_NULL_3X3
       - INV_NULL_4X2
       - AUX_MEDI_KIT
+    specialWeapon: ""
 
   - type: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
     refNode: *STR_MK7_ARMOR
@@ -122,11 +200,13 @@ armors:
     rearArmor: 135
     units:
       - STR_SOLDIER_TECHMARINE
+    isPilotArmor: true
 
   - type: STR_HONOR_ARMOR_UC #HONOR
     refNode: *STR_MK7_ARMOR
     units:
       - STR_SOLDIER_STERNGUARD
+
 
   - &STR_MK7_ARMOR_DEV
     type: STR_DEV_ARMOR_UC
@@ -153,10 +233,13 @@ armors:
     units:
       - STR_SOLDIER_SERGEANT
 
+
   - &STR_MK7_ARMOR_ASS
     type: STR_ASS_ARMOR_UC #ASSAULT
     refNode: *STR_MK7_ARMOR
     rearArmor: 135
+    stats:
+      tu: 5
     units:
       - STR_SOLDIER_ASSAULT
       - STR_SOLDIER
@@ -213,10 +296,9 @@ armors:
   - type: STR_ARMOR_ARTIFICER_UC
     refNode: *STR_MK7_ARMOR
     spriteSheet: XCOM_1.PCK
-    customArmorPreviewIndex: {mod: 40k, index: 1}
+    customArmorPreviewIndex: 1
     corpseBattle:
       - STR_MK7_CORPSE
-    corpseGeo: STR_FALLEN_CORPSE
     specialWeapon: STR_UNARMED_GAUNTLET_PLUS
     drawingRoutine: 0
     loftempsSet: [ 3 ]
@@ -225,6 +307,20 @@ armors:
     rearArmor: 140
     underArmor: 140
     storeItem: STR_ARMOR_ARTIFICER
+    units:
+      - STR_SOLDIER
+
+  - type: STR_ARMOR_CAPTAIN_MK7_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_20.PCK
+    customArmorPreviewIndex: 0
+    corpseBattle:
+      - STR_MK7_CORPSE
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    drawingRoutine: 0
+    loftempsSet: [ 3 ]
+    units:
+      - STR_SOLDIER_CAPTAIN
 
   - &TERMINATOR_ARMOR
     type: STR_POWER_SUIT_UC
@@ -235,15 +331,15 @@ armors:
     damageModifier:
       - 1.0 #none
       - 1.0 #AP
-      - 0.4 #FLAMES
-      - 1.0 #HE
+      - 0.6 #FLAMES
+      - 0.6 #HE
       - 1.0 #LASCANON
       - 1.0 #PLASMA
       - 1.0 #STUN
       - 1.0 #MELEE
-      - 1.0 #ACID
+      - 0.6 #ACID
       - 0.0 #SMOKE
-      - 1.0 #IMPACT
+      - 0.6 #IMPACT
       - 1.0 #MELTA
     stats:
       strength: 30
@@ -267,6 +363,11 @@ armors:
       - STR_SOLDIER_VANGUARD
       - STR_SOLDIER_STERNGUARD
 
+  - type: STR_CAPTAIN_UC
+    refNode: *TERMINATOR_ARMOR
+    units:
+      - STR_SOLDIER_CAPTAIN
+
   - type: STR_POWER_SUIT_APOT_UC
     refNode: *TERMINATOR_ARMOR
     stats:
@@ -279,8 +380,6 @@ armors:
       - AUX_MEDI_KIT
     units:
       - STR_SOLDIER_APOTHECARY
-    visibilityAtDay: 40
-    visibilityAtDark: 30
     spriteSheet: XCOM_2.PCK
     customArmorPreviewIndex: {mod: 40k, index: 7}
     corpseBattle:
@@ -289,32 +388,19 @@ armors:
     corpseGeo: STR_FALLEN_CORPSE
     loftempsSet: [ 3 ]
     forcedTorso: 1
-    layersDefaultPrefix: 0
-    layersSpecificPrefix:
-      1: TERMINATOR
-    layersDefinition:
-      M0: ["0", "TERMINATORMF", "M0_FACE"]
-      M1: ["0", "TERMINATORMF", "M1_FACE"]
-      M2: ["0", "TERMINATORMF", "M2_FACE"]
-      M3: ["0", "TERMINATORMF", "M3_FACE"]
-      M4: ["0", "TERMINATORMF", "M4_FACE"]
-      M5: ["0", "TERMINATORMF", "M5_FACE"]
-      F0: ["0", "TERMINATORMF", "F0_FACE"]
-      F1: ["0", "TERMINATORMF", "F1_FACE"]
-      F2: ["0", "TERMINATORMF", "F2_FACE"]
-      F3: ["0", "TERMINATORMF", "F3_FACE"]
-      F4: ["0", "TERMINATORMF", "F4_FACE"]
-      F5: ["0", "TERMINATORMF", "F5_FACE"]
 
 
   - &DREADNOUGHT
     type: DREAD_ARMOR_UC
-    frontArmor: 260
-    sideArmor: 260
-    rearArmor: 140
-    underArmor: 220
+    frontArmor: 470
+    sideArmor: 470
+    rearArmor: 350
+    underArmor: 420
     stats:
-      health: 140
+      health: 245
+      strength: 300
+      tu: 50
+      stamina: 100
     damageModifier:
       - 1.0 #none
       - 1.0 #AP
@@ -330,6 +416,10 @@ armors:
       - 1.0 #MELTA
     visibilityAtDay: 40
     visibilityAtDark: 30
+    builtInWeapons:
+      - INV_NULL_3X3
+      - INV_NULL_4X2
+      - INV_NULL_1X3_QD
 
   - type: DREAD_ARMOR2_UC
     refNode: *DREADNOUGHT
@@ -348,22 +438,7 @@ armors:
 
   - type: SECTOPOD_ARMOR2
     refNode: *DREADNOUGHT
-
-
-  - type: STR_ARMOR_ARTIFICER_UC
-    layersDefaultPrefix: 0
-    layersSpecificPrefix:
-      1: ARTIFICER
-    layersDefinition:
-      M0: ["0", "ARTIFICERMF"]
-      M1: ["0", "ARTIFICERMF"]
-      M2: ["0", "ARTIFICERMF"]
-      M3: ["0", "ARTIFICERMF"]
-      M4: ["0", "ARTIFICERMF"]
-      M5: ["0", "ARTIFICERMF"]
-      F0: ["0", "ARTIFICERMF"]
-      F1: ["0", "ARTIFICERMF"]
-      F2: ["0", "ARTIFICERMF"]
-      F3: ["0", "ARTIFICERMF"]
-      F4: ["0", "ARTIFICERMF"]
-      F5: ["0", "ARTIFICERMF"]
+  
+  - type: CENT_ARMOR_UC
+    units:
+      - STR_SOLDIER

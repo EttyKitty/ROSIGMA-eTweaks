@@ -1,19 +1,24 @@
 craftWeapons:
 
-  - type: STR_CANNON_UC # Twin-linked Bolter
+  - type: STR_CANNON_UC # Twin Heavy Bolters
     weaponType: 0
+    ammoMax: 120
+    rearmRate: 120
+    reloadCautious: 10
+    reloadStandard: 8
+    reloadAggressive: 6
 
-  - type: STR_CRAFTBOLTER_QUAD_UC
+  - type: STR_CRAFTBOLTER_QUAD_UC # Quad Heavy Bolters
     sprite: 2
     sound: {mod: 40k, index: 4}
-    damage: 10
+    damage: 20
     accuracy: 40
-    reloadCautious: 2
-    reloadStandard: 2
-    reloadAggressive: 2
-    ammoMax: 200
-    rearmRate: 200
-    launcher: STR_CANNON
+    reloadCautious: 5
+    reloadStandard: 4
+    reloadAggressive: 3
+    ammoMax: 240
+    rearmRate: 240
+    launcher: STR_CRAFTBOLTER_QUAD
     clip: STR_HWP_CANNON_SHELLS
     projectileType: 2
     projectileSpeed: 8
@@ -22,7 +27,8 @@ craftWeapons:
 
   - type: STR_STINGRAY # Krak Missile
     damage: 140 #was 60
-    ammoMax: 6  #was 6
+    ammoMax: 12  #was 6
+    rearmRate: 3
     weaponType: 1
     reloadCautious: 48
     reloadStandard: 48
@@ -30,7 +36,8 @@ craftWeapons:
   
   - type: STR_AVALANCHE # Plasma Missile
     damage: 240 #was 100
-    ammoMax: 3 #was 3
+    ammoMax: 6 #was 3
+    rearmRate: 2
     weaponType: 2
     reloadCautious: 72
     reloadStandard: 72
@@ -43,35 +50,57 @@ craftWeapons:
   - type: STR_CRAFT_MULTILASER_UC # Multilaser
     weaponType: 4
 
-  - type: STR_CRAFT_QUADLASER_UC # Quad-linked Lascannon
+  - type: STR_CRAFT_QUADLASER_UC # Quad Lascannons
     weaponType: 5
 
-  - type: STR_CRAFT_AUTOCANNON_UC # Quad-linked Autocannon
+  - type: STR_CRAFT_AUTOCANNON_UC # Quad Autocannons
     weaponType: 6
 
-  - type: STR_FUSION_BALL_UC # Multimelta
+  - type: STR_FUSION_BALL_UC # Multi-Melta
     weaponType: 7
 
-  - type: STR_PLASMA_BEAM_UC # Twin-linked Plasma
+  - type: STR_PLASMA_BEAM_UC # Twin Plasmas
     weaponType: 8
 
-  - type: STR_ASSCANNON_UC # Assault-Cannon
+  - type: STR_ASSCANNON_UC # Assault Cannon
     weaponType: 9
     rearmRate: 200
     ammoMax: 200
+    reloadCautious: 10
+    reloadStandard: 8
+    reloadAggressive: 6
+    clip: STR_ASSC_CLIP
 
-  - type: STR_THUNDER_CANNON_UC # Battle-Cannon
+  - type: STR_ASSCANNON_TWIN_UC # Twin Assault Cannons
+    sprite: {mod: 40k, index: 759}
+    sound: {mod: 40k, index: 4}
+    damage: 20
+    range: 30
+    accuracy: 40
+    reloadCautious: 5
+    reloadStandard: 4
+    reloadAggressive: 3
+    ammoMax: 400
+    rearmRate: 400
+    launcher: STR_ASSCANNON_TWIN
+    clip: STR_ASSC_CLIP
+    projectileType: 2
+    projectileSpeed: 8
+    bulletSaving: true
+    weaponType: 12
+
+  - type: STR_THUNDER_CANNON_UC # Heavy Cannon
     weaponType: 10
 
 
-  - type: STR_LANCE_CANNON_UC        #R 30      A 10        D70      Acc  45
+  - type: STR_LANCE_CANNON_UC
     weaponType: 20
 
-  - type: STR_HEAVYDSCYTHES_UC               #R 50       A 4        D100     Acc 75
+  - type: STR_HEAVYDSCYTHES_UC
     weaponType: 21
 
-  - type: STR_COBRA_CANNON_UC      #R 40      A 6         D300     Acc 30
+  - type: STR_COBRA_CANNON_UC
     weaponType: 23
 
-  - type: STR_DSTARCANNON_UC         #R 40      A 5         D120     Acc 30
+  - type: STR_DSTARCANNON_UC
     weaponType: 24

@@ -1,12 +1,11 @@
 manufacture:
 
-  - &MARINES_CRAFTS
-    name: STR_RHINO_NO_TT
+  - name: STR_RHINO_NO_TT
     category: STR_CRAFT
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
-      - STR_MIDTIER_PREREQ
+      - STR_MT
       - STR_RHINO_NO_TT_MANU
     time: 5000
     cost: 0
@@ -18,11 +17,22 @@ manufacture:
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
-      - STR_MIDTIER_PREREQ
+      - STR_MT
       - STR_INTERCEPTOR_MANU
     time: 3000
     requiredItems:
       STR_ALIEN_ALLOYS: 30
+
+  - name: STR_STORMHAWK
+    category: STR_CRAFT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_MT
+      - STR_STORMHAWK_MANU
+    time: 3500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 35
 
   - name: STR_LIGHTNING
     requires:

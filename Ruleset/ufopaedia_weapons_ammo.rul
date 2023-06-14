@@ -1,6 +1,11 @@
 ufopaedia:
 
-  - id: STR_AC_KP_AMMO
+  # - id: STR_AC_KP_AMMO
+  #   type_id: 14
+  #   section: STR_NOT_AVAILABLE
+
+
+  - id: STR_AC_HF_AMMO
     type_id: 14
     section: STR_NOT_AVAILABLE
 

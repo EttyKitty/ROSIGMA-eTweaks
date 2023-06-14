@@ -2,5 +2,17 @@ units:
 
   - type: STR_TRAITORGUARD_BATTLE_SERVITOR_HB
     builtInWeaponSets:
-          - - STR_CSERVITOR_HB #Chaos servitor heavybolter
-            - STR_CSERVITOR_HB_AMMO #standard "weak" rounds
+          - - STR_CSERVITOR_HB
+            - STR_CSERVITOR_HB_AMMO
+    stats:
+      tu: 60
+      stamina: 120
+      health: 50
+      bravery: 60
+      reactions: 20
+      firing: 40
+      throwing: 2
+      strength: 80
+      psiStrength: 60
+      psiSkill: 0
+      melee: 45

@@ -1,0 +1,69 @@
+ufopaedia:
+
+  - id: STR_PISTOL
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_BOLTER_LIGHT_ULTRA                      #10305
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_BOLTPISTOL_LIGHT_ULTRA                      #10305
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_BOLTER_CANTUS
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASER_RIFLE                   #210
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASER_RIFLEG                   #210
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASER_PISTOL                   #210
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASER_PISTOLG                   #210
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASGUN_ACCATRAN
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASGUN_VOSS
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+      
+  - id: STR_LASGUN_VOSTROYA
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+      
+  - id: STR_LASGUN_LUCIUS
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_STUB_GUN
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_STUB_RIFLE
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_AUTOPISTOL
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS  
+
+  - id: STR_AUTOGUN
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_LASER_RIFLE_G_HIGH_GRADE #Artifex boltgun 
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS

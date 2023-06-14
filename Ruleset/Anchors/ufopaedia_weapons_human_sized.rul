@@ -1,5 +1,0 @@
-ufopaedia:
-
-  - id: STR_PISTOLB
-    requires: !add
-      - STR_HUMAN_SIZED_WEAPONS

@@ -1,0 +1,66 @@
+ufopaedia:
+
+  - id: STR_TATICAL                   #30
+    requires:
+      - STR_GENERALLOCK
+      
+  - id: STR_ASSAULT                   #40
+    requires:
+      - STR_GENERALLOCK
+
+  - id: STR_DEVASTATOR                   #50
+    requires:
+      - STR_GENERALLOCK
+
+  - id: STR_SCOUT                   #60
+    requires:
+      - STR_GENERALLOCK
+
+  - id: STR_PRIMARIS                #62
+    requires:
+      - STR_PRIMARIS
+
+  - id: STR_ADEPTAS                  #65
+    requires:
+      - STR_ADEPTAS
+
+  - id: STR_IGS                    #70
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ARBITES                  #75
+    requires:
+      - STR_ARBITES
+
+  - id: STR_GREYKNIGHTS                  #80
+    requires:
+      - STR_GREYKNIGHTS
+
+  - id: STR_DEATHWATCH                   #85
+    requires:
+      - STR_DEATHWATCH
+
+  - id: STR_TANK_ROCKET_LAUNCHER
+    requires:
+      - STR_HIGHTIER_PREREQ
+
+
+  - id: STR_RHINO_TRANSPORT
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: PICK_STRATEGY.SPK
+    text: STR_RHINO_TRANSPORT_UFOPAEDIA
+    text_width: 300
+    requires:
+      - STR_RHINO_TRANSPORT
+    listOrder: 10
+
+  - id: STR_STORMTALON_INTERCEPTOR
+    type_id: 10
+    section: STR_STRATEGY
+    image_id: PICK_STRATEGY.SPK
+    text: STR_STORMTALON_INTERCEPTOR_UFOPAEDIA
+    text_width: 300
+    requires:
+      - STR_STORMTALON_INTERCEPTOR
+    listOrder: 10

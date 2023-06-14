@@ -1,8 +1,40 @@
 manufacture:
 
-  - name: STR_TATICAL_ARMOR
+  - name: STR_ARMOR_SCOUT
+    category: STR_PERSONAL_ARMOR
+    time: 50
+    cost: 0
+    space: 0
     requiredItems:
-      STR_UFO_CONSTRUCTION: 6
+      STR_ALIEN_ALLOYS: 2
+      STR_UFO_CONSTRUCTION: 1
+      STR_ELERIUM_115: 2
+
+  - name: STR_SCOUTH
+    time: 50
+    cost: 0
+    space: 0
+    requiredItems:
+      STR_ARMOR_SCOUT: 1
+      STR_ELERIUM_115: 4
+
+  - name: STR_TATICAL_ARMOR
+    time: 400
+    cost: 0
+    space: 0
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_UFO_CONSTRUCTION: 2
+      STR_ELERIUM_115: 4
+
+  - name: STR_POWER_SUIT
+    time: 800
+    cost: 0
+    space: 0
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_UFO_CONSTRUCTION: 4
+      STR_ELERIUM_115: 8
 
   - name: STR_APOT_ARMOR
     requires:
@@ -13,24 +45,29 @@ manufacture:
       - "STR_GENERALLOCK"
 
   - name: STR_ASS_ARMOR
-    requiredItems:
-      STR_TATICAL_ARMOR: 1
-      STR_ALIEN_ALLOYS: 15
+    requires:
+      - "STR_GENERALLOCK"
 
   - name: STR_DEV_ARMOR
-    requiredItems:
-      STR_TATICAL_ARMOR: 1
-      STR_ALIEN_ALLOYS: 15
+    requires:
+      - "STR_GENERALLOCK"
 
-  - name: STR_POWER_SUIT
-    requiredItems:
-      STR_ALIEN_ALLOYS: 10
-      STR_UFO_CONSTRUCTION: 45
-      STR_ELERIUM_115: 15
-      STR_KILLPOINT_TOKEN: 60
+  - name: STR_HWP_FUSION_BOMB
+    requires:
+      - STR_DREADNOUGHT_MARINE
 
-  - name: STR_SCOUTH
-    time: 400
-    cost: 10000
-    requiredItems:
-      STR_ALIEN_ALLOYS: 5
+  - name: STR_DREAD2_ARMOR
+    requires:
+      - STR_DREADNOUGHT_MARINE
+
+  - name: STR_DREAD3_ARMOR
+    requires:
+      - STR_DREADNOUGHT_MARINE
+
+  - name: STR_DREAD4_ARMOR
+    requires:
+      - STR_DREADNOUGHT_MARINE
+
+  - name: STR_DREAD5_ARMOR
+    requires:
+      - STR_DREADNOUGHT_MARINE

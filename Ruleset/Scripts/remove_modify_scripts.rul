@@ -1,0 +1,155 @@
+extended:
+  scripts:
+    damageUnit:
+      - delete: ROSIGMA_dU_overkill
+      - delete: ROSIGMA_dU_bomberman
+
+    hitUnit:
+      - delete: ROSIGMA_hU_bomberman
+      - delete: ROSIGMA_hU_bomberman_2
+      - delete: ROSIGMA_hU_remove_flight
+      - new: ROSIGMA_hU_remove_flight
+        offset: 50
+        code: |
+          var int flying;
+          var int flighttime;
+          var int removesflight;
+          var int turn;
+          var int maxCooldown;
+          var int cooldownTime;
+          var int dodged;
+          var ptr BattleItem ammoptr;
+          
+          unit.getTag dodged Tag.DODGED;
+          if eq dodged 1;
+            unit.setTag Tag.DODGED 0;
+            return power part side;
+          end;
+
+          weapon_item.getAmmoItem ammoptr;
+          ammoptr.getTag removesflight Tag.RemovesFlight;
+          if or eq removesflight 1 ge power 200;
+            unit.getTag flighttime Tag.FlightTime;
+            if gt flighttime 0;
+                battle_game.getTurn turn;
+                unit.setTag Tag.FlightTime turn;
+                unit.getTag maxCooldown Tag.MaxCoolDown;
+                set cooldownTime turn;
+                add cooldownTime maxCooldown;
+                unit.setTag Tag.CooldownTime cooldownTime;
+            end;
+            unit.setMovementType movement_type_walk;
+            unit.MoveCost.setBaseNormalTimePercent 100;
+            unit.MoveCost.setBaseNormalEnergyPercent 100;
+          end;
+          return power part side;
+
+
+    healUnit:
+    - delete: ROSIGMA_healU_limited_flight
+    - new: ROSIGMA_healU_limited_flight
+      offset: 1
+      code: |
+        var int activateFlight;
+        var int maxFlight;
+        var int maxCooldown;
+        var int flightTime;
+        var int cooldownTime;
+        var int turn;
+        var int duration;
+        var ptr BattleItem weaponHeld;
+        var int isHeavyWeapon;
+        var int temp;
+
+        item.getTag activateFlight Tag.ActivateFlight;
+        if eq activateFlight 1;
+          battle_game.getTurn turn;
+          actor.getTag maxFlight Tag.MaxFlight;
+          actor.getTag maxCooldown Tag.MaxCoolDown;
+          actor.getTag flightTime Tag.FlightTime;
+          actor.getTag cooldownTime Tag.CooldownTime;
+
+          actor.getLeftHandWeapon weaponHeld;
+          weaponHeld.getTag isHeavyWeapon Tag.ITEM_IS_HEAVY_WEAPON;
+          if eq isHeavyWeapon 0;
+            actor.getRightHandWeapon weaponHeld;
+            weaponHeld.getTag isHeavyWeapon Tag.ITEM_IS_HEAVY_WEAPON;      
+          end;
+          if neq isHeavyWeapon 0;
+            battle_game.flashMessage "STR_SCRIPT_WEAPON_IS_TOO_HEAVY";
+            return;
+          end;
+
+          if lt turn flightTime;
+            set duration flightTime;
+            sub duration turn;
+            battle_game.flashMessage "STR_SCRIPT_FLIGHT_DURATION_LEFT" duration;
+            return;
+          end;
+          if lt turn cooldownTime;
+            set duration cooldownTime;
+            sub duration turn;
+            battle_game.flashMessage "STR_SCRIPT_COOLDOWN_DURATION_LEFT" duration;
+            return;
+          end;
+
+          actor.setMovementType movement_type_fly;
+          actor.MoveCost.setBaseNormalTimePercent 60;
+          actor.MoveCost.setBaseNormalEnergyPercent 60;
+          actor.MoveCost.setBaseFlyTimePercent 50;
+          actor.MoveCost.setBaseFlyEnergyPercent 50;
+          set cooldownTime turn;
+          add cooldownTime maxCooldown;
+          add cooldownTime maxFlight;
+          actor.setTag Tag.CooldownTime cooldownTime;
+          set flightTime turn;
+          add flightTime maxFlight;
+          actor.setTag Tag.FlightTime flightTime;
+
+        end;
+        return;
+
+    newTurnUnit:
+    - delete: ROSIGMA_nTU_limited_flight
+    - new: ROSIGMA_nTU_limited_flight
+      offset: 1
+      code: |
+        var int maxFlight;
+        var int flightTime;
+        var int faction;
+        var int factionturn;
+        var int currentTurn;
+
+        var int temp1;
+
+
+        unit.getTag maxFlight Tag.MaxFlight;
+
+        if eq maxFlight 0;
+          return;
+        end;
+
+        unit.getFaction faction;
+        battle_game.getTurnSide factionturn;
+
+        battle_game.getTurn currentTurn;
+        unit.getTag flightTime Tag.FlightTime;
+
+
+
+
+        if and eq faction FACTION_PLAYER eq factionturn FACTION_PLAYER;
+          if gt flightTime 0;
+            if ge turn flightTime;
+              unit.setMovementType movement_type_walk;
+              unit.MoveCost.setBaseNormalTimePercent 100;
+              unit.MoveCost.setBaseNormalEnergyPercent 100;
+            end;
+          end;
+          if eq currentTurn 1;
+            unit.setMovementType movement_type_walk;
+            unit.MoveCost.setBaseNormalTimePercent 100;
+            unit.MoveCost.setBaseNormalEnergyPercent 100;
+          end;
+        end;
+        return;

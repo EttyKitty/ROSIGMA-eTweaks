@@ -1,0 +1,18 @@
+items:
+
+  - type: STR_ASSCANNON_TWIN
+    categories: [STR_CRAFT_WEAPONS]
+    requires:
+      - STR_CASSC
+    size: 1.0
+    costSell: 50000
+    listOrder: 1750
+
+  - type: STR_CRAFTBOLTER_QUAD
+    categories: [STR_CRAFT_WEAPONS]
+    size: 3
+    requiresBuyBaseFunc: [HANGAR]
+    costBuy: 60000
+    costSell: 45000
+    transferTime: 48
+    listOrder: 1300
