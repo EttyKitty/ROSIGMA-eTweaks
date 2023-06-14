@@ -4,7 +4,7 @@ units:
     type: STR_PINK_HORROR_TERRORIST
     spawnUnit: ""
     stats:
-      health: 60
+      health: 100
 
   - type: STR_TZEENTCH_ACOLYTE_FLAMER  #TZEENTCH FEMALE CULTIST INTO FLAMER
     refNode: *HEALTH_BOOST_MEDIUM
