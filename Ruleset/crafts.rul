@@ -91,7 +91,9 @@ crafts:
 
   - type: STR_SPEEDC
     soldiers: 12
-    speedMax: 180
+    costBuy: 500000
+    costSell: 400000
+    speedMax: 1500
     avoidBonus: 2
     damageMax: 400
     deployment:
