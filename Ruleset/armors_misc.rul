@@ -1,18 +1,69 @@
 armors:
 
-  - type: STR_STORMBOLTER_TURRET_ARMOR
-    visibilityAtDay: 60
-    visibilityAtDark: 60
-    antiCamouflageAtDay: 8
-    antiCamouflageAtDark: 8
-    frontArmor: 50
-    sideArmor: 50
-    rearArmor: 50
-    underArmor: 10
-    damageModifier: #VEICULE ARMOR
+  - type: RAZORBACK_ARMOR
+    frontArmor: 260
+    sideArmor: 260
+    rearArmor: 140
+    underArmor: 220
+    damageModifier:
       - 1.0 #none
       - 1.0 #AP
       - 0.4 #FLAMES
+      - 1.0 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+
+  - &TURRET_TWINLASCANNON
+    type: STR_TURRET_TWINLASCANNON_LEFT_ARMOR
+    spriteSheet: LTT.PCK
+    spriteInv: NOTDONEIMP.SPK
+    scripts:
+      selectUnitSprite:
+        var int temp;
+
+        unit.isCollapsing temp;
+
+        if eq temp 0;
+
+          unit.getDirection sprite_offset;
+          set sprite_index 0;
+
+          unit.isAiming temp;
+
+          if neq temp 0;
+
+            set sprite_index 8;
+
+          end;
+
+        end;
+
+        add sprite_index sprite_offset;
+
+        return sprite_index;
+    allowsMoving: false
+    allowInv: false
+    zombiImmune: true
+    bleedImmune: true
+    fearImmune: true
+    painImmune: true
+    corpseBattle:
+      - STR_LTT_CORPSE
+    frontArmor: 50
+    sideArmor: 50
+    rearArmor: 50
+    underArmor: 50
+    drawingRoutine: 19
+    damageModifier:
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.8 #FLAMES
       - 1.0 #HE
       - 1.4 #LASCANON
       - 1.0 #PLASMA
@@ -20,25 +71,36 @@ armors:
       - 0.8 #MELEE
       - 1.0 #ACID
       - 0.0 #SMOKE
-      - 0.0 #IMPACT
+      - 1.0 #IMPACT
       - 1.2 #MELTA
-    spriteSheet: STORMBOLTER_TURRET.PCK
-    spriteInv: STORMBOLTER_TURRET.SPK
-    drawingRoutine: 4
-    corpseBattle:
-      - STR_INVISIBLE_CORPSE
     loftempsSet: [ 3 ]
-    zombiImmune: true
-    bleedImmune: true
-    fearImmune: true
-    painImmune: true
-    allowsKneeling: false
-    allowsRunning: false
-    allowsMoving: false
-    allowInv: true
-    movementType: 1
-    camouflageAtDay: -60 # don't be shot at
-    camouflageAtDark: -60
-    deathFrames: 1
-    builtInWeapons:
-      - STR_STORMBOLTER_TURRET
+
+  - type: STR_TURRET_TWINLASCANNON_RIGHT_ARMOR
+    refNode: *TURRET_TWINLASCANNON
+    spriteSheet: RTT.PCK
+    scripts:
+      selectUnitSprite:
+        var int temp;
+
+        unit.isCollapsing temp;
+
+        if eq temp 0;
+
+          unit.getDirection sprite_offset;
+          set sprite_index 0;
+
+          unit.isAiming temp;
+
+          if neq temp 0;
+
+            set sprite_index 8;
+
+          end;
+
+        end;
+
+        add sprite_index sprite_offset;
+
+        return sprite_index;
+    corpseBattle:
+      - STR_LTT_CORPSE

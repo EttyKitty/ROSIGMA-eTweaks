@@ -1,27 +1,43 @@
 units:
 
-  - type: STR_STORMBOLTER_TURRET
-    race: STR_STORMBOLTER_TURRET
+  - type: STR_RAZORBACK
+    stats:
+      health: 160
+      firing: 60
+
+
+  - &TURRET_TWINLASCANNON
+    type: STR_TURRET_TWINLASCANNON_LEFT
+    race: STR_TURRET_TWINLASCANNON_LEFT
     stats:
       tu: 20
       stamina: 10
-      health: 50
-      bravery: 110
       reactions: 20
+      health: 60
+      bravery: 100
       firing: 100
       throwing: 0
-      strength: 100
-      psiStrength: 200
+      strength: 90
+      psiStrength: 250
       psiSkill: 0
       melee: 0
-    armor: STR_STORMBOLTER_TURRET_ARMOR
-    standHeight: 14
-    kneelHeight: 14
-    value: 0
-    deathSound: 23
-    moveSound: 14
     energyRecovery: 10
+    armor: STR_TURRET_TWINLASCANNON_LEFT_ARMOR
+    standHeight: 23
+    kneelHeight: 16
+    value: 25
+    deathSound: 23
+    intelligence: 4
+    aggression: 5
+    sniper: 50
+    spotter: 1
     livingWeapon: true
-    moraleLossWhenKilled: 0
-    intelligence: 1
-    aggression: 1
+    builtInWeaponSets:
+      - - STR_LASCANNON_TAUROS
+      - - STR_LASCANNON_TAUROS
+      - - STR_LASCANNON_TAUROS
+
+  - type: STR_TURRET_TWINLASCANNON_RIGHT
+    refNode: *TURRET_TWINLASCANNON
+    race: STR_TURRET_TWINLASCANNON_RIGHT
+    armor: STR_TURRET_TWINLASCANNON_RIGHT_ARMOR

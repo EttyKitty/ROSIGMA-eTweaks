@@ -78,9 +78,65 @@ crafts:
       - [4, 8, 0, 0]
       - [5, 8, 0, 0]
       - [4, 8, 0, 0]
-      - [5, 8, 0, 0]
-      - [6, 8, 0, 2]
-      - [3, 8, 0, 6]
+  - type: STR_CRAFT_LANDRAIDER
+    requires:
+      - STR_RHINO_NO_TT_REQ
+    costBuy: 2000000
+    costRent: 40000
+    costSell: 150000
+    transferTime: 96
+    spacecraft: true
+    marker: 30
+    fuelMax: 1000
+    refuelRate: 1000
+    damageMax: 1600
+    repairRate: 10
+    speedMax: 840
+    maxAltitude: 1
+    accel: 2
+    armor: 10
+    weapons: 1
+    weaponTypes:
+      - 0
+    weaponStrings:
+      - STR_WEAPON_ONE
+    fixedWeapons: ["STR_CANNON_UC"]
+    soldiers: 10
+    vehicles: -1
+    maxLargeUnits: 0
+    score: 600
+    craftInventoryTile: [4, 11, 0]
+    battlescapeTerrainData:
+      name: LANDRAIDER_SM
+      mapDataSets:
+        - BLANKS
+        - SPEED
+      mapBlocks:
+        - name: LANDRAIDER_SM
+          width: 10
+          length: 20
+          items:
+            STR_TURRET_TWINLASCANNON_LEFT_SPAWNER:
+              - [2, 4, 0]
+            STR_TURRET_TWINLASCANNON_RIGHT_SPAWNER:
+              - [7, 4, 0]
+            STR_STORMBOLTER_TURRET_1X1_SPAWNER:
+              - [5, 6, 1]
+          fuseTimers:
+            STR_TURRET_TWINLASCANNON_LEFT_SPAWNER: [0, 0]
+            STR_TURRET_TWINLASCANNON_RIGHT_SPAWNER: [0, 0]
+            STR_STORMBOLTER_TURRET_1X1_SPAWNER: [0, 0]
+    deployment:
+      - [4, 3, 0, 4]
+      - [5, 3, 0, 4]
+      - [4, 4, 0, 4]
+      - [5, 4, 0, 4]
+      - [4, 5, 0, 4]
+      - [5, 5, 0, 4]
+      - [4, 6, 0, 4]
+      - [5, 6, 0, 4]
+      - [4, 7, 0, 4]
+      - [5, 7, 0, 4]
 
   - type: STR_CORVUS
     soldiers: 12
