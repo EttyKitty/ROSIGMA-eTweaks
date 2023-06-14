@@ -1,0 +1,24 @@
+# "Randomize First Turn Enemy TU" script.
+# Made by Kzer-Za, Starving Poet.
+# Slightly modified by EttyKitty.
+
+extended:
+  scripts:
+    createUnit:
+      - new: FIRST_TURN_TU
+        offset: 41
+        code: |
+          var int unitTUs;
+          var int divisor;
+          # var int unitAggression;
+          # adjust aliens' TUs on the first turn
+          debug_log "unit:" unit;
+          unit.getTimeUnits unitTUs;
+          if gt unitTUs 0;
+            unit.getTimeUnitsMax unitTUs;
+            battle_game.randomRange divisor 33 100; 
+            muldiv unitTUs divisor 100;
+            unit.setTimeUnits unitTUs;
+          end;
+          debug_log "tu set to:" unitTUs;
+          return;
