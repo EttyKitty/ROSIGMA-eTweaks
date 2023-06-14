@@ -12,7 +12,7 @@ extended:
           var int divisor;
           # var int unitAggression;
           # adjust aliens' TUs on the first turn
-          debug_log "unit:" unit;
+          # debug_log "unit:" unit;
           unit.getTimeUnits unitTUs;
           if gt unitTUs 0;
             unit.getTimeUnitsMax unitTUs;
@@ -20,5 +20,5 @@ extended:
             muldiv unitTUs divisor 100;
             unit.setTimeUnits unitTUs;
           end;
-          debug_log "tu set to:" unitTUs;
+          # debug_log "tu set to:" unitTUs;
           return;
