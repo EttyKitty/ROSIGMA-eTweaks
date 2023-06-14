@@ -31,7 +31,15 @@ en-US:
 
   STR_QD_SLOT: " "
 
+  STR_MAXIMUM_SPEED_UC: "TRAVEL SPEED>{ALT}{0}{ALT}"
+  STR_ACCELERATION: "COMBAT SPEED>{ALT}{0}{ALT}"
+  STR_DAMAGE_CAPACITY_UC: "DURABILITY>{ALT}{0}{ALT}"
+  STR_CARGO_SPACE: "TRANSPORT>{ALT}{0}{ALT}"
+
+  ########################################################## 40K/ROSIGMA CRAFTS/WEAPONS ##########################################################
+  
   STR_CRAFT_LANDRAIDER: "LAND RAIDER"
+
   ########################################################## 40K/ROSIGMA ITEMS-MISC ##########################################################
 
   STR_ALIEN_ALLOYS: "Plasteel Bar"

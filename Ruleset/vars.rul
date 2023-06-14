@@ -1,0 +1,14 @@
+extendedMeleeReactions: 1
+extendedTerrainMelee: 2
+extendedRunningCost: true
+enableUnitResponseSounds: false
+flagByKills: []
+surrenderMode: 2
+enableCloseQuartersCombat: 1
+closeQuartersAccuracyGlobal: 20
+showFullNameInAlienInventory: true
+tuRecoveryWakeUpNewTurn: 0
+noLOSAccuracyPenaltyGlobal: 20
+enableNewResearchSorting: true
+fixedUserOptions: !add
+  strafe: true
