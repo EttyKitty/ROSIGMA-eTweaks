@@ -29,6 +29,7 @@ Very bad.
 ## Developers:
 **EttyKitty** (**Sayurime**) - main developer. Blame me for everything.
 
+
 ## Credits and thanks to:
 **bulletdesigner** and **ohartenstein23** - developers of the '40k' mod.  
 
@@ -39,7 +40,8 @@ Very bad.
 **Dioxine** - developer of the 'X-Piratez' mod, from which I took some sprites, code parts and ideas.  
 
 **Solarius Scorch** - developer of the 'X-Com Files' mod, from which I also took some ideas and sprites.  
-Both 'X-Piratez' and 'X-Com Files' are great mods, in which I spent a lot of my time, so a separate big thanks to those guys.  
+
+Both 'X-Piratez' and 'X-Com Files' are great mods, in which I spent a looot of my time, so a separate big thanks to those guys.  
 
 **Meridian** and **Yankes** - developers of the OXCE.  
 Nothing even should be said. If not for these guys - a lot of the things simply wouldn't be possible to implement.  
