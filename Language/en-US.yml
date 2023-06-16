@@ -139,9 +139,9 @@ en-US:
   STR_ARMOR_ARTIFICER: "Artificer Power Armor"
   STR_ARMOR_ARTIFICER_UC: "Artificer Power Armor"
   STR_ARMOR_CAPTAIN_MK7_UC: "MK7 Captain Armor"
-  STR_ARMOR_ASPIRANT_UC: "Aspirant Fatigues"
+  STR_ARMOR_ASPIRANT_UC: "Aspirant Garment"
   STR_ARMOR_SCOUT: "Carapace Scout Armor"
-  STR_ARMOR_NEOPHYTE_UC: "Neophyte Fatigues"
+  STR_ARMOR_NEOPHYTE_UC: "Neophyte Garment"
 
   ########################################################## 40K/ROSIGMA FACILITIES ##########################################################
 
