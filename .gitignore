@@ -1,3 +1,5 @@
 
 *.xcf
 *.code-workspace
+ROUTES/MV_Backup/*
+MAPS/MV_Backup/*
