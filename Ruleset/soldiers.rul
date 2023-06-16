@@ -7,26 +7,26 @@ soldiers:
 
   - type: STR_SOLDIER_ASPIRANT
     costBuy: 10000
-    costSalary: 2000
+    costSalary: 1000
     requires:
       - STR_MARINES_STRATEGY
       - STR_CHAPTER_PURITY
     allowPromotion: false
     minStats:
       tu: 55
-      stamina: 60
+      stamina: 75
       health: 35
       bravery: 50
-      reactions: 50
-      firing: 60
-      melee: 60
-      throwing: 60
+      reactions: 55
+      firing: 65
+      melee: 65
+      throwing: 65
       strength: 30
       psiStrength: 0
       psiSkill: 0
     maxStats:
       tu: 60
-      stamina: 70
+      stamina: 80
       health: 40
       bravery: 60
       reactions: 60
@@ -44,18 +44,19 @@ soldiers:
       reactions: 80
       firing: 100
       melee: 100
-      throwing: 90
+      throwing: 100
       strength: 65
       psiStrength: 100
       psiSkill: 50
     trainingStatCaps:
-      tu: 70
-      stamina: 80
-      health: 50
-      firing: 90
-      melee: 80
-      throwing: 80
-      strength: 50
+      tu: 75
+      stamina: 90
+      health: 55
+      reactions: 80
+      firing: 100
+      melee: 100
+      throwing: 100
+      strength: 65
       psiStrength: 100
       psiSkill: 50
     dogfightExperience:
