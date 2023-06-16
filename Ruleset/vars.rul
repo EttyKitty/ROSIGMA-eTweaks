@@ -1,5 +1,5 @@
 extendedMeleeReactions: 1
-extendedTerrainMelee: 2
+extendedTerrainMelee: 5
 extendedRunningCost: true
 enableUnitResponseSounds: false
 flagByKills: []
@@ -12,3 +12,10 @@ noLOSAccuracyPenaltyGlobal: 20
 enableNewResearchSorting: true
 fixedUserOptions: !add
   strafe: true
+performanceBonusFactor: 1000
+buildInfiltrationBaseCloseToTheCountry: true
+pediaReplaceCraftFuelWithRangeType: 2
+minReactionAccuracy: 10
+ai:
+  pickUpWeaponsMoreActivelyCiv: true
+extendedItemReloadCost: true
