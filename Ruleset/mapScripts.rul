@@ -278,3 +278,54 @@ mapScripts:
       freqs: [2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2]
       maxUses: [1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 2]
     - type: fillArea
+
+  - type: DESERT
+    commands:
+    - type: addCraft
+      rects:
+        - [0, 0, 1, 2]
+    - type: addUFO
+    - type: addBlock
+      size: 2
+      executions: 3
+    - type: fillArea
+      blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 15, 16]
+      freqs: [8, 8, 8, 8, 8, 8, 8, 8, 8, 6, 3, 3, 3, 3]
+      maxUses: [-1, -1, -1, -1, -1, -1, -1, -1, -1, 2, 1, 1, 1, 1]
+    - type: fillArea
+      blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+  - type: FOREST
+    commands:
+    - type: addCraft
+      rects:
+        - [0, 0, 1, 2]
+    - type: addUFO
+    - type: addBlock
+      size: 2
+      executions: 2
+      blocks: [10, 11, 12, 13, 14, 15, 16]
+      freqs: [3, 3, 2, 1, 1, 1, 1]
+      maxUses: [-1, -1, 2, 1, 1, 1, 1]
+    - type: fillArea
+
+  - type: POLAR
+    commands:
+    - type: addCraft
+      rects:
+        - [0, 0, 1, 2]
+    - type: addUFO
+    - type: addBlock
+      size: 2
+      blocks: [12, 13, 14, 15, 16, 17, 18]
+      freqs: [3, 3, 2, 1, 1, 1]
+    - type: fillArea
+
+  - type: TWOCRAFTS
+    commands:
+    - type: addCraft
+      rects:
+        - [0, 0, 1, 2]
+    - type: addUFO
+    - type: addUFO
+    - type: fillArea
