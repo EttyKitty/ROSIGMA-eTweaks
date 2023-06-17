@@ -4,10 +4,10 @@ extraSprites:
     files:
       0: Resources/Heavybolter/CASE4.png
       58: Resources/Items/bigob_FirstAid.png
-      59: Resources/NULL/Null_Void_2x2.png
+      59: Resources/NULL/NULL_2X2.png
       60: Resources/NULL/NULL_1X3.png
-      61: Resources/Weapons/Dreadnought/DREAD_FIST_STORMBOLTER.png
-      62: Resources/Weapons/Dreadnought/DREAD_MULTIMELTA.png
+      61: Resources/BIGOBS/Dreadnought/DREAD_FIST_STORMBOLTER.png
+      62: Resources/BIGOBS/Dreadnought/DREAD_MULTIMELTA.png
 
   - type: FLOOROB.PCK
     files:
