@@ -27,17 +27,23 @@ extraSprites:
       100: Resources/Rank/veteran_base.png
       101: Resources/Rank/ancient_base.png  
 
-  - typeSingle: ARTIFICER__1__ARTIFICER
-    fileSingle: Resources/LAYER/ULTRAMARINE/ARTIFICER_HELM.png
+  - type: CustomArmorPreviews
+    width: 360
+    height: 600
+    subX: 12
+    subY: 20
+    files:
+      0: Resources/UI/unit_preview_etweaks.png
 
-  - typeSingle: CAPTAIN_MK7__1__CAPTAIN_MK7
-    fileSingle: Resources/LAYER/ULTRAMARINE/CAPTAIN_MK7.gif
+  ########################################################## BATTLE SPRITES ##########################################################
 
-  - typeSingle: ASPIRANT__4__ASPIRANTM
-    fileSingle: Resources/LAYER/ULTRAMARINE/ASPIRANT2.png
-
-  - typeSingle: NEOPHYTE__1__NEOPHYTEM
-    fileSingle: Resources/LAYER/ULTRAMARINE/NEOPHYTE.gif
+  - type: STORMBOLTER_TURRET_1X1.PCK
+    width: 512
+    height: 200
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/RHINO_STORMBOLTER_BS.png
 
   - type: ASPIRANT.PCK
     width: 512
@@ -53,7 +59,20 @@ extraSprites:
     subX: 32
     subY: 40
     files:
-      0: Resources/RHINO_STORMBOLTER_BS.png
+
+  ########################################################## INV SPRITES ##########################################################
+
+  - typeSingle: ARTIFICER__1__ARTIFICER
+    fileSingle: Resources/LAYER/ULTRAMARINE/ARTIFICER_HELM.png
+
+  - typeSingle: CAPTAIN_MK7__1__CAPTAIN_MK7
+    fileSingle: Resources/LAYER/ULTRAMARINE/CAPTAIN_MK7.gif
+
+  - typeSingle: ASPIRANT__4__ASPIRANTM
+    fileSingle: Resources/LAYER/ULTRAMARINE/ASPIRANT2.png
+
+  - typeSingle: NEOPHYTE__1__NEOPHYTEM
+    fileSingle: Resources/LAYER/ULTRAMARINE/NEOPHYTE.gif
 
   - type: CustomArmorPreviews
     width: 360
@@ -61,7 +80,8 @@ extraSprites:
     subX: 12
     subY: 20
     files:
-      0: Resources/UI/unit_preview_etweaks.png
+
+  ########################################################## HEADS ##########################################################
 
   - typeSingle: 0__2__M0_HEAD
     fileSingle: Resources/Heads/Head_F0.png
