@@ -50,6 +50,7 @@ research:
       # - STR_PERSONAL_ARMOR
       # - STR_MELTABOMB
       - STR_SPEEDC
+      - STR_APOC_BAY
 
   - name: STR_PRIMARIS
     dependencies:

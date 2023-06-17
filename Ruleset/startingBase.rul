@@ -70,3 +70,6 @@ startingBase: #*** Default, Marines
     - type: STR_LABORATORY
       x: 4
       y: 1
+    - type: STR_APOC_BAY
+      x: 4
+      y: 0
