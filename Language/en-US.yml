@@ -248,9 +248,24 @@ en-US:
   STR_CYBERDISC_CORPSE: "Bloodthirster Corpse"
   CYBERDISC_ARMOR: "Bloodthirster"
   STR_CYBERDISC_AUTOPSY: "Bloodthirster Origin"
-  STR_CYBERDISC_TO_HONOR: "Bloodthirster Corpse"
-
+  STR_CYBERDISC_TO_HONOR: "Process Bloodthirster Corpse"
   STR_SNAKEMAN_LEADER: "Traitor Guardsman Commander"
+  STR_CHAOS_HERETEK: "Heretek"
+  STR_TRAITORGUARD_BATTLE_SERVITOR_HB: "Battle Servitor"
+
+  ##### RACES
+  STR_SECTOID: "Chaos Cultists"
+  STR_SNAKEMAN: "Traitor Guardsmen"
+  STR_SNAKEMAN_DESERTERS: "Guardsmen Deserters"
+  STR_ETHEREAL: "Chaos Space Marines"
+  STR_CHAOS_HERETEK_FORCE: "Dark Mechanicus"
+  STR_HERETEK: "Dark Mechanicus"
+
+  ########################################################## eTweaks ##########################################################
+
+  STR_SERVITOR_SERVOARM: "Battle Servitor"
+  STR_CHAOS_HERETEK_VANGUARD: "Heretek Vanguard"
+  STR_CHAOS_HERETEK_RANGER: "Heretek Ranger"
 
   ########################################################## eTweaks UFOPAEDIA TEXT ##########################################################
 

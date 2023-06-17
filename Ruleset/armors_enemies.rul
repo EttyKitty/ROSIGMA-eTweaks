@@ -6,10 +6,33 @@ extended:
 
 armors:
 
-  - type: TG_BATTLESERVITOR_HBARMOR
+  - &SERVITOR
+    type: TG_BATTLESERVITOR_HBARMOR
+    bleedImmune: true
+    painImmune: true
+    zombiImmune: true
+    tags:
+      INFECTION_RESIST: 100 #infection immune
     antiCamouflageAtDay: 0
     antiCamouflageAtDark: 0
     heatVision: 0 #% of smoke that is ignored by superior sensors
+    frontArmor: 30
+    sideArmor: 20
+    rearArmor: 15
+    underArmor: 20
+    damageModifier:
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.8 #FLAMES
+      - 0.8 #HE
+      - 1.0 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
 
 
   - type: STR_CHAOS_HERETEK_ARMOR
@@ -21,3 +44,12 @@ armors:
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 0
       ARMOR_ENERGY_SHIELD_DECAY: 0
+
+  - type: STR_SERVITOR_SERVOARM_ARMOR
+    refNode: *SERVITOR
+    spriteSheet: SERVITOR_SERVOARM_BS.PCK
+    spriteInv: SERVITOR_SERVOARM_INV
+    loftempsSet: [ 3 ]
+    drawingRoutine: 0
+    corpseBattle:
+      - STR_TG_BATTLESERVITOR_CORPSE

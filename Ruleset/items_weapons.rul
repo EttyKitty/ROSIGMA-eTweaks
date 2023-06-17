@@ -313,6 +313,32 @@ items:
       melee: 1.0
       flatHundred: 0.0
 
+  - type: STR_SERVOARM
+    bigSprite: { mod: 40k, index: 326 }
+    meleeAnimation: { mod: 40k, index: 0 }
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
+    power: 80
+    damageType: 7
+    accuracyMelee: 80
+    battleType: 3
+    clipSize: -1
+    damageAlter:
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.2
+      RandomType: 2
+      ToStun: 0.5
+    flatRate: true
+    costMelee:
+      time: 25
+      energy: 4
+    weight: 5
+    defaultInventorySlot: STR_RIGHT_HAND
+    fixedWeapon: true
+    invWidth: 2
+    invHeight: 3
+    recover: false
+
 #################################### MELEE POWER
 
   - type: STR_POWERFIST

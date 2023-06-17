@@ -5,14 +5,132 @@ units:
           - - STR_CSERVITOR_HB
             - STR_CSERVITOR_HB_AMMO
     stats:
-      tu: 60
-      stamina: 120
-      health: 50
-      bravery: 60
+      tu: 40
+      stamina: 40
+      health: 30
+      bravery: 40
       reactions: 20
-      firing: 40
+      firing: 30
       throwing: 2
       strength: 80
       psiStrength: 60
       psiSkill: 0
-      melee: 45
+      melee: 30
+
+  - type: STR_SERVITOR_SERVOARM
+    race: STR_CHAOS_HERETEK_FORCE
+    rank: STR_SOLDIER
+    stats:
+      tu: 40
+      stamina: 40
+      health: 30
+      bravery: 40
+      reactions: 20
+      firing: 30
+      throwing: 2
+      strength: 80
+      psiStrength: 60
+      psiSkill: 0
+      melee: 30
+    armor: STR_SERVITOR_SERVOARM_ARMOR
+    standHeight: 22
+    kneelHeight: 14
+    canPanic: false
+    canBeMindControlled: false
+    moraleLossWhenKilled: 5
+    intelligence: 0
+    deathSound: {mod: 40k, index: 376}
+    aggression: 2
+    isLeeroyJenkins: true
+    spotter: 0
+    value: 30
+    energyRecovery: 60
+    moveSound: -1
+    livingWeapon: true
+    builtInWeaponSets:
+          - - STR_SERVOARM
+
+  - type: STR_CHAOS_HERETEK_RANGER
+    race: STR_HERETEK
+    rank: STR_SOLDIER
+    stats:
+      tu: 60
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 70
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 25
+    armor: STR_CHAOS_HERETEK_ARMOR
+    intelligence: 5
+    aggression: 0
+    standHeight: 22
+    kneelHeight: 14
+    spotter: 2
+    sniper: 75
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_LASGUN_CLIP_HOTSHOT
+
+  - type: STR_CHAOS_HERETEK_RANGER
+    race: STR_HERETEK
+    rank: STR_SOLDIER
+    stats:
+      tu: 60
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 70
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 25
+    armor: STR_CHAOS_HERETEK_ARMOR
+    intelligence: 5
+    aggression: 0
+    standHeight: 22
+    kneelHeight: 14
+    spotter: 2
+    sniper: 75
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_LONGLAS_CHAOS
+        - STR_LASGUN_CLIP_HOTSHOT
+        - STR_LASGUN_CLIP_HOTSHOT
+
+  - type: STR_CHAOS_HERETEK_VANGUARD
+    race: STR_HERETEK
+    rank: STR_SOLDIER
+    stats:
+      tu: 60
+      stamina: 80
+      health: 40
+      bravery: 80
+      reactions: 55
+      firing: 25
+      throwing: 50
+      strength: 50
+      psiStrength: 70
+      psiSkill: 0
+      melee: 70
+    armor: STR_CHAOS_HERETEK_ARMOR
+    intelligence: 10
+    aggression: 2
+    standHeight: 22
+    kneelHeight: 14
+    spotter: 2
+    sniper: 75
+    energyRecovery: 50
+    livingWeapon: true
+    builtInWeaponSets:
+      - - STR_EVISCERATOR
