@@ -90,19 +90,7 @@ items:
   - type: STR_PLASMA_RIFLE
     refNode: *BASIC
 
-  - type: STR_AUTO_CANNON
-    refNode: *BASIC
-  
-  - type: STR_CSERVITOR_HB
-    refNode: *BASIC
-
-  - type: STR_ASSC
-    refNode: *BASIC
-
   - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
-    refNode: *BASIC
-
-  - type: AUX_BOLTER
     refNode: *BASIC
 
   - type: STR_PUMP_SHOTGUN_CHAOS
@@ -162,9 +150,6 @@ items:
   - type: STR_SLAANESH_ROCKET_LAUNCHER
     refNode: *BASIC
 
-  - type: STR_HEAVY_STUBBER_CHAOS
-    refNode: *BASIC
-
   - type: STR_CHAOS_ROCKET_LAUNCHER
     refNode: *BASIC
 
@@ -207,14 +192,33 @@ items:
   - type: STR_PLASMA_PISTOL_SLAAN
     refNode: *BASIC
 
-  - type: STR_TRAITOR_CHIMERA_MULTI_LASER
-    refNode: *BASIC
-
   - type: STR_SHOTGUN
     refNode: *BASIC
 
   - type: STR_BOLTER_ELOHIM
     refNode: *BASIC
+
+
+  - &HEAVY_AUTO
+    type: STR_AUTO_CANNON
+    accuracySnap: 40
+  
+  - type: STR_CSERVITOR_HB
+    refNode: *HEAVY_AUTO
+
+  - type: STR_ASSC
+    refNode: *HEAVY_AUTO
+
+  - type: STR_HEAVY_STUBBER_CHAOS
+    refNode: *HEAVY_AUTO
+
+
+  - &TURRET_AUTO
+    type: AUX_BOLTER
+    accuracyAuto: 40
+
+  - type: STR_TRAITOR_CHIMERA_MULTI_LASER
+    refNode: *TURRET_AUTO
 
 
   - &ALWAYS_HITS
