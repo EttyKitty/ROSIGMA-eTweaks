@@ -1,0 +1,1912 @@
+# grep -R "type" | grep armors | sed 's/^.*type:/  - type:/g' | sort -u
+# VScode search replace with Regex
+# Find      \n
+# Replace   \n    personalLight: 6\n
+
+armors:
+# vscode regex
+# search:   (- type:.*)
+# replace:  $1\n    refNode: *WAKL_COST
+
+  - &WAKL_COST
+    type: BARREL_ARMOR
+    moveCost:
+      walkPercent: [100, 20]
+  - type: BEHEMOTH_ARMOR
+    refNode: *WAKL_COST
+  - type: BIKE_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: CARNI_ARMOR
+    refNode: *WAKL_COST
+  - type: CASTIGATOR_AC_ARMOR
+    refNode: *WAKL_COST
+  - type: CELATID_ARMOR
+    refNode: *WAKL_COST
+  - type: CENT_ARMOR
+    refNode: *WAKL_COST
+  - type: CENT_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: CHRYSSALID_ARMOR
+    refNode: *WAKL_COST
+  - type: CIVF_ARMOR
+    refNode: *WAKL_COST
+  - type: CIVILIAN_F0
+    refNode: *WAKL_COST
+  - type: CIVILIAN_F1
+    refNode: *WAKL_COST
+  - type: CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE
+    refNode: *WAKL_COST
+  - type: CIVILIAN_HEDONITE_ARMOR_BLESSED_SACRIFICE
+    refNode: *WAKL_COST
+  - type: CIVILIAN_HEDONITE_ARMOR_SACRIFICE
+    refNode: *WAKL_COST
+  - type: CIVILIAN_M0
+    refNode: *WAKL_COST
+  - type: CIVILIAN_M1
+    refNode: *WAKL_COST
+  - type: CIVM_ARMOR
+    refNode: *WAKL_COST
+  - type: CLOAKED_WOMAN2_ARMOR
+    refNode: *WAKL_COST
+  - type: CLOAKED_WOMAN_ARMOR
+    refNode: *WAKL_COST
+  - type: CLOAKED_WOMAN_ORANGE_ARMOR
+    refNode: *WAKL_COST
+  - type: CULTIST_RITUAL_SACRIFICE_ARMOR
+    refNode: *WAKL_COST
+  - type: CULTIST_RITUAL_SUMMONING_ARMOR
+    refNode: *WAKL_COST
+  - type: CYBERDISC_ARMOR
+    refNode: *WAKL_COST
+  - type: DAMOCLES_ARMOR
+    refNode: *WAKL_COST
+  - type: DAMOCLESPD_ARMOR
+    refNode: *WAKL_COST
+  - type: DEFILER_ARMOR_L
+    refNode: *WAKL_COST
+  - type: DEFILER_ARMOR_R
+    refNode: *WAKL_COST
+  - type: DREAD_ARMOR2_UC
+    refNode: *WAKL_COST
+  - type: DREAD_ARMOR3_UC
+    refNode: *WAKL_COST
+  - type: DREAD_ARMOR4_UC
+    refNode: *WAKL_COST
+  - type: DREAD_ARMOR5_UC
+    refNode: *WAKL_COST
+  - type: DREAD_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: ELDAR_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: ELDAR_TURRET_ARMOR_P
+    refNode: *WAKL_COST
+  - type: ETHEREAL_ARMOR0
+    refNode: *WAKL_COST
+  - type: ETHEREAL_ARMOR1
+    refNode: *WAKL_COST
+  - type: ETHEREAL_ARMOR2
+    refNode: *WAKL_COST
+  - type: EXORCIST_ARMOR
+    refNode: *WAKL_COST
+  - type: FIELD_ARMOR
+    refNode: *WAKL_COST
+  - type: FLOATER_ARMOR0
+    refNode: *WAKL_COST
+  - type: FLOATER_ARMOR1
+    refNode: *WAKL_COST
+  - type: FLOATER_ARMOR2
+    refNode: *WAKL_COST
+  - type: GATEDOWN_ARMOR
+    refNode: *WAKL_COST
+  - type: GATEUP_ARMOR
+    refNode: *WAKL_COST
+  - type: GENE_ARMOR
+    refNode: *WAKL_COST
+  - type: GENE_ARMOR2
+    refNode: *WAKL_COST
+  - type: GENE_ARMOR3
+    refNode: *WAKL_COST
+  - type: GENERATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: GREEN_ROBE_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_ARMORED_CAR_ARMOR
+    refNode: *WAKL_COST
+#  - type: GSC_AUTOCANNON_ARMOR
+#    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_F0_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_F1_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_FSPACER_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_M0_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_M1_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CIVILIAN_MSPACER_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CLOAKED_WOMAN2_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CLOAKED_WOMAN_ARMOR
+    refNode: *WAKL_COST
+  - type: GSC_CLOAKED_WOMAN_ORANGE_ARMOR
+    refNode: *WAKL_COST
+#  - type: GSC_HB_ARMOR
+#    refNode: *WAKL_COST
+  - type: GUARD_ARMOR
+    refNode: *WAKL_COST
+  - type: GUARD_ARMORF
+    refNode: *WAKL_COST
+  - type: GUARD_ARMORM
+    refNode: *WAKL_COST
+  - type: GUARD_ARMOROF
+    refNode: *WAKL_COST
+  - type: HOVERTANK_ARMOR
+    refNode: *WAKL_COST
+  - type: IMMOLATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: IMPULSOR_SHIELD_ARMOR
+    refNode: *WAKL_COST
+  - type: LEMONRUSS_ARMOR
+    refNode: *WAKL_COST
+  - type: LEMONRUSS_ARMORB
+    refNode: *WAKL_COST
+  - type: LTS_ARMOR
+    refNode: *WAKL_COST
+  - type: LTT_ARMOR
+    refNode: *WAKL_COST
+  - type: MONK_ARMOR_1
+    refNode: *WAKL_COST
+  - type: MONK_ARMOR_2
+    refNode: *WAKL_COST
+  - type: MONK_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: MUNITORIUM_ARMOR
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR0
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR1
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR2
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR3
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR4
+    refNode: *WAKL_COST
+  - type: MUTON_ARMOR5
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORHAVOC
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORHAVOCN
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORHAVOCS
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORHAVOCT
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORNURGLE
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORNURGLEA
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORNURGLEA_BLESSED
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORNURGLEA_PLAYER
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORSLAANESH
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORSLAANESH_BLESSED
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORSLAANESH_PLAYER
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORTZEENTCH
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORTZEENTCH_BLESSED
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORTZEENTCH_PLAYER
+    refNode: *WAKL_COST
+  - type: MUTON_ARMORTZS
+    refNode: *WAKL_COST
+  - type: NURGLE_BLIGHT_HAULER_ARMOR
+    refNode: *WAKL_COST
+  - type: NURGLE_CULTIST_GREENROBE_ARMOR
+    refNode: *WAKL_COST
+  - type: NURGLE_CULTIST_GREENROBE_ARMOR_RITUALIST
+    refNode: *WAKL_COST
+  - type: NURGLE_CULTIST_GREENROBE_ARMOR_RITUALIST_BLESSED
+    refNode: *WAKL_COST
+  - type: NURGLE_CULTIST_GREENROBE_BLESSED_ARMOR
+    refNode: *WAKL_COST
+  - type: NURGLINGS_ARMOR
+    refNode: *WAKL_COST
+  - type: OBLITERATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: ORBITAL_ARMOR
+    refNode: *WAKL_COST
+  - type: ORK_TURRET2_ARMOR
+    refNode: *WAKL_COST
+  - type: ORK_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: PIPELINE_ARMOR
+    refNode: *WAKL_COST
+  - type: PREDATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: PREDATOR_ARMORBASE
+    refNode: *WAKL_COST
+  - type: PREDATOR_SIDE_ARMOR
+    refNode: *WAKL_COST
+  - type: RADAR_ARMOR
+    refNode: *WAKL_COST
+  - type: RAZORBACK_ARMOR
+    refNode: *WAKL_COST
+  - type: REAPER_ARMOR
+    refNode: *WAKL_COST
+  - type: RTS_ARMOR
+    refNode: *WAKL_COST
+  - type: RTT_ARMOR
+    refNode: *WAKL_COST
+  - type: SACRIFICE_F0
+    refNode: *WAKL_COST
+  - type: SACRIFICE_F1
+    refNode: *WAKL_COST
+  - type: SACRIFICE_M0
+    refNode: *WAKL_COST
+  - type: SACRIFICE_M1
+    refNode: *WAKL_COST
+  - type: SECTOID_ARMOR0
+    refNode: *WAKL_COST
+  - type: SECTOPOD_ARMOR
+    refNode: *WAKL_COST
+  - type: SECTOPOD_ARMOR2
+    refNode: *WAKL_COST
+  - type: SERVITOR_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: SHIELD_ARMOR
+    refNode: *WAKL_COST
+  - type: SILACOID_ARMOR
+    refNode: *WAKL_COST
+  - type: SKULL_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_FLAK_M_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_FLAK_F_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_OFFICER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_COMMISSAR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_PLAT_ARMOR_P
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR_BLESSED_RITUALIST
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR_BLESSED_SACRIFICE
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR_RITUALIST
+    refNode: *WAKL_COST
+  - type: SLAANESH_DEMIMONDE_ARMOR_SACRIFICE
+    refNode: *WAKL_COST
+  - type: SLAANESH_SACRIFICE_F_ARMOR
+    refNode: *WAKL_COST
+  - type: SLAANESH_SACRIFICE_M_ARMOR
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMOR0
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMOR1
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMOR2
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMORC
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMORH
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_ARMORN
+    refNode: *WAKL_COST
+  - type: SNAKEMAN_TURRET
+    refNode: *WAKL_COST
+  - type: STORMRAVEN_ADEPTAS_ARMOR
+    refNode: *WAKL_COST
+  - type: STORMRAVEN_ARMOR
+    refNode: *WAKL_COST
+  - type: STORMRAVEN_ARMORGK
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORA_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORB_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_CELESTIAN_ELITE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_CELESTIAN_SACRESANT
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORCEL_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORC_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORD_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_ELOHIM
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_HONOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORH_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORI_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_KHORNE_REPENTIA
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_NOVSUPERIOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORPURPLE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORREDBLACK
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORREDWHITE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_REPSUPERIOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_RETRIBUTOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORR_FIXED_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORR_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORS_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_SUPERIOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMORSUP_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ARMOR_UC_ALTDRED
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ASSASSIN_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_BLOODYROSE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_CALLIDUS_SUIT
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_CANTUSArmor
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ELOHIM_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_HERETIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_HERETIC_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_KHORNE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_KHORNENOVICEARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_KHORNEPARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_KHORNEPARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_KHORNEPARMOR_BLESSED2
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_MEDICAE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_MEDICAE_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NOVICEHABIT
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NOVICE_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NURGLE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NURGLE_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NURGLE_BLESSED2
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_NURGLE_BLESSED_ARMOR_MIDWIFE
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_PILOT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_PILOT_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_REPENTIA_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SENTINEL_HBOLTER_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SENTINEL_LANCE_UC
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SLAANASSASSINARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SLAANDOM
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SLAANDOM_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SLAANESH
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_SLAANESH_BLESSED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_TZEENTCH
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_TZEENTCHAMP
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_TZEENTCHNASSASSINARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_TZEENTCH_TWISTED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ADEPTAS_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR_DAEMONETTE
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR_DAEMONETTE_RITUALIST
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR_ELOHIM
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR_PLAYER
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_ARMOR_ULTRA
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_CORVUS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_DEV_ARMOR_ULTRA
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_GREYKNIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_SARGE_ARMOR_ULTRA
+    refNode: *WAKL_COST
+  - type: STR_ALPHA_SCOUT_ARMOR_ULTRA
+    refNode: *WAKL_COST
+  - type: STR_APOT_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ARBITOR_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ASS_ARMOR_HONOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ASS_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ASSASSINNEUTRAL_FEMSUIT
+    refNode: *WAKL_COST
+  - type: STR_BEASTGUARD_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BEASTGUARD_FLAK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BEASTGUARD_FLAK_ARMOR_MEDIC
+    refNode: *WAKL_COST
+  - type: STR_BEASTGUARD_HEAVY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BEASTGUARD_HEAVY_ARMOR_SLAB
+    refNode: *WAKL_COST
+  - type: STR_BIOMANCER
+    refNode: *WAKL_COST
+  - type: STR_BLACK_LEGION_CSM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BLACKSTONE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BLACKSTONE_ARMOR_SNIPER
+    refNode: *WAKL_COST
+  - type: STR_BLACKSTONE_JUMP_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BLUEHORROR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_BULLGRYN_BUCKLER
+    refNode: *WAKL_COST
+  - type: STR_BULLGRYN_BUCKLER_RIOT
+    refNode: *WAKL_COST
+  - type: STR_BULLGRYN_SLAB
+    refNode: *WAKL_COST
+  - type: STR_BULLGRYN_SLAB_RIOT
+    refNode: *WAKL_COST
+  - type: STR_CAPTAIN_UC
+    refNode: *WAKL_COST
+  - type: STR_CAS_CANNON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CAS_MISSILE_POD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CELATID_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CELESTIAN_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_IRON_MAIDEN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_KHORNE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_NURGLE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_SLAANESH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_TZEENTCH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_ADEPTAS_UNDIVIDED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_BEHEMOTH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_HAVOC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_HERETEK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_LORD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_MARINE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_MARINE_LEADER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_NIGHTLORDS_SISTER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_PENETANTE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_RAPTOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SENTINEL_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SERAPHIM
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SERGEANT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SORC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SQUATS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SQUATS_ARMOR_HEAVY
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SQUATS_ARMOR_LEADER
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_SQUATS_EXOARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAOS_TERMINATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHAP_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_CHIMEDON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHIMERA_PD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHIMERA_PDH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHIMERA_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHIMERA_TWIN_HB_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHRYSSALID_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CHRYSSALID_ARMOR_DIRE
+    refNode: *WAKL_COST
+  - type: STR_CHRYSSALID_ARMORSELENE
+    refNode: *WAKL_COST
+  - type: STR_CMAS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_COMMISSAR_CARAPACE_UC
+    refNode: *WAKL_COST
+  - type: STR_COMMISSAR_CLAW_UC
+    refNode: *WAKL_COST
+  - type: STR_COMMISSAR_UC
+    refNode: *WAKL_COST
+  - type: STR_COMMISSAR_YARRICK_UC
+    refNode: *WAKL_COST
+  - type: STR_CULTIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CULTIST_ASPIRING_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CULTIST_SQUATS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_CULTIST_SQUATS_ARMOR_LEADER
+    refNode: *WAKL_COST
+  - type: STR_DARK_APOSTLE_ALPHA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DARK_APOSTLE_ALPHA_RITUALIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DARK_DISCIPLE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DARK_DISCIPLE_ARMOR_ALPHA
+    refNode: *WAKL_COST
+  - type: STR_DARK_DISCIPLE_ARMOR_DAEMONETTE
+    refNode: *WAKL_COST
+  - type: STR_DARK_DISCIPLE_ARMOR_NEVERBORN
+    refNode: *WAKL_COST
+  - type: STR_DARK_DISCIPLE_ARMOR_NEVERBORN_RITUALIST
+    refNode: *WAKL_COST
+  - type: STR_DEATHCULT_ASSASSIN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHGUARD_SPEWER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_ARDNOB_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_BOY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_KAP_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_KAP_ARMOR_ALPHA
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_MEGANOB_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEATHSKULL_ORK_NOB_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEMI_DAEMONETTE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEMI_DAEMONETTE_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_GUARD_BASIC_FLAKARMOR
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_GUARD_BASIC_GREENSHIRT
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_GUARD_OFFICER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_PSYKER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_SCOUT_FEMALE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DESERTER_SOLDIER_FEM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DESTROYER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_DEV_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_DEV_ARMOR_ULTRA
+    refNode: *WAKL_COST
+  - type: STR_DIVINER
+    refNode: *WAKL_COST
+  - type: STR_DREAD_GK_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR2
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR2_P
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR2_P_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR3
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR3_P
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR3_P_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR4
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR4_P
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR4_P_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR5
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR5_P
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR5_P_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR6
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR6_P
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR6_P_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR_F
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR_FH
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR_F_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR_M
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_ARMOR_M_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_FARSEER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_PLAT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ELDAR_PLAT_ARMOR_P
+    refNode: *WAKL_COST
+  - type: STR_ELYSIAN_JUMP_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ELYSIAN_JUMP_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_EMPLACEMENT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_HEAVY_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_MEDIC_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_SHIELD_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_SIGNAL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_ENFORCER_SIGNALFALSE_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_FELINIDGUARD_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FELINIDGUARD_FLAK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FELINIDGUARD_FLAK_ARMOR_MEDIC
+    refNode: *WAKL_COST
+  - type: STR_FELINIDGUARD_MEDIC_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FELINID_JUMP_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FEM_CULTIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FLAMER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FLOATER_ARMOR0
+    refNode: *WAKL_COST
+  - type: STR_FLYING_SUIT_UC
+    refNode: *WAKL_COST
+  - type: STR_FRATERIS_MILITIA_HEAVY
+    refNode: *WAKL_COST
+  - type: STR_FRATERIS_MILITIA_HEAVY_VETERAN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_FRATERIS_MILITIA_HEAVY_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GC2_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GC3_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GENETANK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GK_APO_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_APO_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_APO_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_APO_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_CHP_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_CHP_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_CHP_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_DREAD_ARMOR_AI
+    refNode: *WAKL_COST
+  - type: STR_GK_LIB_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_LIB_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_LIB_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TAC_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TAC_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TAC_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TAC_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TAC_LV5_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TEC_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TEC_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TEC_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_GK_TEC_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_DREAD_DW_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_DREAD_DW_ARMOR2_UC
+    refNode: *WAKL_COST
+  - type: STR_DREAD_DW_ARMOR3_UC
+    refNode: *WAKL_COST
+  - type: STR_DREAD_DW_ARMOR4_UC
+    refNode: *WAKL_COST
+  - type: STR_DREAD_DW_ARMOR5_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_CAP_ARMOR_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_WM_ARMOR_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_BA_UC #BLOOD ANGELS
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_BAH_UC #BLOOD ANGELS HELMET VER
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_BT_UC #BLACK TEMPLARS
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_IF_UC #IMPERIAL FISTS
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_WS_UC #WHITE SCARS
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_SW_UC #Space Wolves
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_DA_UC #DARK ANGELS
+    refNode: *WAKL_COST
+  - type: STR_DW_TAC_ARMOR_CF_UC #CRIMSON FISTS
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_DEV_ARMOR_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_SALA_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_BAH_UC #ASSAULT BLOOD ANGELS HELMET
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_BT_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_IF_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_WS_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_SW_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_DA_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_ASS_ARMOR_CF_UC #ASSAULT
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_SALA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_BA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_BT_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_WS_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_SW_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_DA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TER_ARMOR_CF_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_SALA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_BA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_BT_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_IF_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_WS_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_SW_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_DA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TASS_ARMOR_CF_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_SALA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_BA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_BT_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_IF_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_WS_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_SW_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_DA_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_TSARGENT_ARMOR_CF_UC #TERMINATOR
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_SALA_UC #SALAMANDERS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_BA_UC #BLOOD ANGELS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_BT_UC #BLACK TEMPLARS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_IF_UC #IMPERIAL FISTS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_WS_UC #WHITE SCARS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_SW_UC #Space Wolves
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_DA_UC #DARK ANGELS
+    refNode: *WAKL_COST
+  - type: STR_DW_APOT_ARMOR_CF_UC #CRIMSON FISTS
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_SALA_UC #SALAMANDERS
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_BA_UC #BLOOD ANGELS
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_BT_UC #BLACK TEMPLARS
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_IF_UC #IMPERIAL FISTS
+    refNode: *WAKL_COST
+  - type: STR_DW_TECH_ARMOR_WS_UC #WHITE SCARS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_LIB_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CHP_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TEC_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_APO_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_TAC_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_PHB_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_GRV_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_SALA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_IF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_BT_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_WS_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_SW_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_DA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_INC_CF_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_ULTRA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_SALA_UC #SALAMANDERS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_BA_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_BT_UC #BLACK TEMPLARS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_IF_UC #IMPERIAL FISTS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_WS_UC #WHITE SCARS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_SW_UC #Space Wolves
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_DA_UC #DARK ANGELS
+    refNode: *WAKL_COST
+  - type: STR_MKX_DW_CAP_CF_UC #CRIMSON FISTS
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_FLAMER_BACK_LEFT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_FLAMER_BACK_RIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_FLAMER_FRONT_LEFT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_FLAMER_FRONT_RIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_STUBBER_LEFT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GORGON_HEAVY_STUBBER_RIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GREYKNIGHT_ADEPTAS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GREYKNIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GREYKNIGHT_ARMOR_BA
+    refNode: *WAKL_COST
+  - type: STR_GREYKNIGHT_ARMOR_NS
+    refNode: *WAKL_COST
+  - type: STR_GREYKNIGHT_UC
+    refNode: *WAKL_COST
+  - type: STR_GROTS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_ARBITOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_COMMISSAR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_COMMISSAR_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_ENFORCER_HEAVY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_ENFORCER_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_ENFORCER_SHIELD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_CARAPACE_ARMOR_OFFICER
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_CARAPACE_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_FLAK_ARMOR_FEMALE
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_FLAK_ARMOR_MALE
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_FLAK_ARMOR_OFFICER
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_GUARD_SCION_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_INFECTED_ADEPTAS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_JUDGE_BIKE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_JUDGEF_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_JUDGEM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_KELER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_KRIEG_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_MEDICAE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_OGRYN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_OGRYN_ORANGE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_PDF_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_PDF_ARMOR1
+    refNode: *WAKL_COST
+  - type: STR_GSC_PDF_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_PENETANTE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_PENETANTE_ARMOR_FEMALE
+    refNode: *WAKL_COST
+  - type: STR_GSC_PSYKER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_REPENTIA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_SENTINELPD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_TANITH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_WARDEN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GSC_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORH_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORP_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORSM
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_MEDIC_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_MOUNTED_AUTOCANNON_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_MOUNTED_LASCANNON_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_PRIEST_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_AUTOCANNON_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_HEAVY_FLAMER_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_HEAVY_PLASMA_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_MISSILE_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_MULTILASER_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMORS_SENTINEL_MULTIMELTA_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_ARMOR_TRAIN
+    refNode: *WAKL_COST
+  - type: STR_GUARD_CARAPACE_VOX
+    refNode: *WAKL_COST
+  - type: STR_GUARD_CARAPACE_VOX_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_GUARD_FLAK_VOX
+    refNode: *WAKL_COST
+  - type: STR_GUARD_FLAK_VOX_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_GUARD_IMPERIAL_ASSASSIN_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_AUTOCANNON_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_LASCANNON_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_MORTAR_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_ENGINEER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_GRENADIER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_KRIEG_GRENADIER_ARMOR_LUCIUS
+    refNode: *WAKL_COST
+  - type: STR_GUARDPD_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARDPDMEDIC_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_POWER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_POWER_ARMOR_COMMISSAR
+    refNode: *WAKL_COST
+  - type: STR_GUARD_POWER_ARMOR_MEDIC
+    refNode: *WAKL_COST
+  - type: STR_GUARD_POWER_ARMOR_MULTILAS
+    refNode: *WAKL_COST
+  - type: STR_GUARD_POWER_ARMOR_OFFICER
+    refNode: *WAKL_COST
+  - type: STR_GUARD_SCION_VOX
+    refNode: *WAKL_COST
+  - type: STR_GUARD_SCION_VOX_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_GUARD_VETERAN_VOX
+    refNode: *WAKL_COST
+  - type: STR_GUARD_VETERAN_VOX_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_HEAVY_GUARDSMAN_FEMALE
+    refNode: *WAKL_COST
+  - type: STR_HEAVY_GUARDSMAN_MALE
+    refNode: *WAKL_COST
+  - type: STR_HERETIC_CANONESS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_HERETIC_SERAPHIM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_HONOR_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_FLAMER
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_HELLGUN
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTILAS
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTIMELTA
+    refNode: *WAKL_COST
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA
+    refNode: *WAKL_COST
+  - type: STR_IRON_BERSERKER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_IRON_GUARD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_IRON_GUARD_ARMOR_PLAYER
+    refNode: *WAKL_COST
+  - type: STR_IRON_MAIDEN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_IRON_TERMINATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_IRON_WARRIOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_IRON_WARRIOR_ARMOR_BREACHER
+    refNode: *WAKL_COST
+  - type: STR_IRON_WARRIOR_ARMOR_PLAYER
+    refNode: *WAKL_COST
+  - type: STR_IRON_WARRIOR_WARSMITH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_JARMORH_UC
+    refNode: *WAKL_COST
+  - type: STR_JARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_JARMOR_UCM
+    refNode: *WAKL_COST
+  - type: STR_JUDGE_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_JUDGE_BIKE_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_KHORNECHAMP_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNECHAMP_ARMOR_PLAYER
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_GOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_REPENTIA_LIGHT
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_RETRIBUTOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_RETRIBUTOR_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_RETRIBUTOR_ARMOR_SUPERIOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_RETRIBUTOR_ARMOR_SUPERIOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_REVENGEANCE_SUIT
+    refNode: *WAKL_COST
+  - type: STR_KHORNESISTER_VALKIA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_UNGOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_VALKIA_ARMORBASIC
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_VALKIA_ARMORRETRIBUTOR
+    refNode: *WAKL_COST
+  - type: STR_KHORNE_VALKIA_ARMORSUPERIOR
+    refNode: *WAKL_COST
+  - type: STR_KRIEG_POWER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_KRIEG_POWER_ARMOR_MULTILAS
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_LOCKDOWN
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_MELEE_INSPIRE
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_SHIELD
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_SMITE
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_STASIS
+    refNode: *WAKL_COST
+  - type: STR_LIB_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_SCOUT_F_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_SCOUT_M_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_TACTICAL_F_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_TACTICAL_M_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_TER_F_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARINE_ZOMBIE_TER_M_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MARSHAL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_MEDIC_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MKX_APO_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_BIKE_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_BIKE_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_BIKE_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_BIKE_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_BIKE_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_CHP_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_LV5_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_GRV_ZOMBIE
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_LV5_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_INC_ZOMBIE
+    refNode: *WAKL_COST
+  - type: STR_MKX_LIB_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_LIB_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_LIB_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_LV5_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_PHB_ZOMBIE
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_LV4_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_LV5_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TAC_ZOMBIE
+    refNode: *WAKL_COST
+  - type: STR_MKX_TEC_LV1_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TEC_LV2_UC
+    refNode: *WAKL_COST
+  - type: STR_MKX_TEC_LV3_UC
+    refNode: *WAKL_COST
+  - type: STR_MONO_E_ARMOR # monolith turrets
+    refNode: *WAKL_COST
+  - type: STR_MONO_N_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MONO_S_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MONO_W_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMOR0
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMOR1
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMOR2
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMORB
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMORNURGLE
+    refNode: *WAKL_COST
+  - type: STR_MUTON_ARMORNURGLEC
+    refNode: *WAKL_COST
+  - type: STR_NECRON_ARCHITECT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NECRON_DEATHMARK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NECRON_DEATHMARK_ARMOR_REVIVES
+    refNode: *WAKL_COST
+  - type: STR_NECRON_IMORTAL_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NECRON_IMORTAL_ARMOR_REVIVES
+    refNode: *WAKL_COST
+  - type: STR_NECRON_LYCHGUARD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NECRON_LYCHGUARD_ARMOR_REVIVES
+    refNode: *WAKL_COST
+  - type: STR_NECRON_WARRIOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NECRON_WARRIOR_ARMOR_REVIVES
+    refNode: *WAKL_COST
+  - type: STR_NEVERBORN_TERRORIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORD_CSM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORD_CSM_ARMOR_PLAYER
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORD_CSM_LEADER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORD_RAPTOR_ARMOR0
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORD_RAPTOR_ARMOR2
+    refNode: *WAKL_COST
+  - type: STR_NIGHT_LORDS_SISTER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NIGHT_LORDS_SISTER_SUPERIOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NIGHTLORDS_WARPTALON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_ADEPTAS_FILTHY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_ADEPTAS_FILTHY_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_BOOMER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLECHEM_SUIT
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_FEM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_HEAVY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_LEADER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_LEADER_ARMOR_RITUALIST
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_CULTIST_LIGHT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_DAEMONETTE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_HOSPITALERARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_OGRYN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_NURGLE_ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_OFFICER_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_OFFICER_CARAPACE_ARMOR_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_OFFICER_FLAK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_OFFICER_FLAK_ARMOR_NOAIRSTRIKE
+    refNode: *WAKL_COST
+  - type: STR_OGRYN_CARAPACE_BASIC
+    refNode: *WAKL_COST
+  - type: STR_OGRYN_CARAPACE
+    refNode: *WAKL_COST
+  - type: STR_OGRYN_UC
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORL_BADMOONS_BOYZ
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORM_BADMOONS_BIGBOYZ
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORH_BADMOONS_NOBZ
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARDEST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMOR_BURNA
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMOR_DEFFKOPTER
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORH
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORKommando
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORL
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORM
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMORMEGA
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMOR_MEGAWARBOSS
+    refNode: *WAKL_COST
+  - type: STR_ORK_ARMOR_MEKBOY
+    refNode: *WAKL_COST
+  - type: STR_ORK_BIKE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ORK_FLASHGITZ_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ORK_KILLA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ORK_STORM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_ORK_TANKBUSTA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_PDF_PILOT
+    refNode: *WAKL_COST
+  - type: STR_PENAL_ARMOR_BROWN_UC
+    refNode: *WAKL_COST
+  - type: STR_PENAL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_PENITENT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_PERSONAL_ARMOR_CIVILIAN
+    refNode: *WAKL_COST
+  - type: STR_PERSONAL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_PINKHORROR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_POWER_SUIT_UC
+    refNode: *WAKL_COST
+  - type: STR_PSYKER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_PYROMANCER
+    refNode: *WAKL_COST
+  - type: STR_REAPER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SAB_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SARGENT_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_SCION_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SCION_CARAPACE_ARMOR_HELLGUN
+    refNode: *WAKL_COST
+  - type: STR_SCION_CARAPACE_ARMOR_HELLPISTOL
+    refNode: *WAKL_COST
+  - type: STR_SCION_CARAPACE_ARMOR_VOLLEYGUN
+    refNode: *WAKL_COST
+  - type: STR_SCION_MEDIC_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SCION_OFFICER_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SCION_OFFICER_CARAPACE_ARMOR_HELLGUN
+    refNode: *WAKL_COST
+  - type: STR_SCION_OFFICER_CARAPACE_ARMOR_HELLPISTOL
+    refNode: *WAKL_COST
+  - type: STR_SCION_OFFICER_CARAPACE_ARMOR_VOLLEYGUN
+    refNode: *WAKL_COST
+  - type: STR_SCOUTHB_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUTHG_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUTHR_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUTH_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUTHW_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUTHY_UC
+    refNode: *WAKL_COST
+  - type: STR_SCOUT_UC
+    refNode: *WAKL_COST
+  - type: STR_SECTOID_ARMOR0
+    refNode: *WAKL_COST
+  - type: STR_SECTOID_ARMORP
+    refNode: *WAKL_COST
+  - type: STR_SENTINEL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_SENTINELPD_ARMOR_MISSILE_UC
+    refNode: *WAKL_COST
+  - type: STR_SENTINELPD_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_SIGNAL_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_SIGNALFALSE_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_SILACOID_ARMORT
+    refNode: *WAKL_COST
+  - type: STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAAN_ADEPTAS_CORRUPTED_ARMOR_BLESSED
+    refNode: *WAKL_COST
+  - type: STR_SLAANCELESTIAN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANCHOSEN_ASS
+    refNode: *WAKL_COST
+  - type: STR_SLAAN_DEVOTED_SUIT
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_ANOINTED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_CANTUSArmor
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_DEMONPRINCESSARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_NOVICEHABIT
+    refNode: *WAKL_COST
+  - type: STR_SLAANESH_PALATINE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_BRAY_ARMORLIGHT
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_BULLGOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_BULLGOR_ARMOR_RITUALIST
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_FIENDGOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_GOR_ARMORMEDIUM
+    refNode: *WAKL_COST
+  - type: STR_SLAANGOR_UNGOR_ARMORLIGHT
+    refNode: *WAKL_COST
+  - type: STR_SNAKEMAN_ARMOR2
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_CARAPACE_ZOMBIE_FEMALE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_CARAPACE_ZOMBIE_MALE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_FLAK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_FLAK_ZOMBIE_FEMALE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUAT_FLAK_ZOMBIE_MALE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_SQUIG
+    refNode: *WAKL_COST
+  - type: STR_STORMTALON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMTALONENGINE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_CARAPACE_ARMOR_HELLGUN
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_CARAPACE_ARMOR_HELLPISTOL
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_CARAPACE_ARMOR_VOLLEYGUN
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_MEDIC_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR_HELLGUN
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR_HELLPISTOL
+    refNode: *WAKL_COST
+  - type: STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR_VOLLEYGUN
+    refNode: *WAKL_COST
+  - type: STR_TANITH_CAMO_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TANITH_MEDIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TANITH_SCOUT_FEMALE
+    refNode: *WAKL_COST
+  - type: STR_TANITH_SCOUT_MALE
+    refNode: *WAKL_COST
+  - type: STR_TAUROS_SMALL_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TAUROS_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TAUROX_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TECH_ARMOR_UC
+    refNode: *WAKL_COST
+  - type: STR_TELEKINE
+    refNode: *WAKL_COST
+  - type: STR_TELEPATH
+    refNode: *WAKL_COST
+  - type: STR_TRAITOR_CHIMERA_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TRAITORGUARD_OGRYN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TRAITORGUARD_OGRYN_REDBLACK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TRAITOR_SQUATS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TSARGENT_UC
+    refNode: *WAKL_COST
+  - type: STR_TZAANGOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZCULTIST_FEM_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZCULTIST_THRALL_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZCULTIST_THRALL_RITUALIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_ACOLYTE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_ACOLYTE_FLAMER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_BATTLE_SERVITOR_PLASMA_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_COMBAT_SERVITOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_LEADER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_LEADER_ASSASSIN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_LEADER_SPAWN_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_POSSESSED_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_SUMMONER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_WITCH_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_CULT_WITCH_RITUALIST_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_INQUISITOR_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_LESSER_DAEMON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_MUTANT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_SORCERESS_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_BASIC_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_CARAPACE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_COMMANDO_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_HEAVY_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_OFFICER_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_TRAITORGUARD_SCOUT_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_TZEENTCH_WARP_THRALL_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_VALK_CANNON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_WARPTALON_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_WEIRDORK_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_WRAITHGUARD_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_WRAITHGUARD_ARMOR_P
+    refNode: *WAKL_COST
+  - type: STR_WRAITHGUARD_ARMOR_P_SHIELD
+    refNode: *WAKL_COST
+  - type: SUPORTFA
+    refNode: *WAKL_COST
+  - type: TANK_ARMOR
+    refNode: *WAKL_COST
+  - type: TARANTULA_ARBITES_BOLTER_ARMOR
+    refNode: *WAKL_COST
+  - type: TARANTULA_ARMOR
+    refNode: *WAKL_COST
+  - type: TARANTULA_BOLTER_ARMOR
+    refNode: *WAKL_COST
+  - type: TARANTULA_BOLTER_ARMOR_I
+    refNode: *WAKL_COST
+  - type: TARGETA
+    refNode: *WAKL_COST
+  - type: TARGET_GUARDSMAN
+    refNode: *WAKL_COST
+  - type: TARGET_INVINCIBLE
+    refNode: *WAKL_COST
+  - type: TAUROXPD_ARMOR
+    refNode: *WAKL_COST
+  - type: TG_BATTLESERVITOR_HBARMOR
+    refNode: *WAKL_COST
+  - type: TG_BATTLESERVITOR_MIARMOR
+    refNode: *WAKL_COST
+  - type: THUNDERFIRE_ARMOR
+    refNode: *WAKL_COST
+  - type: THUNDERFIRE_ARMOR_P
+    refNode: *WAKL_COST
+  - type: VINDICATOR_ARMOR
+    refNode: *WAKL_COST
+  - type: VINDICATOR_ARMOR2
+    refNode: *WAKL_COST
+  - type: VOSS_ENGINE_NORTH_ARMOR
+    refNode: *WAKL_COST
+  - type: VOSS_ENGINE_SOUTH_ARMOR
+    refNode: *WAKL_COST
+  - type: WHIRLWIND_ARMOR
+    refNode: *WAKL_COST
+  - type: WHIRLWINDPD_ARMOR
+    refNode: *WAKL_COST
+  - type: ZOMBIE_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMBOLTER_TURRET_ARMOR
+    refNode: *WAKL_COST
+  - type: STR_STORMBOLTER_TURRET_1X1_ARMOR
+    refNode: *WAKL_COST
