@@ -204,12 +204,14 @@ items:
 
   - type: STR_AUTO_CANNON
     refNode: *RANGE_36
+    autoRange: 36
 
   - type: STR_HEAVY_CANNON
     refNode: *RANGE_36
 
   - type: STR_ASSC
     refNode: *RANGE_36
+    autoRange: 36
 
   - type: STR_BLASTER_LAUNCHER
     refNode: *RANGE_36
@@ -222,12 +224,15 @@ items:
 
   - type: STR_CSERVITOR_HB
     refNode: *RANGE_36
-  
+    autoRange: 36
+
   - type: AUX_BOLTER
     refNode: *RANGE_36
+    autoRange: 36
 
   - type: STR_HEAVY_STUBBER_CHAOS
     refNode: *RANGE_36
+    autoRange: 36
 
   - type: STR_SNIPER_CHAOS
     refNode: *RANGE_36
