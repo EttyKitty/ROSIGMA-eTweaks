@@ -249,9 +249,9 @@ en-US:
   CYBERDISC_ARMOR: "Bloodthirster"
   STR_CYBERDISC_AUTOPSY: "Bloodthirster Origin"
   STR_CYBERDISC_TO_HONOR: "Process Bloodthirster Corpse"
-  STR_SNAKEMAN_LEADER: "Traitor Guardsman Commander"
   STR_CHAOS_HERETEK: "Heretek"
   STR_TRAITORGUARD_BATTLE_SERVITOR_HB: "Battle Servitor"
+  STR_SNAKEMAN_ENGINEER: "Traitor Storm Trooper"
 
   ##### RACES
   STR_SECTOID: "Chaos Cultists"
