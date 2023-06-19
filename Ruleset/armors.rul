@@ -185,15 +185,26 @@ armors:
       - AUX_MEDI_KIT
     specialWeapon: ""
 
-  - type: STR_CHAP_ARMOR_UC                 #CHAPLAIN  zombiImmune: true
+  - type: STR_CHAP_ARMOR_UC 
     refNode: *STR_MK7_ARMOR
     units:
       - STR_SOLDIER_CHAPLAIN
 
-  - type: STR_LIB_ARMOR_UC  #LIBRARIAN
+  - &LIBRARIAN_MK7
+    type: STR_LIB_ARMOR_UC
     refNode: *STR_MK7_ARMOR
     units:
       - STR_SOLDIER_LIBRARIAN
+  - type: STR_LIB_ARMOR_LOCKDOWN
+    refNode: *LIBRARIAN_MK7
+  - type: STR_LIB_ARMOR_MELEE_INSPIRE
+    refNode: *LIBRARIAN_MK7
+  - type: STR_LIB_ARMOR_SHIELD
+    refNode: *LIBRARIAN_MK7
+  - type: STR_LIB_ARMOR_SMITE
+    refNode: *LIBRARIAN_MK7
+  - type: STR_LIB_ARMOR_STASIS
+    refNode: *LIBRARIAN_MK7
 
   - type: STR_TECH_ARMOR_UC
     refNode: *STR_MK7_ARMOR
