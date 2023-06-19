@@ -53,3 +53,8 @@ armors:
     drawingRoutine: 0
     corpseBattle:
       - STR_TG_BATTLESERVITOR_CORPSE
+
+  - type: MUTON_ARMORHAVOC
+    builtInWeapons: []
+    spriteSheet: HAVOC_BS.PCK
+    drawingRoutine: 0

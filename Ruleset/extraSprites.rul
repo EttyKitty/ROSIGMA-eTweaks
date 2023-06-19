@@ -61,6 +61,14 @@ extraSprites:
     files:
       0: Resources/UnitSprites/SERVITOR_SERVOARM_BS.png
 
+  - type: HAVOC_BS.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/UnitSprites/HAVOC_BS.png
+
   ########################################################## INV SPRITES ##########################################################
 
   - typeSingle: ARTIFICER__1__ARTIFICER
