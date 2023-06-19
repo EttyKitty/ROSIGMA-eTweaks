@@ -101,7 +101,7 @@ crafts:
       mapBlocks:
         - name: RHINOASS_NO_TT # Rhino without Thunderhawk
           width: 10
-          length: 20
+          length: 10
           items:
             STR_STORMBOLTER_TURRET_1X1_SPAWNER:
               - [4, 5, 1]
@@ -155,7 +155,7 @@ crafts:
       mapBlocks:
         - name: RHINOASS_NO_TT
           width: 10
-          length: 20
+          length: 10
           items:
             STR_RAZORBACK_SPAWNER:
               - [4, 3, 1]
@@ -205,12 +205,12 @@ crafts:
       mapBlocks:
         - name: LANDRAIDER_SM
           width: 10
-          length: 20
+          length: 10
           items:
             STR_TURRET_TWINLASCANNON_LEFT_SPAWNER:
-              - [2, 4, 0]
+              - [2, 5, 0]
             STR_TURRET_TWINLASCANNON_RIGHT_SPAWNER:
-              - [7, 4, 0]
+              - [7, 5, 0]
             STR_STORMBOLTER_TURRET_1X1_SPAWNER:
               - [5, 6, 1]
           fuseTimers:
