@@ -2,10 +2,11 @@ extended:
   tags:
     RuleItem:
       ITEM_RECOIL: int
-      ITEM_HAS_BIPOD: int
-      ITEM_IS_HEAVY_WEAPON: int # infantry but not mounted/vehicle heavy weapons
+      ITEM_HAS_BIPOD: int # 1=yes
+      ITEM_IS_HEAVY_WEAPON: int # 0 = is medium; 1 = is heavy; 2 = is light; 3 = ignored.
     RuleArmor:
       TERMINATOR_ARMOR: int # 1=yes
+      IS_TURRET: int # 1=yes
 
   scripts:
     accuracyMultiplierBonusStats:
@@ -15,12 +16,11 @@ extended:
         code: |
           var int temp;
           var int currentEnergy;
-          var int accuracyScore;
           var int weaponWithBipod;
           var int kneeling;
           var ptr RuleItem rItem;
           var ptr RuleArmor rArmor;
-          var int tag;
+          var int isHeavy;
   
           unit.getRuleArmor rArmor;
           rArmor.getTag temp Tag.TERMINATOR_ARMOR;
@@ -28,9 +28,14 @@ extended:
             return bonus;
           end;
 
+          rArmor.getTag temp Tag.IS_TURRET;
+          if eq temp 1;
+            return bonus;
+          end;
+
           weapon.getRuleItem rItem;
-          rItem.getTag tag Tag.ITEM_IS_HEAVY_WEAPON;
-          if eq tag 2;
+          rItem.getTag isHeavy Tag.ITEM_IS_HEAVY_WEAPON;
+          if eq isHeavy 3;
             return bonus; # final accuracy
           end;
 
@@ -40,58 +45,39 @@ extended:
           unit.getEnergy currentEnergy; # absolute
           unit.getEnergyMax temp;
           muldiv currentEnergy 100 temp; # relative
-          # debug_log "currentEnergy %" currentEnergy;
-
-          set temp bonus; # starting bonus
 
           if le currentEnergy 98;
 
             if and eq kneeling 1 eq weaponWithBipod 1;
-              # debug_log "currentEnergy:" currentEnergy;
-              # debug_log "Basic Bonus:" bonus;
-              # set temp 100;
-              # sub temp currentEnergy;
-              # mul temp 6;
-              # set currentEnergy 100;
-              # sub currentEnergy temp;
               mul bonus 8;
               div bonus 10;
-              # debug_log "Final Bonus:" bonus;
 
             else and eq kneeling 1 eq weaponWithBipod 0;
-              # debug_log "currentEnergy:" currentEnergy;
-              # debug_log "Basic Bonus:" bonus;
-              # set temp 100;
-              # sub temp currentEnergy;
-              # mul temp 10;
-              # set currentEnergy 100;
-              # sub currentEnergy temp;
               mul bonus 8;
               div bonus 10;
               # debug_log "Final Bonus:" bonus;
 
-            else eq tag 1;
-              # debug_log "currentEnergy:" currentEnergy;
-              # debug_log "Basic Bonus:" bonus;
-              # set temp 100;
-              # sub temp currentEnergy;
-              # mul temp 14;
-              # set currentEnergy 100;
-              # sub currentEnergy temp;
-              mul bonus 7;
-              div bonus 10;
-              # debug_log "Final Bonus:" bonus;
-
-            else;
-              # debug_log "currentEnergy:" currentEnergy;
-              # debug_log "Basic Bonus:" bonus;
+            else eq isHeavy 2;
               set temp 100;
               sub temp currentEnergy;
+              div temp 2;
               set currentEnergy 100;
               sub currentEnergy temp;
-              mul bonus currentEnergy;
-              div bonus 100;
-              # debug_log "Final Bonus:" bonus;
+              muldiv bonus currentEnergy 100;
+              return bonus; # final accuracy
+
+            else eq isHeavy 1;
+              set temp 100;
+              sub temp currentEnergy;
+              mul temp 2;
+              set currentEnergy 100;
+              sub currentEnergy temp;
+              muldiv bonus currentEnergy 100;
+              return bonus; # final accuracy
+
+            else;
+              muldiv bonus currentEnergy 100;
+              return bonus; # final accuracy
             end;
           end;
 
@@ -178,3 +164,169 @@ items:
 
   - type: STR_LASCARBINE_SLAAN
     refNode: *IS_LIGHT
+
+
+armors:
+  - &IS_TURRET
+    type: CASTIGATOR_AC_ARMOR
+    tags:
+      IS_TURRET: 1
+
+  - type: DAMOCLES_ARMOR
+    refNode: *IS_TURRET
+  - type: DAMOCLESPD_ARMOR
+    refNode: *IS_TURRET
+  - type: DEFILER_ARMOR_L
+    refNode: *IS_TURRET
+  - type: DEFILER_ARMOR_R
+    refNode: *IS_TURRET
+  - type: ELDAR_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: ELDAR_TURRET_ARMOR_P
+    refNode: *IS_TURRET
+  - type: EXORCIST_ARMOR
+    refNode: *IS_TURRET
+  - type: FIELD_ARMOR
+    refNode: *IS_TURRET
+  - type: GATEDOWN_ARMOR
+    refNode: *IS_TURRET
+  - type: GENERATOR_ARMOR
+    refNode: *IS_TURRET
+#  - type: GSC_AUTOCANNON_ARMOR
+#    refNode: *STR_PERSONAL_LIGHT_AND_RECOVERY_STAMINA
+#  - type: GSC_HB_ARMOR
+#    refNode: *STR_PERSONAL_LIGHT_AND_RECOVERY_STAMINA
+  - type: IMMOLATOR_ARMOR
+    refNode: *IS_TURRET
+  - type: IMPULSOR_SHIELD_ARMOR
+    refNode: *IS_TURRET
+  - type: LEMONRUSS_ARMOR
+    refNode: *IS_TURRET
+  - type: LEMONRUSS_ARMORB
+    refNode: *IS_TURRET
+  - type: LTS_ARMOR
+    refNode: *IS_TURRET
+  - type: LTT_ARMOR
+    refNode: *IS_TURRET
+  - type: MUNITORIUM_ARMOR
+    refNode: *IS_TURRET
+  - type: ORK_TURRET2_ARMOR
+    refNode: *IS_TURRET
+  - type: ORK_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: PIPELINE_ARMOR
+    refNode: *IS_TURRET
+  - type: PREDATOR_ARMOR
+    refNode: *IS_TURRET
+  - type: PREDATOR_ARMORBASE
+    refNode: *IS_TURRET
+  - type: PREDATOR_SIDE_ARMOR
+    refNode: *IS_TURRET
+  - type: RADAR_ARMOR
+    refNode: *IS_TURRET
+  - type: RAZORBACK_ARMOR
+    refNode: *IS_TURRET
+  - type: RTS_ARMOR
+    refNode: *IS_TURRET
+  - type: RTT_ARMOR
+    refNode: *IS_TURRET
+  - type: SERVITOR_ARMOR_UC
+    refNode: *IS_TURRET
+  - type: SHIELD_ARMOR
+    refNode: *IS_TURRET
+  - type: SNAKEMAN_TURRET
+    refNode: *IS_TURRET
+  - type: STORMRAVEN_ADEPTAS_ARMOR
+    refNode: *IS_TURRET
+  - type: STORMRAVEN_ARMOR
+    refNode: *IS_TURRET
+  - type: STORMRAVEN_ARMORGK
+    refNode: *IS_TURRET
+  - type: STR_CAS_CANNON_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CAS_MISSILE_POD_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CHIMEDON_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CHIMERA_PD_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CHIMERA_PDH_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CHIMERA_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_CHIMERA_TWIN_HB_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_GUARD_ARMORS_MOUNTED_AUTOCANNON_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_ARMORS_MOUNTED_LASCANNON_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_AUTOCANNON_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_HEAVY_BOLTER_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_LASCANNON_UC
+    refNode: *IS_TURRET
+  - type: STR_GUARD_KRIEG_ARMORS_MOUNTED_MORTAR_UC
+    refNode: *IS_TURRET
+  - type: STR_MONO_E_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_MONO_N_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_MONO_S_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_MONO_W_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_STORMTALON_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_STORMTALONENGINE_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_TAUROS_SMALL_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_TAUROS_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_TAUROX_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_TRAITOR_CHIMERA_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_VALK_CANNON_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_WRAITHGUARD_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_WRAITHGUARD_ARMOR_P
+    refNode: *IS_TURRET
+  - type: STR_WRAITHGUARD_ARMOR_P_SHIELD
+    refNode: *IS_TURRET
+  - type: SUPORTFA
+    refNode: *IS_TURRET
+  - type: TANK_ARMOR
+    refNode: *IS_TURRET
+  - type: TARANTULA_ARBITES_BOLTER_ARMOR
+    refNode: *IS_TURRET
+  - type: TARANTULA_ARMOR
+    refNode: *IS_TURRET
+  - type: TARANTULA_BOLTER_ARMOR
+    refNode: *IS_TURRET
+  - type: TARANTULA_BOLTER_ARMOR_I
+    refNode: *IS_TURRET
+  - type: TARGETA
+    refNode: *IS_TURRET
+  - type: TARGET_GUARDSMAN
+    refNode: *IS_TURRET
+  - type: TARGET_INVINCIBLE
+    refNode: *IS_TURRET
+  - type: TAUROXPD_ARMOR
+    refNode: *IS_TURRET
+  - type: VINDICATOR_ARMOR
+    refNode: *IS_TURRET
+  - type: VINDICATOR_ARMOR2
+    refNode: *IS_TURRET
+  - type: WHIRLWIND_ARMOR
+    refNode: *IS_TURRET
+  - type: WHIRLWINDPD_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_STORMBOLTER_TURRET_ARMOR
+    refNode: *IS_TURRET
+  - type: STR_STORMBOLTER_TURRET_1X1_ARMOR
+    refNode: *IS_TURRET
