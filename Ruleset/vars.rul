@@ -18,6 +18,7 @@ minReactionAccuracy: 10
 ai:
   pickUpWeaponsMoreActivelyCiv: true
 extendedItemReloadCost: true
+difficultyDemigod: true
 
 ################################ Surrendering & Bughunt ################################
 surrenderMode: 2
