@@ -3,8 +3,8 @@ items:
 
   - &BASIC_AUTO
     type: STR_AUTOGUN_CHAOS
-    tuSnap: 25
-    tuAuto: 25
+    tuSnap: 21
+    tuAuto: 21
     tuAimed: 0
     autoShots: 2
 
@@ -95,7 +95,7 @@ items:
 
   - &BASIC_SINGLE
     type: STR_HEAVY_LASER
-    tuSnap: 25
+    tuSnap: 21
     tuAuto: 0
     tuAimed: 0
 
@@ -192,7 +192,7 @@ items:
 
   - &SCOPED_SINGLE
     type: STR_SNIPER_CHAOS
-    tuSnap: 45
+    tuSnap: 42
     tuAuto: 0
     tuAimed: 0
   
@@ -206,7 +206,7 @@ items:
 
   - &BASIC_POWER
     type: STR_PLASMA_RIFLE_TERRAN # done
-    tuSnap: 25
+    tuSnap: 21
     tuAuto: 0
     tuAimed: 0
 
@@ -223,7 +223,7 @@ items:
 
   - &HEAVY_AUTO
     type: STR_AUTO_CANNON
-    tuSnap: 45
+    tuSnap: 42
     tuAuto: 0
     tuAimed: 0
     confSnap:
@@ -244,7 +244,7 @@ items:
 
   - &HEAVY_SINGLE
     type: STR_LASCAN
-    tuSnap: 45
+    tuSnap: 42
     tuAuto: 0
     tuAimed: 0
 
