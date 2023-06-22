@@ -3,7 +3,7 @@ armors:
   - type: STR_ARMOR_ASPIRANT_UC
     visibilityAtDay: 40
     visibilityAtDark: 20
-    customArmorPreviewIndex: 3
+    customArmorPreviewIndex: 2
     spriteSheet: ASPIRANT.PCK
     corpseBattle:
       - STR_TANITH_CAMO_CORPSE

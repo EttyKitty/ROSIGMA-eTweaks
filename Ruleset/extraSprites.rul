@@ -51,7 +51,7 @@ extraSprites:
     subX: 32
     subY: 40
     files:
-      0: Resources/UnitSprites/ASPIRANT2.png
+      0: Resources/UnitSprites/ASPIRANT.png
 
   - type: SERVITOR_SERVOARM_BS.PCK
     width: 512
@@ -77,8 +77,8 @@ extraSprites:
   - typeSingle: CAPTAIN_MK7__1__CAPTAIN_MK7
     fileSingle: Resources/LAYER/ULTRAMARINE/CAPTAIN_MK7.gif
 
-  - typeSingle: ASPIRANT__4__ASPIRANTM
-    fileSingle: Resources/LAYER/ULTRAMARINE/ASPIRANT2.png
+  - typeSingle: ASPIRANT__4__Male
+    fileSingle: Resources/LAYER/ULTRAMARINE/ASPIRANT.png
 
   - typeSingle: NEOPHYTE__1__NEOPHYTEM
     fileSingle: Resources/LAYER/ULTRAMARINE/NEOPHYTE.gif

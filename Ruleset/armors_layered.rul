@@ -9,16 +9,16 @@ armors:
     layersSpecificPrefix:
       4: ASPIRANT
     layersDefinition:
-      M0: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M1: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M2: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M3: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M4: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M5: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M6: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M7: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M8: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
-      M9: ["", "", "", "", "ASPIRANTM", "", "", "", ""]
+      M0: ["", "M0", "M0_Hair_Tight", "", "Male", "", "", "", ""]
+      M1: ["", "M1", "M1_Hair_Tight", "", "Male", "", "", "", ""]
+      M2: ["", "M2", "M2_Hair_Tight", "", "Male", "", "", "", ""]
+      M3: ["", "M3", "M3_Hair_Tight", "", "Male", "", "", "", ""]
+      M4: ["", "M4", "", "", "Male", "", "", "", ""]
+      M5: ["", "M5", "M5_Hair_Tight", "", "Male", "", "", "", ""]
+      M6: ["", "M6", "M6_Hair_Tight", "", "Male", "", "", "M6_Hair_Over", ""]
+      M7: ["", "M7", "M7_Hair_Tight", "", "Male", "", "", "", ""]
+      M8: ["", "M8", "M8_Hair_Tight", "", "Male", "", "", "", ""]
+      M9: ["", "M9", "", "", "Male", "", "", "", ""]
 
   - type: STR_ARMOR_NEOPHYTE_UC
     spriteFaceGroup: 6
