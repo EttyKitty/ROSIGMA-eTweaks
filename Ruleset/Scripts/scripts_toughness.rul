@@ -55,9 +55,9 @@ extended:
 
 soldiers:
 
-  - type: STR_SOLDIER_ASPIRANT
-    tags:
-      TOUGHNESS_SOLDIER: 20
+  # - type: STR_SOLDIER_ASPIRANT
+  #   tags:
+  #     TOUGHNESS_SOLDIER: 20
 
   - type: STR_SOLDIER_SCOUT
     tags:

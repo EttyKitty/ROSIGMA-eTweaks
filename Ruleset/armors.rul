@@ -1,79 +1,79 @@
 armors:
 
-  - type: STR_ARMOR_ASPIRANT_UC
-    visibilityAtDay: 40
-    visibilityAtDark: 20
-    customArmorPreviewIndex: 2
-    spriteSheet: ASPIRANT.PCK
-    corpseBattle:
-      - STR_TANITH_CAMO_CORPSE
-    storeItem: STR_NONE
-    frontArmor: 20
-    sideArmor: 20
-    rearArmor: 20
-    underArmor: 20
-    camouflageAtDay: -4
-    camouflageAtDark: -4
-    drawingRoutine: 0
-    moveCost:
-      sneakPercent: [125, 25]
-    damageModifier: #GUARD ARMOR
-      - 1.0 #none
-      - 1.0 #AP
-      - 1.0 #FLAMES
-      - 1.0 #HE
-      - 1.0 #LASCANON
-      - 1.0 #PLASMA
-      - 1.0 #STUN
-      - 1.0 #MELEE
-      - 1.0 #ACID
-      - 1.0 #SMOKE
-      - 1.0 #IMPACT
-      - 1.0 #MELTA
-    units:
-      - STR_SOLDIER_ASPIRANT
-    loftempsSet: [ 3 ]
-    builtInWeapons:
-      - INV_NULL_4X2
-      - INV_NULL_3X3
-      - STR_MEDICAE_POUCH
+  # - type: STR_ARMOR_ASPIRANT_UC
+  #   visibilityAtDay: 40
+  #   visibilityAtDark: 20
+  #   customArmorPreviewIndex: 2
+  #   spriteSheet: ASPIRANT.PCK
+  #   corpseBattle:
+  #     - STR_TANITH_CAMO_CORPSE
+  #   storeItem: STR_NONE
+  #   frontArmor: 20
+  #   sideArmor: 20
+  #   rearArmor: 20
+  #   underArmor: 20
+  #   camouflageAtDay: -4
+  #   camouflageAtDark: -4
+  #   drawingRoutine: 0
+  #   moveCost:
+  #     sneakPercent: [125, 25]
+  #   damageModifier: #GUARD ARMOR
+  #     - 1.0 #none
+  #     - 1.0 #AP
+  #     - 1.0 #FLAMES
+  #     - 1.0 #HE
+  #     - 1.0 #LASCANON
+  #     - 1.0 #PLASMA
+  #     - 1.0 #STUN
+  #     - 1.0 #MELEE
+  #     - 1.0 #ACID
+  #     - 1.0 #SMOKE
+  #     - 1.0 #IMPACT
+  #     - 1.0 #MELTA
+  #   units:
+  #     - STR_SOLDIER_ASPIRANT
+  #   loftempsSet: [ 3 ]
+  #   builtInWeapons:
+  #     - INV_NULL_4X2
+  #     - INV_NULL_3X3
+  #     - STR_MEDICAE_POUCH
 
-  - type: STR_ARMOR_NEOPHYTE_UC
-    visibilityAtDay: 40
-    visibilityAtDark: 25
-    customArmorPreviewIndex: {mod: 40k, index: 808}
-    spriteSheet: OGRYN.PCK
-    corpseBattle:
-      - STR_OGRYN_CORPSE
-    storeItem: STR_NONE
-    frontArmor: 35
-    sideArmor: 35
-    rearArmor: 35
-    underArmor: 35
-    drawingRoutine: 0
-    damageModifier: #GUARD ARMOR
-      - 1.0 #none
-      - 1.0 #AP
-      - 1.0 #FLAMES
-      - 1.0 #HE
-      - 1.0 #LASCANON
-      - 1.0 #PLASMA
-      - 1.0 #STUN
-      - 1.0 #MELEE
-      - 1.0 #ACID
-      - 1.0 #SMOKE
-      - 1.0 #IMPACT
-      - 1.0 #MELTA
-    units:
-      - STR_SOLDIER_SCOUT
-    loftempsSet: [ 3 ]
-    builtInWeapons:
-      - INV_NULL_4X2
-      - STR_MEDICAE_POUCH
+  # - type: STR_ARMOR_NEOPHYTE_UC
+  #   visibilityAtDay: 40
+  #   visibilityAtDark: 25
+  #   customArmorPreviewIndex: {mod: 40k, index: 808}
+  #   spriteSheet: OGRYN.PCK
+  #   corpseBattle:
+  #     - STR_OGRYN_CORPSE
+  #   storeItem: STR_NONE
+  #   frontArmor: 35
+  #   sideArmor: 35
+  #   rearArmor: 35
+  #   underArmor: 35
+  #   drawingRoutine: 0
+  #   damageModifier: #GUARD ARMOR
+  #     - 1.0 #none
+  #     - 1.0 #AP
+  #     - 1.0 #FLAMES
+  #     - 1.0 #HE
+  #     - 1.0 #LASCANON
+  #     - 1.0 #PLASMA
+  #     - 1.0 #STUN
+  #     - 1.0 #MELEE
+  #     - 1.0 #ACID
+  #     - 1.0 #SMOKE
+  #     - 1.0 #IMPACT
+  #     - 1.0 #MELTA
+  #   units:
+  #     - STR_SOLDIER_SCOUT
+  #   loftempsSet: [ 3 ]
+  #   builtInWeapons:
+  #     - INV_NULL_4X2
+  #     - STR_MEDICAE_POUCH
 
   - &SCOUT_ARMOR
     type: STR_SCOUT_UC #SCOUT
-    storeItem: STR_ARMOR_SCOUT
+    # storeItem: STR_ARMOR_SCOUT
     frontArmor: 85
     sideArmor: 70
     rearArmor: 85

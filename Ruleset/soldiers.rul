@@ -5,81 +5,81 @@ extended:
 
 soldiers:
 
-  - type: STR_SOLDIER_ASPIRANT
-    costBuy: 10000
-    costSalary: 1000
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_CHAPTER_PURITY
-    allowPromotion: false
-    minStats:
-      tu: 55
-      stamina: 75
-      health: 35
-      bravery: 50
-      reactions: 55
-      firing: 65
-      melee: 65
-      throwing: 65
-      strength: 30
-      psiStrength: 0
-      psiSkill: 0
-    maxStats:
-      tu: 60
-      stamina: 80
-      health: 40
-      bravery: 60
-      reactions: 60
-      firing: 70
-      melee: 70
-      throwing: 70
-      strength: 35
-      psiStrength: 100
-      psiSkill: 6
-    statCaps:
-      tu: 75
-      stamina: 90
-      health: 55
-      bravery: 110
-      reactions: 80
-      firing: 100
-      melee: 100
-      throwing: 100
-      strength: 65
-      psiStrength: 100
-      psiSkill: 50
-    trainingStatCaps:
-      tu: 75
-      stamina: 90
-      health: 55
-      reactions: 80
-      firing: 100
-      melee: 100
-      throwing: 100
-      strength: 65
-      psiStrength: 100
-      psiSkill: 50
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
-    allowPiloting: true
-    armor: STR_ARMOR_ASPIRANT_UC
-    standHeight: 22
-    kneelHeight: 14
-    avatarOffsetX: 66
-    avatarOffsetY: 42
-    rankStrings:
-      - STR_SOLDIER_ASPIRANT
-    deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
-    deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
-    value: 5
-    femaleFrequency: 0
-    soldierNames:
-      - delete
-      - MarineName/00-Spacemarine.nam
-    rankSprite: 42
-    rankBattleSprite: 20
+  # - type: STR_SOLDIER_ASPIRANT
+  #   costBuy: 0
+  #   costSalary: 1000
+  #   requires:
+  #     - STR_MARINES_STRATEGY
+  #     - STR_CHAPTER_PURITY
+  #   allowPromotion: false
+  #   minStats:
+  #     tu: 55
+  #     stamina: 75
+  #     health: 35
+  #     bravery: 50
+  #     reactions: 55
+  #     firing: 65
+  #     melee: 65
+  #     throwing: 65
+  #     strength: 30
+  #     psiStrength: 0
+  #     psiSkill: 0
+  #   maxStats:
+  #     tu: 60
+  #     stamina: 80
+  #     health: 40
+  #     bravery: 60
+  #     reactions: 60
+  #     firing: 70
+  #     melee: 70
+  #     throwing: 70
+  #     strength: 35
+  #     psiStrength: 100
+  #     psiSkill: 6
+  #   statCaps:
+  #     tu: 75
+  #     stamina: 90
+  #     health: 55
+  #     bravery: 110
+  #     reactions: 80
+  #     firing: 100
+  #     melee: 100
+  #     throwing: 100
+  #     strength: 65
+  #     psiStrength: 100
+  #     psiSkill: 50
+  #   trainingStatCaps:
+  #     tu: 75
+  #     stamina: 90
+  #     health: 55
+  #     reactions: 80
+  #     firing: 100
+  #     melee: 100
+  #     throwing: 100
+  #     strength: 65
+  #     psiStrength: 100
+  #     psiSkill: 50
+  #   dogfightExperience:
+  #     bravery: 10
+  #     reactions: 30
+  #     firing: 25
+  #   allowPiloting: true
+  #   armor: STR_ARMOR_ASPIRANT_UC
+  #   standHeight: 22
+  #   kneelHeight: 14
+  #   avatarOffsetX: 66
+  #   avatarOffsetY: 42
+  #   rankStrings:
+  #     - STR_SOLDIER_ASPIRANT
+  #   deathMale: [{mod: 40k, index: 713}, {mod: 40k, index: 714}, {mod: 40k, index: 715}, {mod: 40k, index: 716}, {mod: 40k, index: 717}, {mod: 40k, index: 718}, {mod: 40k, index: 719}, {mod: 40k, index: 720}, {mod: 40k, index: 721}, {mod: 40k, index: 722}]
+  #   deathFemale: [{mod: 40k, index: 744}, {mod: 40k, index: 745}, {mod: 40k, index: 746}, {mod: 40k, index: 747}, {mod: 40k, index: 748}, {mod: 40k, index: 749}, {mod: 40k, index: 750}, {mod: 40k, index: 751}, {mod: 40k, index: 752}]
+  #   value: 5
+  #   femaleFrequency: 0
+  #   soldierNames:
+  #     - delete
+  #     - MarineName/00-Spacemarine.nam
+  #   rankSprite: 42
+  #   rankBattleSprite: 20
 
   - &SPACE_MARINE
     type: STR_SOLDIER
@@ -90,26 +90,26 @@ soldiers:
       tu: 60
       stamina: 70
       health: 65
-      bravery: 60
-      reactions: 65
-      firing: 70
-      throwing: 60
-      strength: 60
+      bravery: 50
+      reactions: 55
+      firing: 65
+      throwing: 55
+      strength: 40
       psiStrength: 40
       psiSkill: 0
-      melee: 70
+      melee: 65
     maxStats:
       tu: 70
       stamina: 80
       health: 70
       bravery: 100
-      reactions: 75
-      firing: 80
-      throwing: 70
+      reactions: 65
+      firing: 75
+      throwing: 75
       strength: 70
       psiStrength: 100
       psiSkill: 16
-      melee: 80
+      melee: 75
     statCaps:
       tu: 100
       stamina: 120
@@ -155,12 +155,15 @@ soldiers:
 
   - type: STR_SOLDIER_SCOUT
     refNode: *SPACE_MARINE
-    armor: STR_ARMOR_NEOPHYTE_UC
+    armor: STR_SCOUT_UC
     rankStrings:
       - STR_SOLDIER_SCOUT
     value: 25
     rankSprite: 43
     rankBattleSprite: 21
+    transferTime: 168
+    costBuy: 60000
+    costSalary: 25000
 
   - type: STR_SOLDIER_DEVASTATOR
     refNode: *SPACE_MARINE

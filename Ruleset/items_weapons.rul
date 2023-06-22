@@ -12,30 +12,22 @@ items:
     listOrder: 10300
     weight: 16
     costBuy: 5000
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_RIFLEB
     weight: 16
     costBuy: 0
     listOrder: 10300
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_RIFLEC
     weight: 16
     costBuy: 0
     listOrder: 10300
     tuAuto: 0
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_BOLTERC
     weight: 16
     costBuy: 0
     listOrder: 10300
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_PISTOLB
     requiresBuy:
@@ -45,22 +37,16 @@ items:
     listOrder: 10110
     weight: 5
     costBuy: 3000
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_PISTOLH
     listOrder: 10120
     costBuy: 0
     weight: 5
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_PISTOLS
     listOrder: 10130
     costBuy: 0
     weight: 5
-    tags:
-      ITEM_RECOIL: 30
 
   - type: STR_BOLTPISTOL_CHAOS
     listOrder: 10140

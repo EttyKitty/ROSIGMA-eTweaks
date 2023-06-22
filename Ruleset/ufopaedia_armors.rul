@@ -15,21 +15,23 @@ ufopaedia:
     requires:
       - STR_PERSONAL_ARMOR
 
-  - id: STR_ARMOR_ASPIRANT_UC
-    type_id: 5
-    section: STR_ARMORPEDIA
-    text: STR_ARMOR_ASPIRANT_UFOPEDIA
-    requires:
-      - STR_MARINES_STRATEGY
+  # - id: STR_ARMOR_ASPIRANT_UC
+  #   type_id: 5
+  #   section: STR_ARMORPEDIA
+  #   text: STR_ARMOR_ASPIRANT_UFOPEDIA
+  #   requires:
+  #     - STR_MARINES_STRATEGY
 
-  - id: STR_ARMOR_NEOPHYTE_UC
-    type_id: 5
-    section: STR_ARMORPEDIA
-    text: STR_ARMOR_NEOPHYTE_UFOPEDIA
-    requires:
-      - STR_MARINES_STRATEGY
+  # - id: STR_ARMOR_NEOPHYTE_UC
+  #   type_id: 5
+  #   section: STR_ARMORPEDIA
+  #   text: STR_ARMOR_NEOPHYTE_UFOPEDIA
+  #   requires:
+  #     - STR_MARINES_STRATEGY
 
   - id: STR_PERSONAL_ARMOR_UC              #5200
+    requires:
+      - STR_PERSONAL_ARMOR
 
   - id: STR_SCOUT_UC #SCOUT
 
@@ -60,6 +62,8 @@ ufopaedia:
       - STR_PERSONAL_ARMOR
 
   - id: STR_DEV_ARMOR_UC
+    requires:
+      - STR_PERSONAL_ARMOR
 
   - id: STR_SIGNALFALSE_ARMOR_UC #HONOR
     requires:
@@ -70,6 +74,8 @@ ufopaedia:
       - STR_PERSONAL_ARMOR
 
   - id: STR_ASS_ARMOR_UC #ASSAULT
+    requires:
+      - STR_PERSONAL_ARMOR
 
   - id: STR_ASS_ARMOR_HONOR_UC #ASSAULT HONOR
     requires:

@@ -50,3 +50,13 @@ manufacture:
       STR_MK7_CORPSE: 1
     producedItems:
       STR_TATICAL_ARMOR: 1
+
+  # - name: STR_MANUFACTURE_CREATE_ASTARTES
+  #   requires:
+  #     - STR_MARINES_STRATEGY
+  #     - STR_CHAPTER_PURITY
+  #     - STR_CHAPTER_INITIATION
+  #   time: 400
+  #   requiredItems:
+  #     STR_ASPIRANT_ITEM: 1
+  #   spawnedPersonType: STR_SOLDIER_SCOUT

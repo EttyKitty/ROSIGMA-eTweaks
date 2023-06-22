@@ -1,23 +1,23 @@
 soldierTransformation:
 
-  - name: STR_PROMOTION_SCOUT
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_CHAPTER_PURITY
-      - STR_CHAPTER_INITIATION
-    requiresBaseFunc: [MED]
-    producedSoldierType: STR_SOLDIER_SCOUT
-    allowsLiveSoldiers: true
-    allowedSoldierTypes:
-      - STR_SOLDIER_ASPIRANT
-    transferTime: 46
-    cost: 70000
-    showMinMax: false
-    lowerBoundAtMinStats: true
-    upperBoundAtMaxStats: false
-    upperBoundAtStatCaps: true
-    requiredCommendations:
-      STR_MEDAL_STATGAIN: 0
+  # - name: STR_PROMOTION_SCOUT
+  #   requires:
+  #     - STR_MARINES_STRATEGY
+  #     - STR_CHAPTER_PURITY
+  #     - STR_CHAPTER_INITIATION
+  #   requiresBaseFunc: [MED]
+  #   producedSoldierType: STR_SOLDIER_SCOUT
+  #   allowsLiveSoldiers: true
+  #   allowedSoldierTypes:
+  #     - STR_SOLDIER_ASPIRANT
+  #   transferTime: 46
+  #   cost: 70000
+  #   showMinMax: false
+  #   lowerBoundAtMinStats: true
+  #   upperBoundAtMaxStats: false
+  #   upperBoundAtStatCaps: true
+  #   requiredCommendations:
+  #     STR_MEDAL_STATGAIN: 0
 
   - name: STR_PROMOTION_DEVASTATOR
     requires:
