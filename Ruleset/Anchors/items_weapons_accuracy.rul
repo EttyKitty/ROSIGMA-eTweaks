@@ -223,7 +223,7 @@ items:
 
   - &ALWAYS_HITS
     type: STR_FLAMETHROWER_CHAOS
-    accuracySnap: 100
+    accuracySnap: 140
     accuracyMultiplier:
       flatHundred: 1
 

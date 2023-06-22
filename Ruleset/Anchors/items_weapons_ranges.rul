@@ -2,7 +2,7 @@ items:
 
   - &RANGE_8
     type: STR_LASCUTTER
-    dropoff: 150
+    dropoff: 6
     autoRange: 4
     snapRange: 8
     aimRange: 12
@@ -13,7 +13,7 @@ items:
 
   - &RANGE_24
     type: STR_PISTOLB
-    dropoff: 150
+    dropoff: 6
     autoRange: 6
     snapRange: 12
     aimRange: 18
@@ -81,7 +81,7 @@ items:
 
   - &RANGE_18
     type: STR_GRAVGUN_AOE_CHAOS
-    dropoff: 150
+    dropoff: 6
     autoRange: 9
     snapRange: 18
     aimRange: 27
@@ -107,7 +107,7 @@ items:
 
   - &RANGE_24
     type: STR_RIFLE
-    dropoff: 150
+    dropoff: 6
     autoRange: 12
     snapRange: 24
     aimRange: 36
@@ -182,7 +182,7 @@ items:
 
   - &RANGE_32
     type: STR_RIFLEC
-    dropoff: 150
+    dropoff: 6
     autoRange: 16
     snapRange: 32
     aimRange: 48
@@ -196,7 +196,7 @@ items:
 
   - &RANGE_36
     type: STR_GRENADE_LAUNCHER
-    dropoff: 150
+    dropoff: 6
     autoRange: 18
     snapRange: 36
     aimRange: 54
@@ -248,7 +248,7 @@ items:
 
   - &RANGE_48
     type: STR_LASCAN
-    dropoff: 150
+    dropoff: 6
     autoRange: 24
     snapRange: 48
     aimRange: 72
