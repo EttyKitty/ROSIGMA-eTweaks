@@ -165,6 +165,22 @@ items:
   - type: STR_LASCARBINE_SLAAN
     refNode: *IS_LIGHT
 
+  - &IGNORED
+    type: AUX_DREAD_FLAMER
+    tags:
+      ITEM_IS_HEAVY_WEAPON: 3
+  - type: AUX_HOVERTANK_LAUNCHER
+    refNode: *IGNORED
+  - type: AUX_DREAD_STORMBOLTER
+    refNode: *IGNORED
+  - type: AUX_DREAD_ASSC
+    refNode: *IGNORED
+  - type: AUX_HOVERTANK_PLASMA
+    refNode: *IGNORED
+  - type: AUX_HOVERTANK_LASER
+    refNode: *IGNORED
+  - type: AUX_DREAD_MULTIMELTA
+    refNode: *IGNORED
 
 armors:
   - &IS_TURRET

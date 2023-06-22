@@ -3,6 +3,8 @@ items:
   - type: AUX_DREAD_FLAMER
     weight: 150
     tuThrow: 0
+    tuSnap: 35
+    tuMelee: 35
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_LEFT_HAND]
@@ -14,6 +16,7 @@ items:
   - type: AUX_HOVERTANK_LAUNCHER
     weight: 150
     tuThrow: 0
+    tuSnap: 35
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_LEFT_HAND]
@@ -23,6 +26,7 @@ items:
   - type: AUX_DREAD_ASSC
     weight: 150
     tuThrow: 0
+    tuSnap: 35
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_RIGHT_HAND]
@@ -34,6 +38,7 @@ items:
   - type: AUX_HOVERTANK_PLASMA
     weight: 150
     tuThrow: 0
+    tuSnap: 35
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_RIGHT_HAND]
@@ -45,6 +50,7 @@ items:
   - type: AUX_HOVERTANK_LASER
     weight: 150
     tuThrow: 0
+    tuSnap: 35
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_RIGHT_HAND]
@@ -64,7 +70,7 @@ items:
     invWidth: 2
     invHeight: 3
     accuracySnap: 80
-    tuSnap: 50
+    tuSnap: 35
     tuThrow: 0
     confSnap:
       shots: 2
@@ -83,7 +89,7 @@ items:
     fireSound: {mod: 40k, index: 12}
     battleType: 1
     accuracySnap: 75
-    tuSnap: 25
+    tuSnap: 35
     tuThrow: 0
     autoRange: 30
     compatibleAmmo:
@@ -97,9 +103,9 @@ items:
     meleeType: 7
     meleePower: 110
     accuracyMelee: 100
-    tuMelee: 15
+    tuMelee: 35
     flatMelee:
-      time: true
+      time: false
     fixedWeapon: false
     recover: true
     supportedInventorySections: [STR_LEFT_HAND]

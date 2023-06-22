@@ -1,0 +1,102 @@
+extended:
+  tags:
+    RuleItem:
+      DREADNOUGHT_WEAPON: int # 1=yes
+    RuleArmor:
+      DREADNOUGHT_ARMOR: int # 1=yes
+
+  scripts:
+    accuracyMultiplierBonusStats:
+      - new: eTweaks_aMBS_dreadnought_weapon
+        offset: 9
+        code: |
+          var int dreadnoughtWeapon;
+          var int dreadnoughtArmor;
+          var ptr RuleArmor ruleA;
+
+          weapon.getTag dreadnoughtWeapon Tag.DREADNOUGHT_WEAPON;
+          unit.getRuleArmor ruleA;
+          ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
+
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+            return bonus;
+          else;
+            set bonus 0;
+            return bonus;
+          end;
+
+          return bonus;
+
+    meleeMultiplierBonusStats:
+      - new: eTweaks_mMBS_dreadnought_weapon
+        offset: 9
+        code: |
+          var int dreadnoughtWeapon;
+          var int dreadnoughtArmor;
+          var ptr RuleArmor ruleA;
+
+          weapon.getTag dreadnoughtWeapon Tag.DREADNOUGHT_WEAPON;
+          unit.getRuleArmor ruleA;
+          ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
+
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+            return bonus;
+          else;
+            set bonus 0;
+            return bonus;
+          end;
+
+          return bonus;
+
+    throwMultiplierBonusStats:
+      - new: eTweaks_tMBS_dreadnought_weapon
+        offset: 9
+        code: |
+          var int dreadnoughtWeapon;
+          var int dreadnoughtArmor;
+          var ptr RuleArmor ruleA;
+
+          weapon.getTag dreadnoughtWeapon Tag.DREADNOUGHT_WEAPON;
+          unit.getRuleArmor ruleA;
+          ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
+
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+            return bonus;
+          else;
+            set bonus 0;
+            return bonus;
+          end;
+
+          return bonus;
+
+armors:
+  - &DREADNOUGHT_ARMOR
+    type: DREAD_ARMOR_UC
+    tags:
+      DREADNOUGHT_ARMOR: 1
+  - type: DREAD_ARMOR2_UC
+    refNode: *DREADNOUGHT_ARMOR
+  - type: DREAD_ARMOR3_UC
+    refNode: *DREADNOUGHT_ARMOR
+  - type: DREAD_ARMOR4_UC
+    refNode: *DREADNOUGHT_ARMOR
+  - type: DREAD_ARMOR5_UC
+    refNode: *DREADNOUGHT_ARMOR
+
+items:
+  - &DREADNOUGHT_WEAPON
+    type: AUX_DREAD_FLAMER
+    tags:
+      DREADNOUGHT_WEAPON: 1
+  - type: AUX_HOVERTANK_LAUNCHER
+    refNode: *DREADNOUGHT_WEAPON
+  - type: AUX_DREAD_STORMBOLTER
+    refNode: *DREADNOUGHT_WEAPON
+  - type: AUX_DREAD_ASSC
+    refNode: *DREADNOUGHT_WEAPON
+  - type: AUX_HOVERTANK_PLASMA
+    refNode: *DREADNOUGHT_WEAPON
+  - type: AUX_HOVERTANK_LASER
+    refNode: *DREADNOUGHT_WEAPON
+  - type: AUX_DREAD_MULTIMELTA
+    refNode: *DREADNOUGHT_WEAPON

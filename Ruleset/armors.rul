@@ -410,8 +410,11 @@ armors:
     stats:
       health: 245
       strength: 300
-      tu: 50
-      stamina: 100
+      tu: 98
+      stamina: 4
+    recovery:
+      energy:
+        flatHundred: 100
     damageModifier:
       - 1.0 #none
       - 1.0 #AP
