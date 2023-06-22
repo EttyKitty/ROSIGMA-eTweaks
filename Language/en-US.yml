@@ -3,10 +3,10 @@ en-US:
   ########################################################## GLOBALS ##########################################################
 
   STR_1_BEGINNER: "Adeptus Astartes"
-  STR_2_EXPERIENCED: "Unavailable"
-  STR_3_VETERAN: "Unavailable"
-  STR_4_GENIUS: "Unavailable"
-  STR_5_SUPERHUMAN: "Unavailable"
+  STR_2_EXPERIENCED: "§Chamber Militant§"
+  STR_3_VETERAN: "§Adeptus Arbites§"
+  STR_4_GENIUS: "§Adepta Sororitas§"
+  STR_5_SUPERHUMAN: "§Astra Militarum§"
 
   STR_DAMAGE_NONE: "SUPPORT"
   STR_DAMAGE_ARMOR_PIERCING: "PIERCING"
@@ -39,13 +39,17 @@ en-US:
   STR_CAT_SPACEMARINES: "Space Marines"
 
   ########################################################## 40K/ROSIGMA CRAFTS/WEAPONS ##########################################################
-  
+
+  STR_HWP_CANNON_SHELLS: "Heavy Bolter Rounds x50"
+  STR_DROP: "DROP POD"
+  STR_STORMEAGLE: "STORM EAGLE"
+
+  ########################################################## eTweaks CRAFTS/WEAPONS ##########################################################
+
   STR_CRAFTBOLTER_QUAD: "Quad Heavy Bolter"
   STR_CRAFTBOLTER_QUAD_UC: "QUAD HEAVY BOLTER"
   STR_CRAFT_RAZORBACK: "RAZORBACK"
   STR_CRAFT_LANDRAIDER: "LAND RAIDER"
-  STR_HWP_CANNON_SHELLS: "Heavy Bolter Rounds x50"
-  STR_DROP: "DROP POD"
 
   ########################################################## 40K/ROSIGMA ITEMS-MISC ##########################################################
 
@@ -75,13 +79,17 @@ en-US:
   STR_ROCKET_LAUNCHER: "Missile Launcher, Soundstrike"
   STR_HEAVY_CANNON: "Sniper Rifle, Astartes"
   STR_LASCUTTER: "Lascutter, Mezoa"
+  STR_SHOTGUN: "Shotgun, Astartes"
 
   AUX_DREAD_FLAMER: "Dreadnought Flamer Fist"
   AUX_HOVERTANK_LAUNCHER: "Dreadnought Missile Launcher"
-  AUX_DREAD_STORMBOLTER: "Dreadnought Bolter Fist"
   AUX_DREAD_ASSC: "Dreadnought Assault Cannon"
   AUX_HOVERTANK_PLASMA: "Dreadnought Heavy Plasma"
   AUX_HOVERTANK_LASER: "Dreadnought Twin-Lascannon"
+
+  ########################################################## eTweaks ITEMS-WEAPONS ##########################################################
+
+  AUX_DREAD_STORMBOLTER: "Dreadnought Bolter Fist"
   AUX_DREAD_MULTIMELTA: "Dreadnought Multi-Melta"
 
   ########################################################### 40K/ROSIGMA ITEMS-AMMO ##########################################################
@@ -139,9 +147,9 @@ en-US:
   STR_ARMOR_ARTIFICER: "Artificer Power Armor"
   STR_ARMOR_ARTIFICER_UC: "Artificer Power Armor"
   STR_ARMOR_CAPTAIN_MK7_UC: "MK7 Captain Armor"
-  STR_ARMOR_ASPIRANT_UC: "Aspirant Garment"
   STR_ARMOR_SCOUT: "Carapace Scout Armor"
-  STR_ARMOR_NEOPHYTE_UC: "Neophyte Garment"
+  # STR_ARMOR_NEOPHYTE_UC: "Neophyte Garment"
+  # STR_ARMOR_ASPIRANT_UC: "Aspirant Garment"
 
   ########################################################## 40K/ROSIGMA FACILITIES ##########################################################
 
@@ -168,7 +176,7 @@ en-US:
 
   ########################################################## eTweaks SOLDIERS/RANKS
 
-  STR_SOLDIER_ASPIRANT: "Aspirant"
+  # STR_SOLDIER_ASPIRANT: "Aspirant"
   STR_SOLDIER_SCOUT: "Scout"
   STR_SOLDIER_DEVASTATOR: "Devastator"
   STR_SOLDIER_ASSAULT: "Assault"
@@ -241,7 +249,7 @@ en-US:
   STR_STORMBOLTER_TURRET_1X1: "Storm Bolter Turret"
   STR_STORMBOLTER_TURRET_1X1_ARMOR: "Storm Bolter Turret"
 
-  ########################################################## 40k/ROSIGMA Enemies ##########################################################
+  ########################################################## 40k/ROSIGMA ENEMIES ##########################################################
 
   STR_CYBERDISC_TERRORIST: "Bloodthirster"
   STR_CYBERDISC: "Bloodthirster"
@@ -256,12 +264,12 @@ en-US:
   ##### RACES
   STR_SECTOID: "Chaos Cultists"
   STR_SNAKEMAN: "Traitor Guardsmen"
-  STR_SNAKEMAN_DESERTERS: "Guardsmen Deserters"
+  STR_SNAKEMAN_DESERTERS: "Deserters"
   STR_ETHEREAL: "Chaos Space Marines"
   STR_CHAOS_HERETEK_FORCE: "Dark Mechanicus"
   STR_HERETEK: "Dark Mechanicus"
 
-  ########################################################## eTweaks ##########################################################
+  ########################################################## eTweaks ENEMIES ##########################################################
 
   STR_SERVITOR_SERVOARM: "Battle Servitor"
   STR_CHAOS_HERETEK_VANGUARD: "Heretek Vanguard"
