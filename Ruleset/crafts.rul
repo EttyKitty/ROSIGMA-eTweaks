@@ -237,25 +237,29 @@ crafts:
     costSell: 600000
 
   - type: STR_SPEEDC
-    soldiers: 12
-    costBuy: 500000
-    costSell: 400000
+    soldiers: 6
+    costBuy: 250000
+    costSell: 200000
     speedMax: 1500
     avoidBonus: 2
-    damageMax: 400
+    damageMax: 200
+    weapons: 1
+    battlescapeTerrainData:
+      name: SPEED
+      mapDataSets:
+        - BLANKS
+        - SPEED
+      mapBlocks:
+        - name: SPEED
+          width: 10
+          length: 10
     deployment:
-      - [2, 5, 0, 6]
-      - [3, 5, 0, 2]
-      - [6, 13, 0, 4]
-      - [7, 13, 0, 4]
-      - [1, 4, 0, 6]
-      - [4, 4, 0, 2]
-      - [5, 12, 0, 6]
-      - [8, 12, 0, 2]
-      - [2, 4, 0, 4]
+      - [5, 5, 0, 4]
+      - [4, 5, 0, 4]
+      - [6, 4, 0, 4]
       - [3, 4, 0, 4]
-      - [6, 12, 0, 6]
-      - [7, 12, 0, 2]
+      - [5, 4, 0, 4]
+      - [4, 4, 0, 4]
 
   - type: STR_FIRESTORM #STORMRAVEN
     damageMax: 700

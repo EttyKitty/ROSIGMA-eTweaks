@@ -1,16 +1,13 @@
-startingBase: #*** Default, Marines
+startingBase:
 
   items:
-    STR_SHOTGUN_SHELLS: 16
-    STR_FLAMETHROWER_CLIP: 4
-    STR_HC_AP_AMMO: 6
+    STR_RIFLE_CLIP: 12
     STR_SMOKE_GRENADE: 6
     STR_GRENADE: 6
     STR_HWP_CANNON_SHELLS: 4
-    STR_STINGRAY_MISSILES: 12
 
   randomSoldiers:
-    STR_SOLDIER_SCOUT: 16
+    STR_SOLDIER_SCOUT: 8
 
   crafts:
     - type: STR_SPEEDC
@@ -20,19 +17,13 @@ startingBase: #*** Default, Marines
       weapons:
         - type: STR_CANNON_UC
           ammo: 50
-        - type: STR_STINGRAY
-          ammo: 12
       status: STR_READY
       items:
-        STR_FLAMETHROWER: 2
-        STR_FLAMETHROWER_CLIP: 4
-        STR_HEAVY_CANNON: 2
-        STR_HC_AP_AMMO: 6
-        STR_SHOTGUN: 8
-        STR_SHOTGUN_SHELLS: 16
-        STR_KNIF: 12
-        STR_SMOKE_GRENADE: 12
-        STR_GRENADE: 12
+        STR_RIFLE: 6
+        STR_RIFLE_CLIP: 12
+        STR_KNIF: 6
+        STR_SMOKE_GRENADE: 6
+        STR_GRENADE: 6
 
   facilities:
     - type: STR_ACCESS_LIFT
