@@ -156,6 +156,15 @@ items:
     power: 80
     clipSize: 18
 
+  - type: STR_STUN_SHELLS
+    clipSize: 18
+    bigSprite: 63
+    power: 100
+    damageAlter:
+      ToWound: 0
+      ArmorEffectiveness: 1.2
+      ToArmorPre: 0
+
 ###################################### FLAME
 
   - type: STR_FLAMETHROWER_CLIP

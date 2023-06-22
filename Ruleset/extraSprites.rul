@@ -8,6 +8,7 @@ extraSprites:
       60: Resources/NULL/NULL_1X3.png
       61: Resources/BIGOBS/Dreadnought/DREAD_FIST_STORMBOLTER.png
       62: Resources/BIGOBS/Dreadnought/DREAD_MULTIMELTA.png
+      63: Resources/BIGOBS/SHOTGUN_AMMO_STUN.gif
 
   - type: FLOOROB.PCK
     files:
