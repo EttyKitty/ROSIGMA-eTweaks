@@ -18,10 +18,10 @@ extended:
           unit.getRuleArmor ruleA;
           ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
 
-          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 0;
+            set bonus 0;
             return bonus;
           else;
-            set bonus 0;
             return bonus;
           end;
 
@@ -39,10 +39,10 @@ extended:
           unit.getRuleArmor ruleA;
           ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
 
-          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 0;
+            set bonus 0;
             return bonus;
           else;
-            set bonus 0;
             return bonus;
           end;
 
@@ -60,10 +60,10 @@ extended:
           unit.getRuleArmor ruleA;
           ruleA.getTag dreadnoughtArmor Tag.DREADNOUGHT_ARMOR;
 
-          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 1;
+          if and eq dreadnoughtWeapon 1 eq dreadnoughtArmor 0;
+            set bonus 0;
             return bonus;
           else;
-            set bonus 0;
             return bonus;
           end;
 
