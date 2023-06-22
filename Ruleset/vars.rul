@@ -3,7 +3,6 @@ extendedTerrainMelee: 5
 extendedRunningCost: true
 enableUnitResponseSounds: false
 flagByKills: []
-surrenderMode: 2
 enableCloseQuartersCombat: 1
 closeQuartersAccuracyGlobal: 20
 showFullNameInAlienInventory: true
@@ -19,3 +18,13 @@ minReactionAccuracy: 10
 ai:
   pickUpWeaponsMoreActivelyCiv: true
 extendedItemReloadCost: true
+
+################################ Surrendering & Bughunt ################################
+surrenderMode: 2
+
+bughuntMinTurn: 0
+bughuntMaxEnemies: 2
+bughuntRank: -1
+
+bughuntTimeUnitsLeft: 95
+bughuntLowMorale: 20
