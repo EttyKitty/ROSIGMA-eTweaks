@@ -1900,10 +1900,10 @@ armors:
     refNode: *WAKL_COST_VAR1
   - type: STR_STORMBOLTER_TURRET_1X1_ARMOR
     refNode: *WAKL_COST_VAR1
-  - type: STR_ARMOR_ASPIRANT_UC
-    refNode: *WAKL_COST_VAR1
-  - type: STR_ARMOR_NEOPHYTE_UC
-    refNode: *WAKL_COST_VAR1
+  # - type: STR_ARMOR_ASPIRANT_UC
+  #   refNode: *WAKL_COST_VAR1
+  # - type: STR_ARMOR_NEOPHYTE_UC
+  #   refNode: *WAKL_COST_VAR1
   - type: STR_ARMOR_ARTIFICER_UC
     refNode: *WAKL_COST_VAR1
   - type: STR_ARMOR_CAPTAIN_MK7_UC
