@@ -128,10 +128,14 @@ items:
     invHeight: 2
     listOrder: 12030
 
-  - type: AUX_BOLTER #HEAVYBOLTER                12000
-    autoShots: 6
+  - type: AUX_BOLTER
+    power: 90
+    autoShots: 12
     clipSize: -1
     sprayWaypoints: 2
+    accuracyAuto: 40
+    damageAlter:
+      RandomType: 2
 
   - type: STR_CSERVITOR_HB_AMMO
     clipSize: 200
