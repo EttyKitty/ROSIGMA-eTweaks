@@ -33,17 +33,14 @@ startingBase:
       x: 0
       y: 4
     - type: STR_CORRIDOR
-      x: 0
-      y: 2
+      x: 1
+      y: 1
     - type: STR_LIVING_QUARTERS
       x: 1
       y: 2
-    - type: STR_LIVING_QUARTERS
-      x: 0
-      y: 1
     - type: STR_GENERAL_STORES
-      x: 1
-      y: 1
+      x: 0
+      y: 2
     - type: STR_CORRIDOR
       x: 2
       y: 2
