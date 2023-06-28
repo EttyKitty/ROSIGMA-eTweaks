@@ -43,3 +43,5 @@ Very bad.
 
 **Meridian** and **Yankes** - developers of the OXCE.  
 Nothing even should be said. If not for these guys - a lot of the things simply wouldn't be possible to implement.  
+
+**Xross28** - developer of the 'Xross's XCOM Visual Upgrade' mod. His UI sprites were used.  
