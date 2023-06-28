@@ -36,6 +36,35 @@ extraSprites:
     files:
       0: Resources/UI/unit_preview_etweaks.png
 
+  - type: KneelButton
+    width: 32
+    height: 32
+    subX: 32
+    subY: 16
+    files:
+      0: Resources/DECALS/kneelButton.png
+  
+  - type: BACK06.SCR
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/DECALS/BACK06.png
+
+  - type: BACK07.SCR
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/DECALS/BACK07.gif
+
+  - type: ALTBACK07.SCR
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/DECALS/ALTBACK07.gif
+
   ########################################################## BATTLE SPRITES ##########################################################
 
   - type: STORMBOLTER_TURRET_1X1.PCK
