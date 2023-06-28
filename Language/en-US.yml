@@ -80,6 +80,12 @@ en-US:
   STR_HEAVY_CANNON: "Sniper Rifle, Astartes"
   STR_LASCUTTER: "Lascutter, Mezoa"
   STR_SHOTGUN: "Shotgun, Astartes"
+  STR_STUB_GUN: "Stub Pistol"
+  STR_STUB_RIFLE: "Stub Rifle"
+  STR_STUB_GUN_AMMO: "Stub Magazine"
+  STR_SMG_STUB_GUN: "Stub Automatic"
+  STR_STUB_GUN_AMMO_LONG: "Stub Automatic Magazine"
+  STR_SMG_STUB_GUN_CHAOS: "Chaos Stub Automatic"
 
   AUX_DREAD_FLAMER: "Dreadnought Flamer Fist"
   AUX_HOVERTANK_LAUNCHER: "Dreadnought Missile Launcher"
