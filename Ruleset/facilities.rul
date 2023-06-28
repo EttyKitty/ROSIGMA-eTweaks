@@ -56,6 +56,9 @@ facilities:
     radarChance: 80
     maxAllowedPerBase: 1
 
+  - type: STR_LIVING_QUARTERS
+    trainingRooms: 10
+
 #################################################### OUTPOSTS ####################################################
 
   - type: STR_DIRT
