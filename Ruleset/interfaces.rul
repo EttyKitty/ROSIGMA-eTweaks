@@ -1,0 +1,16 @@
+interfaces:
+
+  - type: baseInfo
+    elements:
+      - id: button
+        color: 208   # white
+
+  - type: soldierInfo
+    elements:
+      - id: text1
+        color: 241   # pink
+        color2: 208  # white
+      - id: text2
+        color: 213   # gold
+      - id: button
+        color: 208   # white
