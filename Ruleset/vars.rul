@@ -7,7 +7,7 @@ enableCloseQuartersCombat: 1
 closeQuartersAccuracyGlobal: 20
 showFullNameInAlienInventory: true
 tuRecoveryWakeUpNewTurn: 0
-noLOSAccuracyPenaltyGlobal: 20
+noLOSAccuracyPenaltyGlobal: 0
 enableNewResearchSorting: true
 fixedUserOptions: !add
   strafe: true
