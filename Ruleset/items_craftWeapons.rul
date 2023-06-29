@@ -16,3 +16,21 @@ items:
     costSell: 45000
     transferTime: 48
     listOrder: 1300
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+    costBuy: 1500
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_INTERCEPTOR_REQ
+    costBuy: 4500

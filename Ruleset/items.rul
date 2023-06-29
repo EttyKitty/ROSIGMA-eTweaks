@@ -45,24 +45,6 @@ items:
     requiresBuy:
       - STR_HIGHTIER_PREREQ
 
-  - type: STR_STINGRAY_LAUNCHER
-    requiresBuy:
-      - STR_INTERCEPTOR_REQ
-
-  - type: STR_STINGRAY_MISSILES
-    requiresBuy:
-      - STR_INTERCEPTOR_REQ
-    costBuy: 1500
-
-  - type: STR_AVALANCHE_LAUNCHER
-    requiresBuy:
-      - STR_INTERCEPTOR_REQ
-
-  - type: STR_AVALANCHE_MISSILES
-    requiresBuy:
-      - STR_INTERCEPTOR_REQ
-    costBuy: 4500
-
   - &TURRET_TWINLASCANNON_SPAWNER
     type: STR_TURRET_TWINLASCANNON_LEFT_SPAWNER
     spawnUnit: STR_TURRET_TWINLASCANNON_LEFT
