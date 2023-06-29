@@ -1,0 +1,5 @@
+eventScripts:
+
+  - type: STR_LONE_RECRUIT_RANDOMIZED_SCRIPT
+    researchTriggers: !add
+      STR_MARINES_STRATEGY: false
