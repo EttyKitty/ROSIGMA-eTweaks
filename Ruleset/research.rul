@@ -216,3 +216,18 @@ research:
   - name: STR_LASCAN
     dependencies:
       - STR_CHAOS_LASCANNON_HANDHELD
+
+  - name: STR_SMOKE
+    cost: 0
+
+  - name: STR_MOTION_SCANNER
+    cost: 0
+
+  - name: STR_HOLOGRAM_GRENADE_REQUISITION
+    cost: 0
+
+  - name: STR_HAND_FLAMETHROWER_REQUISITION
+    cost: 0
+
+  - name: STR_TRAINFACILITYR
+    cost: 0
