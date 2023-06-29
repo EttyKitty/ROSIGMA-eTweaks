@@ -1,0 +1,28 @@
+ufos:
+
+  - type: STR_TRUCKS_CULTISTS
+    size: STR_SMALL
+    damageMax: 320
+    speedMax: 100
+    accel: 3
+    power: 5
+    range: 65
+    score: 35
+    reload: 12
+    breakOffTime: 600
+    missionScore: 0
+    battlescapeTerrainData:
+      name: TRUCKS_CULTISTS
+      mapDataSets:
+        - BLANKS
+        - TRUCKS_CULTISTS
+      mapBlocks:
+        - name: TRUCKS_CULTISTS
+          width: 10
+          length: 20
+          height: 4
+          items:
+            STR_REQUISITION_BOUNTY_100K:
+              - [0, 0, 0]
+              - [0, 0, 0]
+    craftCustomDeploy: STR_TRUCKS_CULTISTS

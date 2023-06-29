@@ -1,0 +1,14 @@
+alienMissions:
+
+  - type: STR_CULTISTS_RAIDING
+    retaliationOdds: 0
+    raceWeights:
+      0:
+        STR_SECTOID: 100
+    operationType: 0
+    points: 100
+    waves:
+      - ufo: STR_TRUCKS_CULTISTS
+        count: 6
+        timer: 2000
+        trajectory: GROUND_PATROL_TRAJECTORY

@@ -1,0 +1,43 @@
+alienDeployments:
+
+  - type: STR_TRUCKS_CULTISTS
+    data:
+      - alienRank: 1
+        lowQty: 2
+        highQty: 2
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []
+      - alienRank: 2
+        lowQty: 6
+        highQty: 6
+        dQty: 4
+        percentageOutsideUfo: 60
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []
+      - alienRank: 5
+        lowQty: 6
+        highQty: 6
+        dQty: 4
+        percentageOutsideUfo: 60
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []
+    width: 40
+    length: 40
+    height: 9
