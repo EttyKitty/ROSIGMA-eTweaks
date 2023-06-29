@@ -81,13 +81,9 @@ items:
 
   - type: STR_SHOTGUN
     costBuy: 5000
-    confSnap:
-      shots: 2
     bulletSpeed: 50
 
   - type: STR_SHOTGUN_CHAOS
-    confSnap:
-      shots: 2
     bulletSpeed: 50
 
   - &ASSAULT_CANNON

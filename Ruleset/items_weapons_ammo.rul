@@ -152,8 +152,6 @@ items:
     weight: 20
 
   - type: STR_SHOTGUN_SHELLS
-    shotgunPellets: 0
-    power: 80
     clipSize: 18
 
   - type: STR_STUN_SHELLS
