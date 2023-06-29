@@ -1,0 +1,7 @@
+items:
+
+  - type: STR_LASPISTOL_CLIP
+    bulletSpeed: &FAST 50
+
+  - type: STR_LASGUN_CLIP
+    bulletSpeed: *FAST
