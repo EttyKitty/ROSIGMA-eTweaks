@@ -7,6 +7,9 @@ items:
     clipSize: 28
     weight: 2
     power: 80
+    damageAlter:
+      RandomWound: false
+      ToWound: 0.2
 
   - type: STR_RIFLE_CLIP_AP
     costBuy: 0
