@@ -165,6 +165,7 @@ items:
       ToWound: 0
       ArmorEffectiveness: 1.2
       ToArmorPre: 0
+      ToArmor: 0
 
 ###################################### FLAME
 
