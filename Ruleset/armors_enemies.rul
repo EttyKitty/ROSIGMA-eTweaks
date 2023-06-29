@@ -58,3 +58,10 @@ armors:
     builtInWeapons: []
     spriteSheet: HAVOC_BS.PCK
     drawingRoutine: 0
+
+  - type: STR_SECTOID_ARMOR0
+    spriteSheet: CULTI3.PCK
+    spriteInv: CULTI3
+
+  - type: STR_CULTIST_ARMOR
+    spriteSheet: CUTIST2.PCK

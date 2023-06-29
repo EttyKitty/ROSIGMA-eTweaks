@@ -1,0 +1,77 @@
+units:
+
+  - type: STR_SECTOID_LEADER
+    armor: STR_CULTIST_ASPIRING_ARMOR
+    intelligence: 8
+    aggression: 1
+    berserkChance: 80
+    spotter: 1
+    builtInWeaponSets:
+      - 
+        - STR_AUTOPISTOL_CHAOS
+        - STR_AUTOPISTOL_CLIP
+        - STR_AUTOPISTOL_CLIP
+        - STR_KNIF
+        - STR_GRENADE
+      - 
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_AXE
+        - STR_KRAK_GRENADE
+      - 
+        - STR_BOLTPISTOL_CHAOS
+        - STR_PISTOL_CLIP
+        - STR_PISTOL_CLIP
+        - STR_AXE
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+
+  - type: STR_SECTOID_NAVIGATOR
+    intelligence: 8
+    aggression: 1
+    spotter: 1
+    canSurrender: true
+    autoSurrender: false
+    builtInWeaponSets:
+      - 
+        - STR_FLAMETHROWER_CHAOS
+        - STR_FLAMETHROWER_CLIP
+        - STR_FLAMETHROWER_CLIP
+        - STR_GRENADE
+      - 
+        - STR_HEAVY_STUBBER_CHAOS
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_HEAVY_STUBBER_CLIP
+        - STR_KRAK_GRENADE
+      - 
+        - STR_GRENADE_LAUNCHER_CHAOS
+        - STR_FRAG_GRENADE_DRUM
+        - STR_FRAG_GRENADE_DRUM
+        - STR_GRENADE
+        - STR_KRAK_GRENADE
+  
+  - type: STR_SECTOID_SOLDIER
+    intelligence: 4
+    aggression: 2
+    spotter: 1
+    canSurrender: true
+    autoSurrender: true
+    builtInWeaponSets:
+      - 
+        - STR_AUTOPISTOL_CHAOS
+        - STR_AUTOPISTOL_CLIP
+        - STR_AUTOPISTOL_CLIP
+        - STR_KNIF
+        - STR_GRENADE
+      - 
+        - STR_AUTOGUN_CHAOS
+        - STR_AUTOGUN_CLIP
+        - STR_AUTOGUN_CLIP
+        - STR_KRAK_GRENADE
+      - 
+        - STR_AUTOGUN_CHAOS
+        - STR_AUTOGUN_CLIP
+        - STR_AUTOGUN_CLIP
+        - STR_KRAK_GRENADE
+        - STR_GRENADE

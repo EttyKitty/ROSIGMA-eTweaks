@@ -267,6 +267,11 @@ en-US:
   STR_TRAITORGUARD_BATTLE_SERVITOR_HB: "Battle Servitor"
   STR_SNAKEMAN_ENGINEER: "Traitor Storm Trooper"
 
+  STR_SECTOID_COMMANDER: "Cult Leader"
+  STR_SECTOID_LEADER: "Cultist Champion"
+  STR_SECTOID_NAVIGATOR: "Cultist Maniac"
+  STR_SECTOID_SOLDIER: "Cultist"
+
   ##### RACES
   STR_SECTOID: "Chaos Cultists"
   STR_SNAKEMAN: "Traitor Guardsmen"

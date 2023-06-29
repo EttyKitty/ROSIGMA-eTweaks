@@ -99,6 +99,14 @@ extraSprites:
     files:
       0: Resources/UnitSprites/HAVOC_BS.png
 
+  - type: CULTI3.PCK
+    width: 512
+    height: 720
+    subX: 32
+    subY: 40
+    files:
+      0: Resources/FOES/battlesprite/cultist3.png
+
   ########################################################## INV SPRITES ##########################################################
 
   - typeSingle: ARTIFICER__1__ARTIFICER
