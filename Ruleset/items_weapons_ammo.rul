@@ -169,7 +169,7 @@ items:
 ###################################### FLAME
 
   - type: STR_FLAMETHROWER_CLIP
-    blastRadius: 0
+    blastRadius: 1
     power: 75
     damageAlter:
       ToHealth: 1.1
