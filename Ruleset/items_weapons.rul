@@ -22,7 +22,6 @@ items:
     weight: 16
     costBuy: 0
     listOrder: 10300
-    tuAuto: 0
 
   - type: STR_BOLTERC
     weight: 16
@@ -143,26 +142,12 @@ items:
   - &PLASMA_RIFLE
     type: STR_PLASMA_RIFLE_TERRAN # done
     autoShots: 2
-    confAimed:
-      shots: 1
-      spendPerShot: 3
-      name: STR_POWER_SHOT
-      shortName: STR_POWER_SHOT_COUNT
-    tags:
-      ITEM_AIMED_POWER_BONUS: 20
     costBuy: 0
     monthlyBuyLimit: 1
 
   - &PLASMA_PISTOL
     type: STR_PLASMA_PISTOL_TERRAN #                11200
     autoShots: 2
-    confAimed:
-      shots: 1
-      spendPerShot: 3
-      name: STR_POWER_SHOT
-      shortName: STR_POWER_SHOT_COUNT
-    tags:
-      ITEM_AIMED_POWER_BONUS: 20
     costBuy: 0
     monthlyBuyLimit: 1
 

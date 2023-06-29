@@ -6,7 +6,6 @@ items:
     listOrder: 10410
     clipSize: 28
     weight: 2
-    power: 80
     damageAlter:
       RandomWound: false
       ToWound: 0.2
@@ -47,7 +46,6 @@ items:
     clipSize: 60
     weight: 8
     listOrder: 12010
-    power: 90
 
   - type: STR_AC_HE_AMMO
     bigSprite: {mod: 40k, index: 8}
@@ -132,13 +130,7 @@ items:
     listOrder: 12030
 
   - type: AUX_BOLTER
-    power: 90
-    autoShots: 12
-    clipSize: -1
     sprayWaypoints: 2
-    accuracyAuto: 40
-    damageAlter:
-      RandomType: 2
 
   - type: STR_CSERVITOR_HB_AMMO
     clipSize: 200
@@ -160,7 +152,6 @@ items:
   - type: STR_STUN_SHELLS
     clipSize: 18
     bigSprite: 63
-    power: 100
     damageAlter:
       ToWound: 0
       ArmorEffectiveness: 1.2
@@ -171,9 +162,6 @@ items:
 
   - type: STR_FLAMETHROWER_CLIP
     blastRadius: 1
-    power: 75
-    damageAlter:
-      ToHealth: 1.1
 
   - type: STR_TZEENTCH_FLAMER_WEAPON_BLUE
 
